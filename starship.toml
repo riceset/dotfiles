@@ -1,0 +1,19 @@
+[line_break]
+disabled = true
+[cmd_duration]
+disabled = true
+[git_status]
+disabled = true
+[username]
+style_user = "#45ba45"
+style_root = "bold yellow"
+format = "[$user]($style) in "
+disabled = true 
+show_always = true
+[directory]
+style = "#00b3b3"
+[git_branch]
+style = "#ff0000"
+[character]
+success_symbol = "[❯](bold white)"
+error_symbol = "[❯](bold red)"
