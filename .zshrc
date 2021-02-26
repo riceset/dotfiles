@@ -122,5 +122,3 @@ alias external='cd /volumes/OKONOMIYAKI/external'
 ### Open Files ###
 alias zshrc='cd ~ && n .zshrc'
 alias initvim='cd ~/.config/nvim && n init.vim'
-
-alias a='a'
