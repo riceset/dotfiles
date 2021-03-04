@@ -2,6 +2,7 @@
 
 ## Vim
 init.vim - NeoVim
+
 .vimrc - Vim
 
 ## Vscode
