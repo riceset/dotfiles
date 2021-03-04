@@ -60,7 +60,7 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-
+#zinit light jeffreytse/zsh-vi-mode
 ### Starship:
 eval "$(starship init zsh)"
 
@@ -115,10 +115,13 @@ alias desktop='cd ~/Desktop'
 alias dev='cd ~/Developer'
 alias internal='cd ~/Internal'
 alias dev='cd ~/Developer'
-alias c='cd ~/Developer/Harvard-CS50/c'
+alias c='cd ~/Developer/Harvard-CS50/C'
 alias clones='cd ~/Developer/clones'
 alias external='cd /volumes/OKONOMIYAKI/external'
 
 ### Open Files ###
 alias zshrc='cd ~ && n .zshrc'
 alias initvim='cd ~/.config/nvim && n init.vim'
+
+### Others ###
+alias l='ls -a'

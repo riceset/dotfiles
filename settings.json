@@ -1,0 +1,20 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    //Hide scrollbars:
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    //General Size:
+    "window.zoomLevel": 0,
+    //Editor:
+    "editor.fontSize": 17,
+    "editor.fontFamily": "Hack",
+    "editor.formatOnSave": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.cursorBlinking": "phase",
+    "files.trimFinalNewlines": true,
+    //Terminal:
+    "terminal.integrated.fontSize": 15,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "workbench.colorTheme": "2077"
+}
