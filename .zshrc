@@ -33,8 +33,12 @@ alias push='git push'
 alias all='git add . && git commit -m'
 alias clone='git clone'
 
+if [[ $TERM_PROGRAM != 'vscode' ]]; then
+
 ###Pfetch
 PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=4 PF_COL3=2 /usr/local/bin/pfetch
+
+fi
 
 ###Oh my zsh
 
@@ -83,17 +87,14 @@ export PATH="/usr/local/sbin:$PATH"
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 ### Media ###
-alias preview='open -a preview'
+alias photo='open -a preview'
 alias jpg='open -a preview *jpg'
 alias png='open -a preview *png'
 alias jpeg='open -a preview *jpeg'
-alias quicktime='open -a "quicktime player"'
-alias mp4='open -a "quicktime player" *.mp4'
-alias m4a='open -a "quicktime player" *.m4a"'
-alias mp3='open -a "quicktime player" *.mp3"'
+alias listen='open -a "Quicktime Player" '
 alias book='open -a books'
 alias finder='open -a finder'
-
+alias code='open -a "Visual Studio Code" '
 ### Youtube-dl ###
 alias videodl='youtube-dl -f best '
 alias audiodl='youtube-dl -x --audio-format mp3 '
@@ -118,6 +119,7 @@ alias dev='cd ~/Developer'
 alias c='cd ~/Developer/Harvard-CS50/C'
 alias clones='cd ~/Developer/clones'
 alias external='cd /volumes/OKONOMIYAKI/external'
+alias music='cd ~/Music/study'
 
 ### Open Files ###
 alias zshrc='cd ~ && n .zshrc'
@@ -125,3 +127,4 @@ alias initvim='cd ~/.config/nvim && n init.vim'
 
 ### Others ###
 alias l='ls -a'
+alias pip='python3 -m pip'

@@ -1,20 +1,32 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
-    //Hide scrollbars:
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
-    //General Size:
-    "window.zoomLevel": 0,
-    //Editor:
+    //"editor.scrollbar.horizontal": "hidden",
+    //"editor.scrollbar.vertical": "hidden",
+    "window.zoomLevel": 0.3,
     "editor.fontSize": 17,
     "editor.fontFamily": "Hack",
     "editor.formatOnSave": true,
-    "workbench.editor.highlightModifiedTabs": true,
-    "editor.cursorBlinking": "phase",
+    "editor.cursorBlinking": "solid",
     "files.trimFinalNewlines": true,
-    //Terminal:
+    "editor.lineNumbers": "relative",
     "terminal.integrated.fontSize": 15,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "Hack Nerd Font",
-    "workbench.colorTheme": "2077"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Monokai Vibrant",
+    "window.title": "${rootPath}",
+    "window.titleSeparator": "・",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "editor.rulers": [
+        80
+    ],
+    "todo-tree.tree.showScanModeButton": false,
+    "files.autoSave": "afterDelay",
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "iTerm.app",
+    "explorer.confirmDelete": false,
+    "code-runner.runInTerminal": true,
+    "workbench.startupEditor": "newUntitledFile",
 }
