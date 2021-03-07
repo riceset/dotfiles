@@ -29,4 +29,5 @@
     "explorer.confirmDelete": false,
     "code-runner.runInTerminal": true,
     "workbench.startupEditor": "newUntitledFile",
+    "git.confirmSync": false,
 }
