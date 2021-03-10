@@ -1,7 +1,7 @@
 # Table of contents
 
 ### Shells
-- [zshrc](https://github.com/riceset/dotfiles/blob/main/.zshrc)
+- [zsh](https://github.com/riceset/dotfiles/blob/main/.zshrc)
 
 - [fish](https://github.com/riceset/dotfiles/blob/main/config.fish)
 
