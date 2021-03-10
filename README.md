@@ -6,7 +6,7 @@ Some of my dotfiles.
 ### Shells
 - [zshrc](https://github.com/riceset/dotfiles/blob/main/.zshrc)
 
-- [starship.toml](https://github.com/riceset/dotfiles/blob/main/starship.toml)
+- [fish](https://github.com/riceset/dotfiles/blob/main/config.fish)
 
 - [bash_profile](https://github.com/riceset/dotfiles/blob/main/.bash_profile)
 
@@ -20,3 +20,5 @@ Some of my dotfiles.
 
 ### Others
 - [karabiner.json](https://github.com/riceset/dotfiles/blob/main/karabiner.json)
+
+- [starship.toml](https://github.com/riceset/dotfiles/blob/main/starship.toml)
