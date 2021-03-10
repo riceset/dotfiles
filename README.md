@@ -4,11 +4,11 @@ Some of my dotfiles.
 ## Table of contents
 
 ### Shells
-- [bash_profile](https://github.com/riceset/dotfiles/blob/main/.bash_profile)
-
 - [zshrc](https://github.com/riceset/dotfiles/blob/main/.zshrc)
 
 - [starship.toml](https://github.com/riceset/dotfiles/blob/main/starship.toml)
+
+- [bash_profile](https://github.com/riceset/dotfiles/blob/main/.bash_profile)
 
 ### Vim / NeoVim
 - [vimrc](https://github.com/riceset/dotfiles/blob/main/.vimrc)
