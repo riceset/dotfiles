@@ -1,4 +1,4 @@
-# Dot Files
+# dotfiles
 Some of my dotfiles.
 
 ## Table of contents
@@ -10,10 +10,10 @@ Some of my dotfiles.
 
 - [bash_profile](https://github.com/riceset/dotfiles/blob/main/.bash_profile)
 
-### Vim / NeoVim
-- [vimrc](https://github.com/riceset/dotfiles/blob/main/.vimrc)
-
+### Vim
 - [init.vim](https://github.com/riceset/dotfiles/blob/main/init.vim)
+
+- [vimrc](https://github.com/riceset/dotfiles/blob/main/.vimrc)
 
 ### VSCode
 - [settings.json](https://github.com/riceset/dotfiles/blob/main/settings.json)
