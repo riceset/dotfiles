@@ -1,7 +1,4 @@
-# dotfiles
-Some of my dotfiles.
-
-## Table of contents
+# Table of contents
 
 ### Shells
 - [zshrc](https://github.com/riceset/dotfiles/blob/main/.zshrc)
