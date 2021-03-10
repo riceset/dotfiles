@@ -20,18 +20,20 @@
 
 ### navigation ###
 alias ..='cd ..' 
-alias ...='cd ../..'
+alias cd ...='cd ../..'
+alias cd ....='cd ../../..'
+alias cd .....='cd ../../../..'
 
 ### Git ###
-alias add='git add .'
-alias commit='git commit -m'
-alias branch='git branch'
-alias fetch='git fetch'
-alias status='git status'
-alias pull='git pull'
-alias push='git push'
-alias all='git add . && git commit -m'
-alias clone='git clone'
+#alias add='git add .'
+#alias commit='git commit -m'
+#alias branch='git branch'
+#alias fetch='git fetch'
+#alias status='git status'
+#alias pull='git pull'
+#alias push='git push'
+#alias all='git add . && git commit -m'
+#alias clone='git clone'
 
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
 
@@ -87,14 +89,15 @@ export PATH="/usr/local/sbin:$PATH"
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 ### Media ###
-alias photo='open -a preview'
+alias preview='open -a preview'
 alias jpg='open -a preview *jpg'
 alias png='open -a preview *png'
 alias jpeg='open -a preview *jpeg'
-alias listen='open -a "Quicktime Player" '
+alias quicktime='open -a "Quicktime Player" '
 alias book='open -a books'
 alias finder='open -a finder'
 alias code='open -a "Visual Studio Code" '
+
 ### Youtube-dl ###
 alias videodl='youtube-dl -f best '
 alias audiodl='youtube-dl -x --audio-format mp3 '
@@ -109,17 +112,18 @@ alias study='open -a Anki.app; open -a photos; open -a Drafts.app'
 alias n='nvim'
 
 ### Useful Directories ###
-alias download='cd ~/Downloads'
-alias picture='cd ~/Pictures'
-alias dot='cd ~/developer/others/dotfiles'
-alias desktop='cd ~/Desktop'
-alias dev='cd ~/Developer'
-alias internal='cd ~/Internal'
-alias dev='cd ~/Developer'
-alias c='cd ~/Developer/Harvard-CS50/C'
-alias clones='cd ~/Developer/clones'
-alias external='cd /volumes/OKONOMIYAKI/external'
-alias music='cd ~/Music/study'
+alias downloads='~/Downloads'
+alias pictures='~/Pictures'
+alias dot='~/developer/others/dotfiles'
+alias desktop='~/Desktop'
+alias dev='~Developer'
+alias internal='~/Internal'
+alias dev='~/Developer'
+alias c='~/Developer/Harvard-CS50/C'
+alias clones='~/Developer/clones'
+alias external='/volumes/OKONOMIYAKI/external'
+alias music='~/Music/study'
+#TODO quicktime shortcut to play some music automatically.
 
 ### Open Files ###
 alias zshrc='cd ~ && n .zshrc'
@@ -127,4 +131,9 @@ alias initvim='cd ~/.config/nvim && n init.vim'
 
 ### Others ###
 alias l='ls -a'
+
+### Pip ###
 alias pip='python3 -m pip'
+
+### touch and open a file on VSCode
+t() { [[ ! -f "$1" ]] && touch "$1"; code "$1"; }

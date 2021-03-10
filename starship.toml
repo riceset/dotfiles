@@ -11,9 +11,9 @@ format = "[$user]($style) in "
 disabled = true 
 show_always = true
 [directory]
-style = "#00e786"
+style = "#8be200"
 [git_branch]
-style = "#e16e6a"
+style = "#e7005c"
 [character]
 success_symbol = "[❯](bold white)"
 error_symbol = "[❯](bold red)"

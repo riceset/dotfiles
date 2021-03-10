@@ -1,9 +1,6 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
-    //"editor.scrollbar.horizontal": "hidden",
-    //"editor.scrollbar.vertical": "hidden",
-    "window.zoomLevel": 0.3,
-    "editor.fontSize": 17,
+    "editor.fontSize": 16,
     "editor.fontFamily": "Hack",
     "editor.formatOnSave": true,
     "editor.cursorBlinking": "solid",
@@ -19,9 +16,10 @@
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
-    "editor.rulers": [
-        80
-    ],
+    // "editor.rulers": [
+
+    //     80
+    // ],
     "todo-tree.tree.showScanModeButton": false,
     "files.autoSave": "afterDelay",
     "terminal.explorerKind": "external",
@@ -30,4 +28,7 @@
     "code-runner.runInTerminal": true,
     "workbench.startupEditor": "newUntitledFile",
     "git.confirmSync": false,
+    "files.exclude": {
+        "**/*.dSYM": true
+    },
 }
