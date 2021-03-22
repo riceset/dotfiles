@@ -42,6 +42,7 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
+zinit light jeffreytse/zsh-vi-mode
 
 ### Starship:
 eval "$(starship init zsh)"
@@ -72,6 +73,7 @@ alias quicktime='open -a "Quicktime Player" '
 alias book='open -a books'
 alias finder='open -a finder'
 alias code='open -a "Visual Studio Code" '
+alias notes='open -a notes'
 
 ### Youtube-dl
 alias videodl='youtube-dl -f best '
@@ -99,7 +101,8 @@ alias external='/volumes/OKONOMIYAKI/external'
 alias zshrc='cd ~ && n .zshrc'
 
 ### Others
-alias l='ls -a'
+alias l='ls'
+alias lsa='ls -a'
 
 ### Pip
 alias pip='python3 -m pip'
