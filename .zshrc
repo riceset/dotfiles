@@ -7,14 +7,6 @@
 
 ### ZSH Configuration File
 
-### MANPAGER
-
-### "bat" as manpager
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-### "vim" as manpager
-# export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
-
 ### "nvim" as manpager
  export MANPAGER="nvim -c 'set ft=man' -"
 
@@ -24,22 +16,10 @@ alias cd ...='cd ../..'
 alias cd ....='cd ../../..'
 alias cd .....='cd ../../../..'
 
-### Git
-#alias add='git add .'
-#alias commit='git commit -m'
-#alias branch='git branch'
-#alias fetch='git fetch'
-#alias status='git status'
-#alias pull='git pull'
-#alias push='git push'
-#alias all='git add . && git commit -m'
-#alias clone='git clone'
-
+### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
-
 ### Pfetch
 PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=4 PF_COL3=2 /usr/local/bin/pfetch
-
 fi
 
 ### Oh my zsh
@@ -62,7 +42,6 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-zinit light jeffreytse/zsh-vi-mode
 
 ### Starship:
 eval "$(starship init zsh)"
@@ -78,7 +57,6 @@ export PATH="/usr/local/sbin:$PATH"
 #Automatically starts tmux:
 
 #if [ "$TMUX" = "" ]; then tmux; fi
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -111,19 +89,14 @@ alias n='nvim'
 ### Useful Directories
 alias downloads='~/Downloads'
 alias pictures='~/Pictures'
-alias dot='~/developer/others/dotfiles'
 alias desktop='~/Desktop'
-alias dev='~Developer'
-alias internal='~/Internal'
-alias dev='~/Developer'
-alias c='~/Developer/Harvard-CS50/C'
-alias clones='~/Developer/clones'
+alias c='~/C'
+alias blog='~/Blog'
+alias developer='~/Developer'
+alias harvard='~/Harvard-CS50'
+alias music='~/Music/Study'
 alias external='/volumes/OKONOMIYAKI/external'
-alias music='~/Music/study'
-
-### Open Files
 alias zshrc='cd ~ && n .zshrc'
-alias initvim='cd ~/.config/nvim && n init.vim'
 
 ### Others
 alias l='ls -a'
@@ -131,5 +104,32 @@ alias l='ls -a'
 ### Pip
 alias pip='python3 -m pip'
 
-## touch and open a file on VSCode
+### touch and open a file on VSCode
 t() { [[ ! -f "$1" ]] && touch "$1"; code "$1"; }
+
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
+### New Article
+alias article='cd ~/Blog && code . && cd _posts && t '
+
+### Tests
+alias te='t test.c'
+alias re='rm test.c'
+
+### Removes executable files
+alias rmexec='find . -perm +100 -type f -delete'
+
+alias cldir='rmexec && rm -rf *.dSYM'
+
+### Git
+alias add='git add .'
+alias commit='git commit -m'
+alias branch='git branch'
+alias fetch='git fetch'
+alias status='git status'
+alias pull='git pull'
+alias push='git push'
+alias all='git add . && git commit -m'
+alias clone='git clone'
+

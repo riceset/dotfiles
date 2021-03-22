@@ -31,4 +31,5 @@
     "files.exclude": {
         "**/*.dSYM": true
     },
+    "C_Cpp.updateChannel": "Insiders",
 }
