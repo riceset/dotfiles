@@ -42,7 +42,7 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-zinit light jeffreytse/zsh-vi-mode
+#zinit light jeffreytse/zsh-vi-mode
 
 ### Starship:
 eval "$(starship init zsh)"
@@ -83,7 +83,7 @@ alias audiodl='youtube-dl -x --audio-format mp3 '
 alias refreshapp='open -a AltServer.app; open -a mail'
 
 ### Language learning
-alias study='open -a Anki.app; open -a photos; open -a Drafts.app'
+alias study='open -a Anki.app; open -a Drafts.app'
 
 ### Sets "n" to open neovim
 alias n='nvim'

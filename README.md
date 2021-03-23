@@ -16,8 +16,6 @@
 - [settings.json](https://github.com/riceset/dotfiles/blob/main/settings.json)
 
 ### Others
-- [Karabiner](https://github.com/riceset/dotfiles/blob/main/karabiner.json)
-
 - [Starship](https://github.com/riceset/dotfiles/blob/main/starship.toml)
 
 ## Notes
