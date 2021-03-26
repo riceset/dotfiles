@@ -9,7 +9,6 @@
     "terminal.integrated.fontSize": 15,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "Hack Nerd Font",
-    "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Monokai Vibrant",
     "window.title": "${rootPath}",
     "window.titleSeparator": "・",
@@ -32,4 +31,5 @@
         "**/*.dSYM": true
     },
     "C_Cpp.updateChannel": "Insiders",
+    "workbench.iconTheme": "material-icon-theme"
 }

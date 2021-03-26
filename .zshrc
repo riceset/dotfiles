@@ -3,12 +3,10 @@
 # | '__| |/ __/ _ \/ __|/ _ \ __|
 # | |  | | (_|  __/\__ \  __/ |_ 
 # |_|  |_|\___\___||___/\___|\__|
-
-
-### ZSH Configuration File
+## ZSH Configuration File
 
 ### "nvim" as manpager
- export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER="nvim -c 'set ft=man' -"
 
 ### navigation
 alias ..='cd ..' 
@@ -73,6 +71,7 @@ alias quicktime='open -a "Quicktime Player" '
 alias book='open -a books'
 alias finder='open -a finder'
 alias code='open -a "Visual Studio Code" '
+alias v='code'
 alias notes='open -a notes'
 
 ### Youtube-dl
@@ -101,8 +100,8 @@ alias external='/volumes/OKONOMIYAKI/external'
 alias zshrc='cd ~ && n .zshrc'
 
 ### Others
-alias l='ls'
-alias lsa='ls -a'
+alias l='ls -l'
+alias lsa='ls -la'
 
 ### Pip
 alias pip='python3 -m pip'
@@ -114,11 +113,10 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 ### New Article
-alias article='cd ~/Blog && code . && cd _posts && t '
+alias article='cd ~/Blog/_posts && t '
 
 ### Tests
-alias te='t test.c'
-alias re='rm test.c'
+alias te='t t.c'
 
 ### Removes executable files
 alias rmexec='find . -perm +100 -type f -delete'
@@ -135,4 +133,17 @@ alias pull='git pull'
 alias push='git push'
 alias all='git add . && git commit -m'
 alias clone='git clone'
+
+###iCloud Drive
+alias icloud='~/Library/Mobile\ Documents/com~apple~CloudDocs/'
+
+### Karabiner
+alias karabiner='cd ~/.config/karabiner && v karabiner.json'
+
+### Images
+function imginfo() {
+    imgcat $1 && sips --getProperty pixelHeight --getProperty pixelWidth $1;
+}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
