@@ -31,5 +31,13 @@
         "**/*.dSYM": true
     },
     "C_Cpp.updateChannel": "Insiders",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "debug.onTaskErrors": "abort",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+    ],
 }
