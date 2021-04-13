@@ -1,7 +1,7 @@
 #       _                    _
 #  _ __(_) ___ ___  ___  ___| |_
 # | '__| |/ __/ _ \/ __|/ _ \ __|
-# | |  | | (_|  __/\__ \  __/ |_ 
+# | |  | | (_|  __/\__ \  __/ |_
 # |_|  |_|\___\___||___/\___|\__|
 ## ZSH Configuration File
 
@@ -9,7 +9,7 @@
 export MANPAGER="nvim -c 'set ft=man' -"
 
 ### navigation
-alias ..='cd ..' 
+alias ..='cd ..'
 alias cd ...='cd ../..'
 alias cd ....='cd ../../..'
 alias cd .....='cd ../../../..'
@@ -40,7 +40,7 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-zinit light jeffreytse/zsh-vi-mode
+# zinit light jeffreytse/zsh-vi-mode
 
 ### Starship:
 eval "$(starship init zsh)"
@@ -146,4 +146,3 @@ function imginfo() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
