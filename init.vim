@@ -1,9 +1,7 @@
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'Raimondi/delimitMate'
-Plug 'crusoexia/vim-monokai'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'ayu-theme/ayu-vim'
+Plug 'tomasiser/vim-code-dark'
 Plug 'mcmartelle/vim-monokai-bold'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -13,13 +11,17 @@ Plug 'Yavor-Ivanov/airline-monokai-subtle.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/AutoComplPop'
-Plug 'severin-lemaignan/vim-minimap'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'Yggdroot/indentLine'
+"Plug 'luochen1990/rainbow'
+"Plug 'Yggdroot/indentLine'
 call plug#end()
+
+" rainbow brackets
+"let g:rainbow_active = 1
 
 " indentLine
 let g:indentLine_char = '⎸'
+
 " Vim devicons
 set encoding=UTF-8
 
@@ -41,8 +43,12 @@ syntax on
 
 set termguicolors  " enable true colors support
 
-colorscheme monokai-bold
-let g:airline_theme='virtualenv'
+set t_Co=256
+set t_ut=
+colorscheme codedark
+let g:airline_theme = 'transparent'
+
+"let g:airline_theme='virtualenv'
 " Transparent
 "let g:airline_theme = 'monokai_subtle'
 
@@ -73,6 +79,18 @@ highlight clear LineNr
 highlight clear SignColumn
 highlight clear CursorLineNR
 
+" Theme
+hi Normal       ctermbg=none  guibg=none
+hi CursorLineNr               guibg=none
+hi EndOfBuffer                guibg=none
+hi Folded                     guibg=none
+hi LineNr       ctermbg=none  guibg=none
+hi SignColumn   ctermbg=none  guibg=none
+
+" airline
+hi airline_c       ctermbg=none guibg=none
+hi airline_tabfill ctermbg=none guibg=none
+
 " Next Line
 inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 
@@ -81,3 +99,5 @@ set noshowmode
 
 " Compile C
 map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+
+hi VertSplit ctermbg=none guibg=none
