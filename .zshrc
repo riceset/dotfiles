@@ -3,7 +3,6 @@
 # | '__| |/ __/ _ \/ __|/ _ \ __|
 # | |  | | (_|  __/\__ \  __/ |_
 # |_|  |_|\___\___||___/\___|\__|
-## ZSH Configuration File
 
 ### "nvim" as manpager
 export MANPAGER="nvim -c 'set ft=man' -"
@@ -146,3 +145,12 @@ function imginfo() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+source $(dirname $(gem which colorls))/tab_complete.sh
+
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.3/bin:$PATH"
+alias lc='colorls -lA --sd'
+
+# vi
+bindkey -v
+export KEYTIMEOUT=1
