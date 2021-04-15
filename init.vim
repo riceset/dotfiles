@@ -10,7 +10,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Yavor-Ivanov/airline-monokai-subtle.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/AutoComplPop'
+"Plug 'vim-scripts/AutoComplPop'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
@@ -97,3 +97,5 @@ hi VertSplit ctermbg=none guibg=none
 
 " Disable trailing[1]
 let g:airline#extensions#whitespace#enabled = 0
+
+let g:jedi#completions_enabled = 0
