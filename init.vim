@@ -14,10 +14,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sainnhe/sonokai'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 " Vim devicons
 set encoding=UTF-8
+
+" Escape insert mode in the terminal
+tnoremap <t> <c-€><c-n>
 
 " Open NERDTree by default
 autocmd VimEnter * NERDTree
@@ -34,6 +38,9 @@ let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
 
 hi! Directory guifg=none ctermfg=none
 
+set laststatus=0
+set noshowcmd
+set cmdheight=1
 set hidden
 set number
 set relativenumber
@@ -68,8 +75,9 @@ nnoremap <c-f> :Ag<space>
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
 
-:set laststatus=0 ruler
-
+set laststatus=0 ruler
+set nosmd
+set noru
 set clipboard=unnamedplus
 
 "language en_US
@@ -294,3 +302,13 @@ highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=1
 highlight GitGutterChangeDelete ctermfg=4
+
+" FLoat term
+hi FloatermBorder guibg=none guifg=none
+
+" Shortcuts
+let g:floaterm_keymap_toggle = '<F7>'
+let g:floaterm_keymap_new    = '<F8>'
+let g:floaterm_keymap_prev   = '<F9>'
+let g:floaterm_keymap_next   = '<F10>'
+
