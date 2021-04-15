@@ -12,15 +12,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-"Plug 'luochen1990/rainbow'
-"Plug 'Yggdroot/indentLine'
 call plug#end()
-
-" rainbow brackets
-"let g:rainbow_active = 1
-
-" indentLine
-let g:indentLine_char = '⎸'
 
 " Vim devicons
 set encoding=UTF-8
@@ -41,11 +33,12 @@ set number
 set relativenumber
 syntax on
 
-set termguicolors  " enable true colors support
+set termguicolors
 
 set t_Co=256
 set t_ut=
 colorscheme codedark
+"colorscheme monokai-bold
 let g:airline_theme = 'transparent'
 
 "let g:airline_theme='virtualenv'

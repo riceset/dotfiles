@@ -10,7 +10,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: 0.87
+background_opacity: 0.9
 font:
   normal:
     family: Hack Nerd Font
@@ -24,7 +24,7 @@ font:
   bold_italic:
     family: Hack Nerd Font
     style: Bold Italic
-  size: 15.5
+  size: 14
   offset:
     x: 0
     y: 0
