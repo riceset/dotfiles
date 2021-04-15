@@ -39,7 +39,7 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-# zinit light jeffreytse/zsh-vi-mode
+zinit light jeffreytse/zsh-vi-mode
 
 ### Starship:
 eval "$(starship init zsh)"
