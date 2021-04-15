@@ -98,7 +98,7 @@ inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : 
 set noshowmode
 
 " Compile C
-map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR>
 
 hi VertSplit ctermbg=none guibg=none
 
