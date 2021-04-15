@@ -97,8 +97,8 @@ alias harvard='~/Harvard-CS50'
 alias music='~/Music/Study'
 alias external='/volumes/OKONOMIYAKI/external'
 alias zshrc='cd ~ && n .zshrc'
-alias vim='cd ~/.config/nvim/ && nvim init.vim'
-alias ala='cd ~/.config/alacritty/ && nvim alacritty.yml'
+alias initvim='cd ~/.config/nvim/ && nvim init.vim'
+alias alacritty='cd ~/.config/alacritty/ && nvim alacritty.yml'
 
 
 ### Others

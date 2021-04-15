@@ -13,6 +13,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'vim-scripts/AutoComplPop'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sainnhe/sonokai'
 call plug#end()
 
 " Vim devicons
@@ -29,6 +30,10 @@ let g:NERDTreeWinSize=22
 " Removes help message
 let NERDTreeMinimalUI=1
 
+let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
+
+hi! Directory guifg=none ctermfg=none
+
 set hidden
 set number
 set relativenumber
@@ -38,7 +43,8 @@ set termguicolors
 
 set t_Co=256
 set t_ut=
-colorscheme codedark
+colorscheme sonokai
+"colorscheme codedark
 "colorscheme monokai-bold
 let g:airline_theme = 'transparent'
 
@@ -268,5 +274,23 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" Transparent Coc
+" Transparent completion
 highlight Pmenu ctermbg=NONE guibg=NONE
+
+" left symbols transparent
+hi! CocErrorSign  ctermfg=none guifg=none guibg=none
+hi! CocWarningSign  ctermfg=none guifg=none guibg=none
+hi! CocInfoSign ctermfg=none guifg=none guibg=none
+hi! CocHintSign  ctermfg=none guifg=none guibg=none
+
+" transparent floating error/info/warning
+hi CocInfoFloat guifg=none guibg=none
+hi CocErrorFloat guifg=none guibg=none
+hi CocWarningFloat guifg=none guibg=none
+hi CocHintFloat guifg=none guibg=none
+
+" Gutter + - ~
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
+highlight GitGutterChangeDelete ctermfg=4
