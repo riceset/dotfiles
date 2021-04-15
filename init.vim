@@ -101,3 +101,6 @@ set noshowmode
 map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 hi VertSplit ctermbg=none guibg=none
+
+" Disable trailing[1]
+let g:airline#extensions#whitespace#enabled = 0
