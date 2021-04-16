@@ -1,20 +1,20 @@
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'Raimondi/delimitMate'
-Plug 'tomasiser/vim-code-dark'
-Plug 'mcmartelle/vim-monokai-bold'
+"Plug 'tomasiser/vim-code-dark'
+"Plug 'mcmartelle/vim-monokai-bold'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'Yavor-Ivanov/airline-monokai-subtle.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-"Plug 'vim-scripts/AutoComplPop'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sainnhe/sonokai'
 Plug 'voldikss/vim-floaterm'
+Plug 'tpope/vim-commentary'
+Plug 'bluz71/vim-nightfly-guicolors'
 call plug#end()
 
 " Vim devicons
@@ -34,7 +34,8 @@ let g:NERDTreeWinSize=22
 " Removes help message
 let NERDTreeMinimalUI=1
 
-let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
+" Removes Path
+"let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
 
 hi! Directory guifg=none ctermfg=none
 
@@ -58,8 +59,13 @@ let g:sonokai_menu_selection_background = 'black'
 let g:sonokai_sign_column_background = 'none'
 let g:sonokai_current_word = 'bold'
 let g:sonokai_disable_italic_comment = 1
+"colorscheme sonokai
 
-colorscheme sonokai
+let g:nightflyCursorColor = 1
+let g:nightflyUnderlineMatchParen = 1
+set background=dark
+colorscheme nightfly
+
 "colorscheme codedark
 "colorscheme monokai-bold
 let g:airline_theme = 'transparent'
@@ -88,7 +94,7 @@ set nosmd
 set noru
 set clipboard=unnamedplus
 
-"language en_US
+language en_US
 
 " Transparency
 highlight clear LineNr
@@ -291,7 +297,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Transparent completion
-highlight Pmenu ctermbg=NONE guibg=black
+highlight Pmenu ctermbg=NONE guibg=none
 
 " left symbols transparent
 hi! CocErrorSign  ctermfg=none guifg=none guibg=none

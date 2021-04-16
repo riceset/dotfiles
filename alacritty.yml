@@ -13,18 +13,18 @@ scrolling:
 background_opacity: 0.9
 font:
   normal:
-    family: Hack iCursive S12
+    family: Hack Nerd Font
     style: Regular
   bold:
-    family: Hack iCursive S12
+    family: Hack Nerd Font
     style: Bold
   italic:
-    family: Hack iCursive S12
+    family: Hack Nerd Font
     style: Italic
   bold_italic:
-    family: Hack iCursive S12
+    family: Hack Nerd Font
     style: Bold Italic
-  size: 14
+  size: 16
   offset:
     x: 0
     y: 0
@@ -40,33 +40,79 @@ colors:
     foreground: '#c5c8c6'
 
 # Colors (Ayu Dark)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '#0A0E14'
+#     foreground: '#B3B1AD'
+
+#   # Normal colors
+#   normal:
+#     black: '#01060E'
+#     red: '#EA6C73'
+#     green: '#91B362'
+#     yellow: '#F9AF4F'
+#     blue: '#53BDFA'
+#     magenta: '#FAE994'
+#     cyan: '#90E1C6'
+#     white: '#C7C7C7'
+
+#   # Bright colors
+#   bright:
+#     black: '#686868'
+#     red: '#F07178'
+#     green: '#C2D94C'
+#     yellow: '#FFB454'
+#     blue: '#59C2FF'
+#     magenta: '#FFEE99'
+#     cyan: '#95E6CB'
+#     white: '#FFFFFF'
+
+
+
+
+draw_bold_text_with_bright_colors: true
+
+# Colors
 colors:
   # Default colors
   primary:
-    background: '#0A0E14'
-    foreground: '#B3B1AD'
+    background:        '#011627'
+    foreground:        '#acb4c2'
+    bright_foreground: '#eeeeee'
+
+  # Cursor colors
+  cursor:
+    text:   '#080808'
+    cursor: '#9ca1aa'
+
+  # Selection colors
+  selection:
+    text:       '#080808'
+    background: '#b2ceee'
 
   # Normal colors
   normal:
-    black: '#01060E'
-    red: '#EA6C73'
-    green: '#91B362'
-    yellow: '#F9AF4F'
-    blue: '#53BDFA'
-    magenta: '#FAE994'
-    cyan: '#90E1C6'
-    white: '#C7C7C7'
+    black:   '#1d3b53'
+    red:     '#fc514e'
+    green:   '#a1cd5e'
+    yellow:  '#e3d18a'
+    blue:    '#82aaff'
+    magenta: '#c792ea'
+    cyan:    '#7fdbca'
+    white:   '#a1aab8'
 
   # Bright colors
   bright:
-    black: '#686868'
-    red: '#F07178'
-    green: '#C2D94C'
-    yellow: '#FFB454'
-    blue: '#59C2FF'
-    magenta: '#FFEE99'
-    cyan: '#95E6CB'
-    white: '#FFFFFF'
+    black:   '#7c8f8f'
+    red:     '#ff5874'
+    green:   '#21c7a8'
+    yellow:  '#ecc48d'
+    blue:    '#82aaff'
+    magenta: '#ae81ff'
+    cyan:    '#7fdbca'
+    white:   '#d6deeb'
+
 
     # Bright and dim foreground colors
     #

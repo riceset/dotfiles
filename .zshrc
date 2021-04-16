@@ -70,8 +70,21 @@ alias quicktime='open -a "Quicktime Player" '
 alias book='open -a books'
 alias finder='open -a finder'
 alias code='open -a "Visual Studio Code" '
-alias v='code'
 alias notes='open -a notes'
+
+### ls
+alias ls='lsd --group-dirs first'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+### cat
+alias cat='bat'
+
+### Useful
+alias mv="mv -iv"
+alias cp="cp -riv"
 
 ### Youtube-dl
 alias videodl='youtube-dl -f best '
@@ -99,11 +112,6 @@ alias external='/volumes/OKONOMIYAKI/external'
 alias zshrc='cd ~ && n .zshrc'
 alias initvim='cd ~/.config/nvim/ && nvim init.vim'
 alias alacritty='cd ~/.config/alacritty/ && nvim alacritty.yml'
-
-
-### Others
-alias l='ls -l'
-alias lsa='ls -la'
 
 ### Pip
 alias pip='python3 -m pip'
