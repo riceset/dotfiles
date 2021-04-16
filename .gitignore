@@ -1,3 +1,5 @@
 .config/nvim/plugged/AutoComplPop
 .config/karabiner
 .config/coc
+.config/configstore
+.config/gtk-2.0
