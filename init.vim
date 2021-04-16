@@ -35,7 +35,7 @@ let g:NERDTreeWinSize=22
 let NERDTreeMinimalUI=1
 
 " Removes Path
-"let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
+let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
 
 hi! Directory guifg=none ctermfg=none
 
@@ -61,10 +61,11 @@ let g:sonokai_current_word = 'bold'
 let g:sonokai_disable_italic_comment = 1
 "colorscheme sonokai
 
+colorscheme nightfly
 let g:nightflyCursorColor = 1
 let g:nightflyUnderlineMatchParen = 1
+let g:nightflyTransparent = 1
 set background=dark
-colorscheme nightfly
 
 "colorscheme codedark
 "colorscheme monokai-bold
@@ -97,9 +98,9 @@ set clipboard=unnamedplus
 language en_US
 
 " Transparency
-highlight clear LineNr
-highlight clear SignColumn
-highlight clear CursorLineNR
+"highlight clear LineNr
+"highlight clear SignColumn
+"highlight clear CursorLineNR
 
 " Theme
 hi Normal       ctermbg=none  guibg=none

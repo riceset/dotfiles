@@ -8,10 +8,11 @@
 export MANPAGER="nvim -c 'set ft=man' -"
 
 ### navigation
-alias ..='cd ..'
-alias cd ...='cd ../..'
-alias cd ....='cd ../../..'
-alias cd .....='cd ../../../..'
+alias dl="cd ~/Downloads"
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
 
 ### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
