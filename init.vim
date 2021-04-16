@@ -50,13 +50,21 @@ set termguicolors
 
 set t_Co=256
 set t_ut=
+
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_transparent_background = 1
+let g:sonokai_menu_selection_background = 'black'
+let g:sonokai_sign_column_background = 'none'
+let g:sonokai_current_word = 'bold'
+let g:sonokai_disable_italic_comment = 1
+
 colorscheme sonokai
 "colorscheme codedark
 "colorscheme monokai-bold
 let g:airline_theme = 'transparent'
 
 "let g:airline_theme='virtualenv'
-" Transparent
 "let g:airline_theme = 'monokai_subtle'
 
 hi Normal guibg=NONE ctermbg=NONE
@@ -283,7 +291,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Transparent completion
-highlight Pmenu ctermbg=NONE guibg=NONE
+highlight Pmenu ctermbg=NONE guibg=black
 
 " left symbols transparent
 hi! CocErrorSign  ctermfg=none guifg=none guibg=none
@@ -307,8 +315,10 @@ highlight GitGutterChangeDelete ctermfg=4
 hi FloatermBorder guibg=none guifg=none
 
 " Shortcuts
-let g:floaterm_keymap_toggle = '<F7>'
-let g:floaterm_keymap_new    = '<F8>'
-let g:floaterm_keymap_prev   = '<F9>'
-let g:floaterm_keymap_next   = '<F10>'
+let g:floaterm_keymap_toggle = '<F2>'
+let g:floaterm_keymap_new    = '<F12>'
+let g:floaterm_keymap_prev   = '<F10>'
+let g:floaterm_keymap_next   = '<F11>'
 
+" stop highlighting matching parenthesis
+"hi! MatchParen cterm=NONE gui=NONE guibg=NONE guifg=NONE
