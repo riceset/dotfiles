@@ -3,3 +3,4 @@
 .config/coc
 .config/configstore
 .config/gtk-2.0
+.config/nvim/plugged
