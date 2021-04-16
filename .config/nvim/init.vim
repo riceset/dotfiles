@@ -16,7 +16,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 Plug 'bluz71/vim-nightfly-guicolors'
 call plug#end()
-
+" test
 " Vim devicons
 set encoding=UTF-8
 
