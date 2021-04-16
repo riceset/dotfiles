@@ -63,12 +63,8 @@ export PATH="/usr/local/sbin:$PATH"
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 ### Media
-alias preview='open -a preview'
-alias jpg='open -a preview *jpg'
-alias png='open -a preview *png'
-alias jpeg='open -a preview *jpeg'
-alias quicktime='open -a "Quicktime Player" '
-alias book='open -a books'
+alias photo='open -a preview'
+alias video='open -a "Quicktime Player" '
 alias finder='open -a finder'
 alias code='open -a "Visual Studio Code" '
 alias notes='open -a notes'
@@ -113,6 +109,8 @@ alias external='/volumes/OKONOMIYAKI/external'
 alias zshrc='cd ~ && n .zshrc'
 alias initvim='cd ~/.config/nvim/ && nvim init.vim'
 alias alacritty='cd ~/.config/alacritty/ && nvim alacritty.yml'
+alias icloud='~/Library/Mobile\ Documents/com~apple~CloudDocs/'
+alias karabiner='cd ~/.config/karabiner && v karabiner.json'
 
 ### Pip
 alias pip='python3 -m pip'
@@ -120,15 +118,11 @@ alias pip='python3 -m pip'
 ### touch and open a file on VSCode
 t() { [[ ! -f "$1" ]] && touch "$1"; code "$1"; }
 
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-
 ### New Article
-alias article='cd ~/Blog/_posts && t '
+alias article='cd ~/Blog/_posts'
 
 ### Removes executable files
 alias rmexec='find . -perm +100 -type f -delete'
-
 alias cldir='rmexec && rm -rf *.dSYM'
 
 ### Git
@@ -142,21 +136,14 @@ alias push='git push'
 alias all='git add . && git commit -m'
 alias clone='git clone'
 
-###iCloud Drive
-alias icloud='~/Library/Mobile\ Documents/com~apple~CloudDocs/'
-
-### Karabiner
-alias karabiner='cd ~/.config/karabiner && v karabiner.json'
-
+# iTerm
 ### Images
 function imginfo() {
     imgcat $1 && sips --getProperty pixelHeight --getProperty pixelWidth $1;
 }
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 source $(dirname $(gem which colorls))/tab_complete.sh
-
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.3/bin:$PATH"
 alias lc='colorls -lA --sd'
 
@@ -170,8 +157,7 @@ export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"
 # compile and run
 r() { [[ ! -f "$1" ]] && make "$1"; ./$1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15 $16 $17 $18 $19 $20 $21 $22 $23 $24 $25 $26 $27 $28 $29 $30 $31 $32 $33 $34 $35 $36 $37 $38 $39 $40 $41 $42 $43 $44 $45 $46 $47 $48 $49 $50; rm -rf $1.dSYM}
 
-# git shortcut
-
+# git lazy shortcut
 function lazy() {
     git add .
     git commit -a -m "$1"
@@ -179,3 +165,5 @@ function lazy() {
 }
 
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"

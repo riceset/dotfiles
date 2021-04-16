@@ -16,64 +16,20 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 Plug 'bluz71/vim-nightfly-guicolors'
 call plug#end()
-" test
-" Vim devicons
-set encoding=UTF-8
 
-" Escape insert mode in the terminal
-tnoremap <t> <c-€><c-n>
-
-" Open NERDTree by default
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-
-" Quits nerd tree when quitting vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" window size
-let g:NERDTreeWinSize=22
-" Removes help message
-let NERDTreeMinimalUI=1
-
-" Removes Path
-let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
-
-hi! Directory guifg=none ctermfg=none
-
+syntax on
+set noshowmode "Hides bottom text INSERT etc
+set encoding=UTF-8 " Vim devicons
 set laststatus=0
 set noshowcmd
 set cmdheight=1
 set hidden
 set number
 set relativenumber
-syntax on
-
 set termguicolors
-
 set t_Co=256
 set t_ut=
-
-let g:sonokai_style = 'andromeda'
-let g:sonokai_enable_italic = 1
-let g:sonokai_transparent_background = 1
-let g:sonokai_menu_selection_background = 'black'
-let g:sonokai_sign_column_background = 'none'
-let g:sonokai_current_word = 'bold'
-let g:sonokai_disable_italic_comment = 1
-"colorscheme sonokai
-
-colorscheme nightfly
-let g:nightflyCursorColor = 1
-let g:nightflyUnderlineMatchParen = 1
-let g:nightflyTransparent = 1
-set background=dark
-
-"colorscheme codedark
-"colorscheme monokai-bold
-let g:airline_theme = 'transparent'
-
-"let g:airline_theme='virtualenv'
-"let g:airline_theme = 'monokai_subtle'
-
+hi! Directory guifg=none ctermfg=none
 hi Normal guibg=NONE ctermbg=NONE
 set inccommand=split
 set clipboard=unnamed
@@ -81,23 +37,49 @@ set hlsearch
 set expandtab
 set shiftwidth=2
 let mapleader="\<space>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
+set laststatus=0 ruler
+set nosmd
+set noru
+set clipboard=unnamedplus
+language en_US
+
+" Themes
+colorscheme nightfly
+"colorscheme sonokai
+"colorscheme codedark
+"colorscheme monokai-bold
+
+" Airline Themes
+let g:airline_theme = 'transparent'
+"let g:airline_theme='virtualenv'
+"let g:airline_theme = 'monokai_subtle'
+
+" Sonokai
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_transparent_background = 1
+let g:sonokai_menu_selection_background = 'black'
+let g:sonokai_sign_column_background = 'none'
+let g:sonokai_current_word = 'bold'
+let g:sonokai_disable_italic_comment = 1
+
+" Nightfly
+let g:nightflyCursorColor = 1
+let g:nightflyUnderlineMatchParen = 1
+let g:nightflyTransparent = 1
+set background=dark
+
 
 nnoremap <leader>; A;<esc>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <c-p> :Files<cr>
 nnoremap <c-f> :Ag<space>
 
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
-
-set laststatus=0 ruler
-set nosmd
-set noru
-set clipboard=unnamedplus
-
-language en_US
-
 " Transparency
+
+" Line Transparency
 "highlight clear LineNr
 "highlight clear SignColumn
 "highlight clear CursorLineNR
@@ -117,9 +99,6 @@ hi airline_tabfill ctermbg=none guibg=none
 " Next Line
 inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 
-" Hides bottom text INSERT etc
-set noshowmode
-
 " Compile C
 map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR>
 
@@ -129,6 +108,58 @@ hi VertSplit ctermbg=none guibg=none
 let g:airline#extensions#whitespace#enabled = 0
 
 let g:jedi#completions_enabled = 0
+
+" Transparent completion
+highlight Pmenu ctermbg=NONE guibg=none
+
+" left symbols transparent
+hi! CocErrorSign  ctermfg=none guifg=none guibg=none
+hi! CocWarningSign  ctermfg=none guifg=none guibg=none
+hi! CocInfoSign ctermfg=none guifg=none guibg=none
+hi! CocHintSign  ctermfg=none guifg=none guibg=none
+
+" transparent floating error/info/warning
+hi CocInfoFloat guifg=none guibg=none
+hi CocErrorFloat guifg=none guibg=none
+hi CocWarningFloat guifg=none guibg=none
+hi CocHintFloat guifg=none guibg=none
+
+" Gutter + - ~
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
+highlight GitGutterChangeDelete ctermfg=4
+
+" FLoat term
+hi FloatermBorder guibg=none guifg=none
+
+" Shortcuts
+let g:floaterm_keymap_toggle = '<F2>'
+let g:floaterm_keymap_new    = '<F12>'
+let g:floaterm_keymap_prev   = '<F10>'
+let g:floaterm_keymap_next   = '<F11>'
+
+" stop highlighting matching parenthesis
+"hi! MatchParen cterm=NONE gui=NONE guibg=NONE guifg=NONE
+
+
+" NERDTree
+
+" Open NERDTree by default
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+" Quits nerd tree when quitting vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" window size
+let g:NERDTreeWinSize=22
+
+" Removes help message
+let NERDTreeMinimalUI=1
+
+" Removes Path
+let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
 
 " coc
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
@@ -297,35 +328,3 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" Transparent completion
-highlight Pmenu ctermbg=NONE guibg=none
-
-" left symbols transparent
-hi! CocErrorSign  ctermfg=none guifg=none guibg=none
-hi! CocWarningSign  ctermfg=none guifg=none guibg=none
-hi! CocInfoSign ctermfg=none guifg=none guibg=none
-hi! CocHintSign  ctermfg=none guifg=none guibg=none
-
-" transparent floating error/info/warning
-hi CocInfoFloat guifg=none guibg=none
-hi CocErrorFloat guifg=none guibg=none
-hi CocWarningFloat guifg=none guibg=none
-hi CocHintFloat guifg=none guibg=none
-
-" Gutter + - ~
-highlight GitGutterAdd ctermfg=2
-highlight GitGutterChange ctermfg=3
-highlight GitGutterDelete ctermfg=1
-highlight GitGutterChangeDelete ctermfg=4
-
-" FLoat term
-hi FloatermBorder guibg=none guifg=none
-
-" Shortcuts
-let g:floaterm_keymap_toggle = '<F2>'
-let g:floaterm_keymap_new    = '<F12>'
-let g:floaterm_keymap_prev   = '<F10>'
-let g:floaterm_keymap_next   = '<F11>'
-
-" stop highlighting matching parenthesis
-"hi! MatchParen cterm=NONE gui=NONE guibg=NONE guifg=NONE
