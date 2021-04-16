@@ -1,0 +1,1 @@
+/Users/riceset/.fzf/shell/key-bindings.fish
