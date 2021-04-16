@@ -15,7 +15,14 @@ Plug 'sainnhe/sonokai'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/tagbar'
+"Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
+
+"lua require'plug-colorizer'
 
 syntax on
 set noshowmode "Hides bottom text INSERT etc
@@ -51,6 +58,11 @@ colorscheme nightfly
 "colorscheme codedark
 "colorscheme monokai-bold
 
+let g:nightflyUnderlineMatchParen = 1
+let g:nightflyCursorColor = 1
+let g:nightflyTransparent = 1
+highlight SpecialKey ctermbg=none
+
 " Airline Themes
 let g:airline_theme = 'transparent'
 "let g:airline_theme='virtualenv'
@@ -71,7 +83,6 @@ let g:nightflyUnderlineMatchParen = 1
 let g:nightflyTransparent = 1
 set background=dark
 
-
 nnoremap <leader>; A;<esc>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <c-p> :Files<cr>
@@ -90,7 +101,18 @@ hi CursorLineNr               guibg=none
 hi EndOfBuffer                guibg=none
 hi Folded                     guibg=none
 hi LineNr       ctermbg=none  guibg=none
+
+hi TabLineFill ctermbg=none
 hi SignColumn   ctermbg=none  guibg=none
+highlight NonText ctermbg=none
+hi TabLineFill guibg=none ctermbg=none
+
+hi BufferInactive guibg=none
+hi BufferInactiveMod guibg=none
+hi StatusLine guibg=none
+hi StatusLineNC guibg=none
+hi StatusLineTerm guibg=none
+hi StatusLineTermNC guibg=none
 
 " airline
 hi airline_c       ctermbg=none guibg=none
@@ -110,7 +132,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:jedi#completions_enabled = 0
 
 " Transparent completion
-highlight Pmenu ctermbg=NONE guibg=none
+highlight Pmenu ctermbg=NONE guibg=black
 
 " left symbols transparent
 hi! CocErrorSign  ctermfg=none guifg=none guibg=none
@@ -119,10 +141,10 @@ hi! CocInfoSign ctermfg=none guifg=none guibg=none
 hi! CocHintSign  ctermfg=none guifg=none guibg=none
 
 " transparent floating error/info/warning
-hi CocInfoFloat guifg=none guibg=none
-hi CocErrorFloat guifg=none guibg=none
-hi CocWarningFloat guifg=none guibg=none
-hi CocHintFloat guifg=none guibg=none
+hi CocInfoFloat guifg=none guibg=black
+hi CocErrorFloat guifg=none guibg=black
+hi CocWarningFloat guifg=none guibg=black
+hi CocHintFloat guifg=none guibg=black
 
 " Gutter + - ~
 highlight GitGutterAdd ctermfg=2
@@ -143,23 +165,29 @@ let g:floaterm_keymap_next   = '<F11>'
 "hi! MatchParen cterm=NONE gui=NONE guibg=NONE guifg=NONE
 
 
-" NERDTree
+" NERDTree & Tagbar
 
-" Open NERDTree by default
+" Open by default
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+autocmd VimEnter * Tagbar
+
 
 " Quits nerd tree when quitting vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+let g:is_tagbar=0
+
 " window size
 let g:NERDTreeWinSize=22
+let g:tagbar_width=22
 
 " Removes help message
 let NERDTreeMinimalUI=1
+let g:tagbar_compact=1
 
 " Removes Path
-let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
+"let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
 
 " coc
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some

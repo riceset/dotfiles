@@ -1,0 +1,6 @@
+# Basic Settings
+set preview true
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
