@@ -19,6 +19,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/tagbar'
+"Plug '907th/vim-auto-save'
 "Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
@@ -128,9 +129,9 @@ hi Repeat cterm=italic gui=italic
 hi CocFloating       ctermbg=none guibg=none
 hi ColorColumn       ctermbg=none guibg=none
 hi NormalFloat       ctermbg=none guibg=none
-hi CursorColumn       ctermbg=none guibg=none
-hi CursorLine       ctermbg=none guibg=none
-hi TabLine       ctermbg=none guibg=none
+hi CursorColumn      ctermbg=none guibg=none
+hi CursorLine        ctermbg=none guibg=none
+hi TabLine           ctermbg=none guibg=none
 
 " airline
 hi airline_c       ctermbg=none guibg=none
@@ -212,6 +213,9 @@ let g:tagbar_compact=1
 
 " Removes Path
 "let NERDTreeStatusline="%{matchstr(getline('.'), '€€s€€zs€€w€€(.*€€)')}"
+
+" Autosave
+let g:auto_save = 1
 
 " coc
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some

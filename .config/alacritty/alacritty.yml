@@ -13,12 +13,12 @@ scrolling:
 background_opacity: 0.9
 font:
   normal:
-    # family: Hack Nerd Font
-    family: Hack iCursive S12
+    family: Hack Nerd Font
+    # family: Hack iCursive S12
     style: Regular
   bold:
-    # family: Hack Nerd Font
-    family: Hack iCursive S12
+    family: Hack Nerd Font
+    # family: Hack iCursive S12
     style: Bold
   italic:
     # family: Hack Nerd Font
