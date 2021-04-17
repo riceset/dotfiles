@@ -160,7 +160,7 @@ r() { [[ ! -f "$1" ]] && make "$1"; ./$1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13
 # git lazy shortcut
 function lazy() {
     git add .
-    git commit -a -m "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15"
+    git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10"
     git push
 }
 
