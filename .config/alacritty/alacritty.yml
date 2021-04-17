@@ -13,16 +13,20 @@ scrolling:
 background_opacity: 0.9
 font:
   normal:
-    family: Hack Nerd Font
+    # family: Hack Nerd Font
+    family: Hack iCursive S12
     style: Regular
   bold:
-    family: Hack Nerd Font
+    # family: Hack Nerd Font
+    family: Hack iCursive S12
     style: Bold
   italic:
-    family: Hack Nerd Font
+    # family: Hack Nerd Font
+    family: Hack iCursive S12
     style: Italic
   bold_italic:
-    family: Hack Nerd Font
+    # family: Hack Nerd Font
+    family: Hack iCursive S12
     style: Bold Italic
   size: 15
   offset:
@@ -34,51 +38,12 @@ font:
 
 draw_bold_text_with_bright_colors: true
 
-colors:
-  primary:
-    background: '#1d1f21'
-    foreground: '#c5c8c6'
-
-# Colors (Ayu Dark)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '#0A0E14'
-#     foreground: '#B3B1AD'
-
-#   # Normal colors
-#   normal:
-#     black: '#01060E'
-#     red: '#EA6C73'
-#     green: '#91B362'
-#     yellow: '#F9AF4F'
-#     blue: '#53BDFA'
-#     magenta: '#FAE994'
-#     cyan: '#90E1C6'
-#     white: '#C7C7C7'
-
-#   # Bright colors
-#   bright:
-#     black: '#686868'
-#     red: '#F07178'
-#     green: '#C2D94C'
-#     yellow: '#FFB454'
-#     blue: '#59C2FF'
-#     magenta: '#FFEE99'
-#     cyan: '#95E6CB'
-#     white: '#FFFFFF'
-
-
-
-
-draw_bold_text_with_bright_colors: true
-
 # Colors
 colors:
   # Default colors
   primary:
-    background:        '#011627'
-    foreground:        '#acb4c2'
+    background:        '0x0f1419'
+    foreground:        '0xe6e1cf'
     bright_foreground: '#eeeeee'
 
   # Cursor colors
@@ -112,7 +77,6 @@ colors:
     magenta: '#ae81ff'
     cyan:    '#7fdbca'
     white:   '#d6deeb'
-
 
     # Bright and dim foreground colors
     #

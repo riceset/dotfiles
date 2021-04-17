@@ -53,7 +53,7 @@ icons:
   theme: fancy
   # Separator between icon and the name
   # Default to 1 space
-  separator: '  '
+  separator: ' '
 
 
 # == Ignore Globs ==

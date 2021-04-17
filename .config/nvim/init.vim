@@ -53,8 +53,8 @@ set clipboard=unnamedplus
 language en_US
 
 " Themes
-colorscheme nightfly
-"colorscheme sonokai
+"colorscheme nightfly
+colorscheme sonokai
 "colorscheme codedark
 "colorscheme monokai-bold
 
@@ -114,6 +114,24 @@ hi StatusLineNC guibg=none
 hi StatusLineTerm guibg=none
 hi StatusLineTermNC guibg=none
 
+
+" Italics
+
+hi Conditional cterm=italic gui=italic
+hi Include cterm=italic gui=italic
+hi Statement cterm=italic gui=italic
+hi Macro cterm=italic gui=italic
+hi Repeat cterm=italic gui=italic
+
+" Transparency
+
+hi CocFloating       ctermbg=none guibg=none
+hi ColorColumn       ctermbg=none guibg=none
+hi NormalFloat       ctermbg=none guibg=none
+hi CursorColumn       ctermbg=none guibg=none
+hi CursorLine       ctermbg=none guibg=none
+hi TabLine       ctermbg=none guibg=none
+
 " airline
 hi airline_c       ctermbg=none guibg=none
 hi airline_tabfill ctermbg=none guibg=none
@@ -128,7 +146,7 @@ let program = @%
 "map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR> " Runs on vim
 
 " Runs inside floaterm
-map <C-l> :w <CR> :!clang % -lcs50 <CR> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
+map <F7> :w <CR> :!clang % -lcs50 <CR> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
 
 hi VertSplit ctermbg=none guibg=none
 
