@@ -22,7 +22,7 @@ fi
 
 ### Oh my zsh
 export ZSH="/Users/riceset/.oh-my-zsh"
-plugins=(git)
+plugins=(git zsh-z)
 source $ZSH/oh-my-zsh.sh
 
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
