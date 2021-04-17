@@ -159,9 +159,15 @@ r() { [[ ! -f "$1" ]] && make "$1"; ./$1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13
 
 # git lazy shortcut
 function lazy() {
-    git add .
-    git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10"
-    git push
+    git add .;
+    git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10";
+    git push;
+}
+
+function cl()
+{
+    clear;
+    PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=4 PF_COL3=2 /usr/local/bin/pfetch
 }
 
 export PATH=/usr/local/share/npm/bin:$PATH

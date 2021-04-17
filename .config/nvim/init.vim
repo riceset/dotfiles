@@ -133,6 +133,13 @@ hi CursorColumn      ctermbg=none guibg=none
 hi CursorLine        ctermbg=none guibg=none
 hi TabLine           ctermbg=none guibg=none
 
+" hi airline_warning_red           ctermbg=none guibg=none
+" hi airline_warning_bold          ctermbg=none guibg=none
+" hi airline_warning               ctermbg=none guibg=none
+" hi airline_error                 ctermbg=none guibg=none
+" hi airline_error_bold            ctermbg=none guibg=none
+" hi airline_error_red             ctermbg=none guibg=none
+
 " airline
 hi airline_c       ctermbg=none guibg=none
 hi airline_tabfill ctermbg=none guibg=none
@@ -157,7 +164,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:jedi#completions_enabled = 0
 
 " Transparent completion
-highlight Pmenu ctermbg=NONE guibg=black
+highlight Pmenu ctermbg=NONE guibg=none
 
 " left symbols transparent
 hi! CocErrorSign  ctermfg=none guifg=none guibg=none
@@ -166,10 +173,10 @@ hi! CocInfoSign ctermfg=none guifg=none guibg=none
 hi! CocHintSign  ctermfg=none guifg=none guibg=none
 
 " transparent floating error/info/warning
-hi CocInfoFloat guifg=none guibg=black
-hi CocErrorFloat guifg=none guibg=black
-hi CocWarningFloat guifg=none guibg=black
-hi CocHintFloat guifg=none guibg=black
+hi CocInfoFloat guifg=none guibg=none
+hi CocErrorFloat guifg=none guibg=none
+hi CocWarningFloat guifg=none guibg=none
+hi CocHintFloat guifg=none guibg=none
 
 " Gutter + - ~
 highlight GitGutterAdd ctermfg=2
