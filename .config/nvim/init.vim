@@ -121,8 +121,14 @@ hi airline_tabfill ctermbg=none guibg=none
 " Next Line
 inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 
+let program = @%
+
 " Compile C
-map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR>
+
+"map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR> " Runs on vim
+
+" Runs inside floaterm
+map <C-l> :w <CR> :!clang % -lcs50 <CR> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
 
 hi VertSplit ctermbg=none guibg=none
 
@@ -158,8 +164,8 @@ hi FloatermBorder guibg=none guifg=none
 " Shortcuts
 let g:floaterm_keymap_toggle = '<F2>'
 let g:floaterm_keymap_new    = '<F12>'
-let g:floaterm_keymap_prev   = '<F10>'
-let g:floaterm_keymap_next   = '<F11>'
+let g:floaterm_keymap_prev   = '<F9>'
+let g:floaterm_keymap_next   = '<F10>'
 
 " stop highlighting matching parenthesis
 "hi! MatchParen cterm=NONE gui=NONE guibg=NONE guifg=NONE
