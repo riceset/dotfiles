@@ -31,10 +31,10 @@ font:
   size: 15
   offset:
     x: 0
-    y: 0
+    y: 3
   glyph_offset:
     x: 0
-    y: 0
+    y: 3
 
 draw_bold_text_with_bright_colors: true
 
