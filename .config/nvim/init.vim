@@ -154,7 +154,7 @@ let program = @%
 "map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR> " Runs on vim
 
 " Runs inside floaterm
-map <F7> :w <CR> :!clang % -lcs50 <CR> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
+nmap <C-l> :w <CR> :!clang % -lcs50 <CR> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
 
 hi VertSplit ctermbg=none guibg=none
 
