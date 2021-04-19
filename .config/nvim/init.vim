@@ -31,13 +31,7 @@ Plug 'junegunn/fzf.vim'
 "Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
-"   ____             __ _                       _   _
-"  / ___|___  _ __  / _(_) __ _ _   _ _ __ __ _| |_(_) ___  _ __
-" | |   / _ \| '_ \| |_| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \
-" | |__| (_) | | | |  _| | (_| | |_| | | | (_| | |_| | (_) | | | |
-"  \____\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|
-"                         |___/
-
+" CONFIG
 
 " Basic Config
 syntax on
@@ -98,12 +92,7 @@ nmap <C-k> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
 " Autosave
 let g:auto_save = 1
 
-"  _____ _
-" |_   _| |__   ___ _ __ ___   ___
-"   | | | '_ \ / _ \ '_ ` _ \ / _ \
-"   | | | | | |  __/ | | | | |  __/
-"   |_| |_| |_|\___|_| |_| |_|\___|
-
+" THEME
 
 " Selection
 colorscheme sonokai
@@ -149,7 +138,7 @@ hi Repeat cterm=italic gui=italic
 let g:airline#extensions#whitespace#enabled = 0
 let g:jedi#completions_enabled = 0
 
-" Transparency
+" TRANSPARENCY
 
 hi CocFloating       ctermbg=none guibg=none
 hi ColorColumn       ctermbg=none guibg=none
@@ -199,13 +188,7 @@ hi StatusLineNC guibg=none
 hi StatusLineTerm guibg=none
 hi StatusLineTermNC guibg=none
 
-
-"   ___ _____ _   _ _____ ____  ____
-"  / _ \_   _| | | | ____|  _ \/ ___|
-" | | | || | | |_| |  _| | |_) \___ \
-" | |_| || | |  _  | |___|  _ < ___) |
-"  \___/ |_| |_| |_|_____|_| \_\____/
-
+" OTHERS
 
 " NERDTree
 
