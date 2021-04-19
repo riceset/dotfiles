@@ -93,7 +93,8 @@ colors:
   #
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  # cursor:
+  cursor:
+    unfocused_hollow: true
   #  text: CellBackground
   #  cursor: CellForeground
 

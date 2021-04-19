@@ -40,7 +40,7 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-zinit light jeffreytse/zsh-vi-mode
+#zinit light jeffreytse/zsh-vi-mode
 
 ### Starship:
 eval "$(starship init zsh)"
@@ -147,8 +147,8 @@ export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.3/bin:$PATH"
 alias lc='colorls -lA --sd'
 
 # zsh vi mode
-#bindkey -v
-#export KEYTIMEOUT=1
+bindkey -v
+export KEYTIMEOUT=1
 
 # make
 export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"
@@ -163,7 +163,7 @@ function lazy() {
     git push;
 }
 
-function cl()
+function c()
 {
     clear;
     PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=4 PF_COL3=2 /usr/local/bin/pfetch

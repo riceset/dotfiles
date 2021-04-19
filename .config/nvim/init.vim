@@ -19,7 +19,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/tagbar'
-"Plug '907th/vim-auto-save'
+Plug '907th/vim-auto-save'
 "Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
@@ -154,7 +154,8 @@ let program = @%
 "map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR> " Runs on vim
 
 " Runs inside floaterm
-nmap <C-l> :w <CR> :!clang % -lcs50 <CR> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
+nmap <C-l> :w <CR> :!clang % -lcs50 <CR>
+nmap <C-k> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
 
 hi VertSplit ctermbg=none guibg=none
 
