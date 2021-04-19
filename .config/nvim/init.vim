@@ -4,6 +4,7 @@
 " | | | | | | |_   _   \ V /| | | | | | |
 " |_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
 
+
 " Import Plugins
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
@@ -30,7 +31,13 @@ Plug 'junegunn/fzf.vim'
 "Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
-""" CONFIGURATION
+"   ____             __ _                       _   _
+"  / ___|___  _ __  / _(_) __ _ _   _ _ __ __ _| |_(_) ___  _ __
+" | |   / _ \| '_ \| |_| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \
+" | |__| (_) | | | |  _| | (_| | |_| | | | (_| | |_| | (_) | | | |
+"  \____\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|
+"                         |___/
+
 
 " Basic Config
 syntax on
@@ -91,7 +98,12 @@ nmap <C-k> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
 " Autosave
 let g:auto_save = 1
 
-" THEME
+"  _____ _
+" |_   _| |__   ___ _ __ ___   ___
+"   | | | '_ \ / _ \ '_ ` _ \ / _ \
+"   | | | | | |  __/ | | | | |  __/
+"   |_| |_| |_|\___|_| |_| |_|\___|
+
 
 " Selection
 colorscheme sonokai
@@ -100,16 +112,100 @@ colorscheme sonokai
 "colorscheme monokai-bold
 
 " Theme Settings
-source ~/.config/nvim/config/theme.vim
+let g:nightflyUnderlineMatchParen = 1
+let g:nightflyCursorColor = 1
+let g:nightflyTransparent = 1
+highlight SpecialKey ctermbg=none
+
+" Airline Themes
+let g:airline_theme = 'transparent'
+"let g:airline_theme='virtualenv'
+"let g:airline_theme = 'monokai_subtle'
+
+" Sonokai
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_transparent_background = 1
+let g:sonokai_menu_selection_background = 'black'
+let g:sonokai_sign_column_background = 'none'
+let g:sonokai_current_word = 'bold'
+let g:sonokai_disable_italic_comment = 1
+
+" Nightfly
+let g:nightflyCursorColor = 1
+let g:nightflyUnderlineMatchParen = 1
+let g:nightflyTransparent = 1
+set background=dark
+
+" Italics
+
+hi Conditional cterm=italic gui=italic
+hi Include cterm=italic gui=italic
+hi Statement cterm=italic gui=italic
+hi Macro cterm=italic gui=italic
+hi Repeat cterm=italic gui=italic
+
+" Disable trailing[1]
+let g:airline#extensions#whitespace#enabled = 0
+let g:jedi#completions_enabled = 0
 
 " Transparency
-source ~/.config/nvim/config/Transparency.vim
+
+hi CocFloating       ctermbg=none guibg=none
+hi ColorColumn       ctermbg=none guibg=none
+hi NormalFloat       ctermbg=none guibg=none
+hi CursorColumn      ctermbg=none guibg=none
+hi CursorLine        ctermbg=none guibg=none
+hi TabLine           ctermbg=none guibg=none
+
+" airline
+hi airline_c       ctermbg=none guibg=none
+hi airline_tabfill ctermbg=none guibg=none
+
+" Transparent completion
+highlight Pmenu ctermbg=NONE guibg=none
+
+" left symbols transparent
+hi! CocErrorSign  ctermfg=none guifg=none guibg=none
+hi! CocWarningSign  ctermfg=none guifg=none guibg=none
+hi! CocInfoSign ctermfg=none guifg=none guibg=none
+hi! CocHintSign  ctermfg=none guifg=none guibg=none
+
+" transparent floating error/info/warning
+hi CocInfoFloat guifg=none guibg=none
+hi CocErrorFloat guifg=none guibg=none
+hi CocWarningFloat guifg=none guibg=none
+hi CocHintFloat guifg=none guibg=none
+
+" Split
+hi VertSplit ctermbg=none guibg=none
+
+" Theme
+hi Normal       ctermbg=none  guibg=none
+hi CursorLineNr               guibg=none
+hi EndOfBuffer                guibg=none
+hi Folded                     guibg=none
+hi LineNr       ctermbg=none  guibg=none
+
+hi TabLineFill ctermbg=none
+hi SignColumn   ctermbg=none  guibg=none
+highlight NonText ctermbg=none
+hi TabLineFill guibg=none ctermbg=none
+
+hi BufferInactive guibg=none
+hi BufferInactiveMod guibg=none
+hi StatusLine guibg=none
+hi StatusLineNC guibg=none
+hi StatusLineTerm guibg=none
+hi StatusLineTermNC guibg=none
+
 
 "   ___ _____ _   _ _____ ____  ____
 "  / _ \_   _| | | | ____|  _ \/ ___|
 " | | | || | | |_| |  _| | |_) \___ \
 " | |_| || | |  _  | |___|  _ < ___) |
 "  \___/ |_| |_| |_|_____|_| \_\____/
+
 
 " NERDTree
 
