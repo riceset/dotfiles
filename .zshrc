@@ -5,15 +5,15 @@
 # (_) /___|___/_| |_|_|  \___|
 
 
-### "nvim" as manpager
-export MANPAGER="nvim -c 'set ft=man' -"
-
 ### navigation
 alias dl="cd ~/Downloads"
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
+
+### "nvim" as manpager
+export MANPAGER="nvim -c 'set ft=man' -"
 
 ### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
@@ -42,7 +42,6 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 #zinit light jeffreytse/zsh-vi-mode
-
 ### Starship:
 eval "$(starship init zsh)"
 

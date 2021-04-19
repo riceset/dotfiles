@@ -1,8 +1,4 @@
 " Themes
-"colorscheme nightfly
-colorscheme sonokai
-"colorscheme codedark
-"colorscheme monokai-bold
 
 let g:nightflyUnderlineMatchParen = 1
 let g:nightflyCursorColor = 1
