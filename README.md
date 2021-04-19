@@ -4,7 +4,7 @@
 - [zsh](https://github.com/riceset/dotfiles/blob/main/.zshrc)
 
 ### Vim
-- [NeoVim](https://github.com/riceset/dotfiles/blob/main/.config/nvim/)
+- [NeoVim](https://github.com/riceset/dotfiles/blob/main/.config/nvim/init.vim)
 
 ### Terminal
 
