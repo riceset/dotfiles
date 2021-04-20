@@ -26,9 +26,9 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'preservim/tagbar'
-"Plug '907th/vim-auto-save'
 "Plug 'norcalli/nvim-colorizer.lua'
+Plug 'preservim/tagbar'
+"Plug '907th/vim-auto-save'
 call plug#end()
 
 " CONFIG
@@ -210,19 +210,22 @@ let NERDTreeMinimalUI=1
 
 " Tagbar
 "autocmd VimEnter * Tagbar
-"let g:is_tagbar=0
+let g:is_tagbar=0
 
 " Size
-"let g:tagbar_width=22
+let g:tagbar_width=22
 
 " Removes help message
-"let g:tagbar_compact=1
+let g:tagbar_compact=1
 
 " Map
 nnoremap <leader>; A;<esc>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <c-p> :Files<cr>
 nnoremap <c-f> :Ag<space>
+
+nmap <C-n> :NERDTree <CR>
+
 
 " Coc Config
 source ~/.config/nvim/config/coc.vim

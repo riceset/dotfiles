@@ -12,6 +12,13 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
+function logof()
+{
+    shuf -n 1 ~/Developer/random_logo/random.txt
+}
+
+logo=$(logof)
+
 ### "nvim" as manpager
 export MANPAGER="nvim -c 'set ft=man' -"
 
