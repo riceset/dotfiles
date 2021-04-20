@@ -82,13 +82,6 @@ let g:floaterm_keymap_next   = '<F10>'
 " Next Line
 inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 
-" Compile C
-"map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR> " Runs inside vim
-
-" Runs inside floaterm
-nmap <C-l> :w <CR> :!clang % -lcs50 <CR>
-nmap <C-k> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
-
 " Autosave
 let g:auto_save = 1
 
@@ -208,6 +201,9 @@ let g:NERDTreeWinSize=22
 " Removes help message
 let NERDTreeMinimalUI=1
 
+" Opens file in a new tab
+let NERDTreeMapOpenInTab='<ENTER>'
+
 " Removes Path
 "let NERDTreeStatusline="%{matchstr(getline('.'), 'szsw(.*)')}"
 
@@ -221,14 +217,33 @@ let g:tagbar_width=22
 " Removes help message
 let g:tagbar_compact=1
 
+" Tabs
+nnoremap <C-Z> :tabprevious<CR>
+nnoremap <C-X> :tabnext<CR>
+
+" Splits
+
+" Open new split panes to right and bottom
+set splitbelow
+set splitright
+
+" Navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Runs inside floaterm
+nmap <C-N> :w <CR> :!clang % -lcs50 <CR>
+nmap <C-M> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
+
+" Compile C
+"map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR> " Runs inside vim
+
 " Map
 nnoremap <leader>; A;<esc>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <c-p> :Files<cr>
-nnoremap <c-f> :Ag<space>
-
-nmap <C-n> :NERDTree <CR>
-
 
 " Coc Config
 source ~/.config/nvim/config/coc.vim
