@@ -194,6 +194,9 @@ hi StatusLineTermNC guibg=none
 
 " Open by default
 autocmd VimEnter * NERDTree
+
+" Opens nerdtree on a new tab automatically
+autocmd BufWinEnter * NERDTreeMirror
 autocmd VimEnter * wincmd p
 
 " Quits nerd tree when quitting vim
