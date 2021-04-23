@@ -234,7 +234,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Runs inside floaterm
-nmap <C-M> :w <CR> :!clang % -lcs50 <CR>
+nmap <C-M> :w <CR> :!clang % -lcs50 -ggdb<CR>
 nmap <C-N> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
 
 " Compile C
