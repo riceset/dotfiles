@@ -32,7 +32,6 @@ Plug 'preservim/tagbar'
 call plug#end()
 
 " CONFIG
-
 " Basic Config
 syntax on
 set noshowmode "Hides bottom text INSERT etc

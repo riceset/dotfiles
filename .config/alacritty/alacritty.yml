@@ -17,7 +17,7 @@ window:
 scrolling:
   history: 500
   multiplier: 3
-background_opacity: 0.9
+background_opacity: 0.92
 font:
   normal:
     family: Hack Nerd Font
