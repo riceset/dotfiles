@@ -1,5 +1,5 @@
 " highlight operators
-syntax match _Operator "[-+&|<>=!\/~.,;:*%&^?]"
+syntax match _Operator "[-+&|<>=!\/~.,;:*%&^?\[\]]"
 
 " Original
 " syntax match _Operator "[-+&|<>=!\/~.,;:*%&^?()\[\]{}]"
@@ -10,7 +10,12 @@ syntax match _Operator "[-+&|<>=!\/~.,;:*%&^?]"
 
 " colors
 " hi _memberFunc guifg=#0000FF guibg=NONE gui=none
-hi _Operator guifg=#00FF00 guibg=NONE gui=none
+
+" Sonokai
+hi _Operator guifg=#fb617e guibg=NONE gui=none
+
+" Solarized
+" hi _Operator guifg=#b32d2b guibg=NONE gui=none
 
 " to resolve conflict with comment markers
 syntax region _Comment start="\/\*" end="\*\/"

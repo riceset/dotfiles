@@ -9,8 +9,6 @@
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'Raimondi/delimitMate'
-Plug 'tomasiser/vim-code-dark'
-Plug 'mcmartelle/vim-monokai-bold'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
@@ -23,12 +21,7 @@ Plug 'sainnhe/sonokai'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-"Plug 'norcalli/nvim-colorizer.lua'
-Plug 'preservim/tagbar'
-"Plug '907th/vim-auto-save'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 
 " CONFIG
@@ -88,9 +81,6 @@ let g:auto_save = 1
 
 " Selection
 colorscheme sonokai
-"colorscheme nightfly
-"colorscheme codedark
-"colorscheme monokai-bold
 
 " Theme Settings
 let g:nightflyUnderlineMatchParen = 1
@@ -118,13 +108,15 @@ let g:nightflyUnderlineMatchParen = 1
 let g:nightflyTransparent = 1
 set background=dark
 
-" Italics
+" Italics Solarized
 
 hi Conditional cterm=italic gui=italic
 hi Include cterm=italic gui=italic
 hi Statement cterm=italic gui=italic
 hi Macro cterm=italic gui=italic
 hi Repeat cterm=italic gui=italic
+hi Function cterm=italic gui=italic
+hi Type cterm=italic gui=italic
 
 " Disable trailing[1]
 let g:airline#extensions#whitespace#enabled = 0
@@ -204,7 +196,7 @@ let NERDTreeMinimalUI=1
 let NERDTreeMapOpenInTab='<ENTER>'
 
 " Removes Path
-"let NERDTreeStatusline="%{matchstr(getline('.'), 'szsw(.*)')}"
+let NERDTreeStatusline="%{matchstr(getline('.'), 'szsw(.*)')}"
 
 " Tagbar
 "autocmd VimEnter * Tagbar
@@ -246,3 +238,18 @@ nnoremap <c-p> :Files<cr>
 
 " Coc Config
 source ~/.config/nvim/config/coc.vim
+
+" Gdb
+function! NvimGdbNoTKeymaps()
+  tnoremap <silent> <buffer> <esc> <c-\><c-n>
+endfunction
+
+let g:nvimgdb_config_override = {
+  \ 'key_next': 'n',
+  \ 'key_step': 's',
+  \ 'key_finish': 'f',
+  \ 'key_continue': 'c',
+  \ 'key_until': 'u',
+  \ 'key_breakpoint': 'b',
+  \ 'set_tkeymaps': "NvimGdbNoTKeymaps",
+  \ }

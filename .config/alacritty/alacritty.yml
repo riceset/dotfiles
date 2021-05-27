@@ -17,7 +17,7 @@ window:
 scrolling:
   history: 500
   multiplier: 3
-background_opacity: 0.92
+background_opacity: 0.91
 font:
   normal:
     family: Hack Nerd Font
@@ -28,12 +28,12 @@ font:
     # family: Hack iCursive S12
     style: Bold
   italic:
-    # family: Hack Nerd Font
-    family: Hack iCursive S12
+    family: Hack Nerd Font
+    # family: Hack iCursive S12
     style: Italic
   bold_italic:
-    # family: Hack Nerd Font
-    family: Hack iCursive S12
+    family: Hack Nerd Font
+    # family: Hack iCursive S12
     style: Bold Italic
   size: 15
   offset:
@@ -46,6 +46,24 @@ font:
 draw_bold_text_with_bright_colors: true
 
 # Colors
+
+  # Normal colors
+# colors:
+#   primary:
+#     background: '0x002b36'
+#     foreground: '0x839496'
+
+#   normal:
+#     black:   '0x073642'
+#     red:     '0xdc322f'
+#     green:   '0x859900'
+#     yellow:  '0xb58900'
+#     blue:    '0x268bd2'
+#     magenta: '0xd33682'
+#     cyan:    '0x2aa198'
+#     white:   '0xeee8d5'
+
+# ! Default 37gcc
 colors:
   # Default colors
   primary:
