@@ -7,10 +7,10 @@
 
 ### navigation
 alias dl="cd ~/Downloads"
-alias -g ...='../..'
-alias -g ....='../../..'
-alias -g .....='../../../..'
-alias -g ......='../../../../..'
+alias -g ...='cd ../..'
+alias -g ....='cd ../../..'
+alias -g .....='cd ../../../..'
+alias -g ......='cd ../../../../..'
 
 ### "nvim" as manpager
 export MANPAGER="nvim -c 'set ft=man' -"
@@ -90,11 +90,8 @@ alias audiodl='youtube-dl -x --audio-format mp3 '
 ### Alt server
 alias refreshapp='open -a AltServer.app; open -a mail'
 
-### Language learning
-alias study='open -a Anki.app; open -a Drafts.app'
-
-### Sets "n" to open neovim
-alias n='nvim'
+### Sets "vi" to open neovim
+alias vi='nvim'
 
 ### Useful Directories
 alias downloads='~/Downloads'
@@ -105,7 +102,7 @@ alias developer='~/Developer'
 alias harvard='~/Harvard-CS50'
 alias music='~/Music/Study'
 alias external='/volumes/OKONOMIYAKI/external'
-alias zshrc='cd ~ && n .zshrc'
+alias zshrc='cd ~ && nvim .zshrc'
 alias init='cd ~/.config/nvim/ && nvim init.vim'
 alias alacritty='cd ~/.config/alacritty/ && nvim alacritty.yml'
 alias icloud='~/Library/Mobile\ Documents/com~apple~CloudDocs/'
@@ -116,6 +113,8 @@ alias pip='python3 -m pip'
 
 ### touch and open a file on VSCode
 t() { [[ ! -f "$1" ]] && touch "$1"; code "$1"; }
+
+alias python="Python3"
 
 ### New Article
 alias article='cd ~/Blog/_posts'
@@ -174,6 +173,14 @@ if [[ $TERM_PROGRAM != 'vscode' ]]; then
 fi
 }
 
+alias clear="c"
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
+# Go
+export GOPATH="$HOME/go"
+PATH="$GOPATH/bin:$PATH"
+
+# Ubuntu
+alias ubuntu="docker exec -it 4f9066d297fbde5824c3c5463f16961d3579fe2e7f037cd47b60d1d34d090e2c /bin/sh"

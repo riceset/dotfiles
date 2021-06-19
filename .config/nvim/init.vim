@@ -22,6 +22,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 " CONFIG
