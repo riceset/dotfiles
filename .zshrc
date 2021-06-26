@@ -184,3 +184,4 @@ PATH="$GOPATH/bin:$PATH"
 
 # Ubuntu
 alias ubuntu="docker exec -it 4f9066d297fbde5824c3c5463f16961d3579fe2e7f037cd47b60d1d34d090e2c /bin/sh"
+export FLASK_APP=application.py

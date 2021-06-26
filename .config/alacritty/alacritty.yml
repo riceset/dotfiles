@@ -15,7 +15,7 @@ window:
   startup_mode: Maximized
   dynamic_title: true
 scrolling:
-  history: 500
+  history: 0
   multiplier: 3
 background_opacity: 0.91
 font:
