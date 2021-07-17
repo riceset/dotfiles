@@ -18,7 +18,7 @@ export MANPAGER="nvim -c 'set ft=man' -"
 ### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
 ### Pfetch
-PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=4 PF_COL3=2 /usr/local/bin/pfetch
+PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=5 PF_COL3=5 /usr/local/bin/pfetch
 fi
 
 ### Oh my zsh
@@ -41,7 +41,7 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-#zinit light jeffreytse/zsh-vi-mode
+zinit light jeffreytse/zsh-vi-mode
 ### Starship:
 eval "$(starship init zsh)"
 
@@ -76,8 +76,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
-### cat
-alias cat='bat'
+alias bat='bat -p'
 
 ### Useful
 alias mv="mv -iv"
@@ -165,11 +164,10 @@ function lazy() {
     git push;
 }
 
-function c()
-{
+function c() {
     clear;
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
-    PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=4 PF_COL3=2 /usr/local/bin/pfetch
+    PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=5 PF_COL3=5 /usr/local/bin/pfetch
 fi
 }
 
@@ -185,3 +183,9 @@ PATH="$GOPATH/bin:$PATH"
 # Ubuntu
 alias ubuntu="docker exec -it 4f9066d297fbde5824c3c5463f16961d3579fe2e7f037cd47b60d1d34d090e2c /bin/sh"
 export FLASK_APP=application.py
+
+# LOVE
+alias love="/Applications/love.app/Contents/MacOS/love"
+
+# API
+# source "$HOME/Developer/Others/API.zsh"
