@@ -33,6 +33,7 @@ if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
+
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
@@ -42,32 +43,16 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 zinit light jeffreytse/zsh-vi-mode
+
 ### Starship:
 eval "$(starship init zsh)"
 
-### Blocks brew from updating every time
+### Stops brew from updating every time
 alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
 
 ### Flutter SDK:
 export PATH="$PATH:/Users/riceset/FlutterSDK/flutter/bin"
 export PATH="/usr/local/sbin:$PATH"
-
-### Tmux
-#Automatically starts tmux:
-
-#if [ "$TMUX" = "" ]; then tmux; fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-### rickroll
-alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
-### Media
-alias photo='open -a preview'
-alias video='open -a "Quicktime Player" '
-alias finder='open -a finder'
-alias code='open -a "Visual Studio Code" '
-alias notes='open -a notes'
 
 ### ls
 alias ls='lsd --group-dirs first'
@@ -96,13 +81,10 @@ alias vi='nvim'
 alias downloads='~/Downloads'
 alias pictures='~/Pictures'
 alias desktop='~/Desktop'
-alias blog='~/Blog'
+alias blog='~/Developer/Blog'
 alias developer='~/Developer'
-alias harvard='~/Harvard-CS50'
-alias music='~/Music/Study'
-alias external='/volumes/OKONOMIYAKI/external'
 alias zshrc='cd ~ && nvim .zshrc'
-alias init='cd ~/.config/nvim/ && nvim init.vim'
+alias initvim='cd ~/.config/nvim/ && nvim init.vim'
 alias alacritty='cd ~/.config/alacritty/ && nvim alacritty.yml'
 alias icloud='~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias karabiner='cd ~/.config/karabiner && v karabiner.json'
@@ -114,9 +96,7 @@ alias pip='python3 -m pip'
 t() { [[ ! -f "$1" ]] && touch "$1"; code "$1"; }
 
 alias python="Python3"
-
-### New Article
-alias article='cd ~/Blog/_posts'
+alias py="Python3"
 
 ### Removes executable files
 alias rmexec='find . -perm +100 -type f -delete'
@@ -132,21 +112,6 @@ alias pull='git pull'
 alias push='git push'
 alias all='git add . && git commit -m'
 alias clone='git clone'
-
-# iTerm
-### Images
-function imginfo() {
-    imgcat $1 && sips --getProperty pixelHeight --getProperty pixelWidth $1;
-}
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
-source $(dirname $(gem which colorls))/tab_complete.sh
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.3/bin:$PATH"
-alias lc='colorls -lA --sd'
-
-# zsh vi mode
-bindkey -v
-export KEYTIMEOUT=1
 
 # make
 export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"
@@ -164,28 +129,22 @@ function lazy() {
     git push;
 }
 
+# Clears the screen and runs pfetch
 function c() {
     clear;
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
     PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=5 PF_COL3=5 /usr/local/bin/pfetch
 fi
 }
-
 alias clear="c"
+
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-
+export FLASK_APP=application.py
 # Go
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
 
 # Ubuntu
 alias ubuntu="docker exec -it 4f9066d297fbde5824c3c5463f16961d3579fe2e7f037cd47b60d1d34d090e2c /bin/sh"
-export FLASK_APP=application.py
-
-# LOVE
-alias love="/Applications/love.app/Contents/MacOS/love"
-
-# API
-# source "$HOME/Developer/Others/API.zsh"
