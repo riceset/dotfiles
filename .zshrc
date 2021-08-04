@@ -15,6 +15,8 @@ alias -g ......='cd ../../../../..'
 ### "nvim" as manpager
 export MANPAGER="nvim -c 'set ft=man' -"
 
+TERM=xterm-256color
+
 ### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
 ### Pfetch
@@ -22,7 +24,7 @@ PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL
 fi
 
 ### Oh my zsh
-export ZSH="/Users/riceset/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 plugins=(git zsh-z)
 source $ZSH/oh-my-zsh.sh
 
@@ -39,10 +41,10 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 ### Plugins
-zinit light zsh-users/zsh-autosuggestions
+# zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-zinit light jeffreytse/zsh-vi-mode
+# zinit light jeffreytse/zsh-vi-mode
 
 ### Starship:
 eval "$(starship init zsh)"
@@ -87,7 +89,7 @@ alias zshrc='cd ~ && nvim .zshrc'
 alias initvim='cd ~/.config/nvim/ && nvim init.vim'
 alias alacritty='cd ~/.config/alacritty/ && nvim alacritty.yml'
 alias icloud='~/Library/Mobile\ Documents/com~apple~CloudDocs/'
-alias karabiner='cd ~/.config/karabiner && v karabiner.json'
+alias karabiner='cd ~/.config/karabiner && nvim karabiner.json'
 
 ### Pip
 alias pip='python3 -m pip'
@@ -141,7 +143,9 @@ alias clear="c"
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
 export FLASK_APP=application.py
+
 # Go
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"

@@ -116,8 +116,10 @@ hi Include cterm=italic gui=italic
 hi Statement cterm=italic gui=italic
 hi Macro cterm=italic gui=italic
 hi Repeat cterm=italic gui=italic
-hi Function cterm=italic gui=italic
 hi Type cterm=italic gui=italic
+hi PreProc cterm=italic gui=italic
+hi Comment cterm=italic gui=italic
+
 
 " Disable trailing[1]
 let g:airline#extensions#whitespace#enabled = 0
@@ -210,8 +212,8 @@ let g:tagbar_width=22
 let g:tagbar_compact=1
 
 " Tabs
-nnoremap <C-p> :tabprevious<CR>
-nnoremap <C-n> :tabnext<CR>
+" nnoremap <C-p> :tabprevious<CR>
+" nnoremap <C-n> :tabnext<CR>
 
 " Splits
 
