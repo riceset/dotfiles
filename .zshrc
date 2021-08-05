@@ -18,7 +18,7 @@ export LANG=en_US.UTF-8
 ### "nvim" as manpager
 export MANPAGER="nvim -c 'set ft=man' -"
 
-# TERM=xterm-256color
+TERM=xterm-256color
 
 ### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then

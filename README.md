@@ -9,6 +9,7 @@
 ### Terminal
 
 - [Alacritty](https://github.com/riceset/dotfiles/blob/main/.config/alacritty/alacritty.yml)
+- [kitty](https://github.com/riceset/dotfiles/tree/main/.config/kitty)
 
 ### Others
 - [Starship](https://github.com/riceset/dotfiles/blob/main/.config/starship.toml)
