@@ -12,15 +12,18 @@ alias -g ....='cd ../../..'
 alias -g .....='cd ../../../..'
 alias -g ......='cd ../../../../..'
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 ### "nvim" as manpager
 export MANPAGER="nvim -c 'set ft=man' -"
 
-TERM=xterm-256color
+# TERM=xterm-256color
 
 ### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
 ### Pfetch
-PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=5 PF_COL3=5 /usr/local/bin/pfetch
+PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
 fi
 
 ### Oh my zsh
@@ -41,10 +44,9 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 ### Plugins
-# zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-# zinit light jeffreytse/zsh-vi-mode
 
 ### Starship:
 eval "$(starship init zsh)"
@@ -94,9 +96,6 @@ alias karabiner='cd ~/.config/karabiner && nvim karabiner.json'
 ### Pip
 alias pip='python3 -m pip'
 
-### touch and open a file on VSCode
-t() { [[ ! -f "$1" ]] && touch "$1"; code "$1"; }
-
 alias python="Python3"
 alias py="Python3"
 
@@ -118,9 +117,6 @@ alias clone='git clone'
 # make
 export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"
 
-# compile and run
-r() { [[ ! -f "$1" ]] && make "$1"; ./$1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15 $16 $17 $18 $19 $20 $21 $22 $23 $24 $25 $26 $27 $28 $29 $30 $31 $32 $33 $34 $35 $36 $37 $38 $39 $40 $41 $42 $43 $44 $45 $46 $47 $48 $49 $50; rm -rf $1.dSYM}
-
 # Gdb quiet
 alias gdb='gdb -q'
 
@@ -135,7 +131,7 @@ function lazy() {
 function c() {
     clear;
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
-    PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=5 PF_COL3=5 /usr/local/bin/pfetch
+    PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
 fi
 }
 alias clear="c"
