@@ -119,7 +119,7 @@ hi Repeat cterm=italic gui=italic
 hi Type cterm=italic gui=italic
 hi PreProc cterm=italic gui=italic
 hi Comment cterm=italic gui=italic
-
+hi Red cterm=italic gui=italic
 
 " Disable trailing[1]
 let g:airline#extensions#whitespace#enabled = 0

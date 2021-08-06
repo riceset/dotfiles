@@ -16,9 +16,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 ### "nvim" as manpager
-export MANPAGER="nvim -c 'set ft=man' -"
+# export MANPAGER="nvim -c 'set ft=man' -"
 
-TERM=xterm-256color
+# TERM=xterm-256color
+TERM=xterm-kitty
 
 ### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
@@ -115,7 +116,7 @@ alias all='git add . && git commit -m'
 alias clone='git clone'
 
 # make
-export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"
+# export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"
 
 # Gdb quiet
 alias gdb='gdb -q'
