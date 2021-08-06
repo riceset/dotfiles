@@ -16,7 +16,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 ### "nvim" as manpager
-# export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER="nvim -c 'set ft=man' -"
 
 # TERM=xterm-256color
 TERM=xterm-kitty
@@ -149,3 +149,17 @@ PATH="$GOPATH/bin:$PATH"
 
 # Ubuntu
 alias ubuntu="docker exec -it 4f9066d297fbde5824c3c5463f16961d3579fe2e7f037cd47b60d1d34d090e2c /bin/sh"
+
+#sets title to the name of the currently executing command, and to the current directory when no process is running. https://github.com/kovidgoyal/kitty/issues/610
+
+function set-title-precmd() {
+  printf "\e]2;%s\a" "${PWD/#$HOME/~}"
+}
+
+function set-title-preexec() {
+  printf "\e]2;%s\a" "$1"
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd set-title-precmd
+add-zsh-hook preexec set-title-preexec
