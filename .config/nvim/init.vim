@@ -25,6 +25,8 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug '907th/vim-auto-save'
 call plug#end()
 
+let g:airline#extensions#coc#enabled = 0
+
 " CONFIG
 " Basic Config
 syntax on
@@ -63,6 +65,7 @@ highlight GitGutterChangeDelete ctermfg=4
 
 " FLoat term
 hi FloatermBorder guibg=none guifg=none
+
 " Shortcuts
 let g:floaterm_keymap_toggle = '<F2>'
 let g:floaterm_keymap_new    = '<F12>'
@@ -203,13 +206,13 @@ let NERDTreeStatusline="%{matchstr(getline('.'), 'szsw(.*)')
 
 " Tagbar
 "autocmd VimEnter * Tagbar
-let g:is_tagbar=0
+" let g:is_tagbar=0
 
 " Size
-let g:tagbar_width=22
+" let g:tagbar_width=22
 
 " Removes help message
-let g:tagbar_compact=1
+" let g:tagbar_compact=1
 
 " Tabs
 " nnoremap <C-p> :tabprevious<CR>
@@ -241,6 +244,8 @@ nnoremap <c-p> :Files<cr>
 
 " Coc Config
 source ~/.config/nvim/config/coc.vim
+
+set path+=**
 
 " Gdb
 function! NvimGdbNoTKeymaps()

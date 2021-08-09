@@ -20,20 +20,20 @@ scrolling:
 background_opacity: 0.91
 font:
   normal:
-    family: JetBrainsMono Nerd Font
-    # family: Hack iCursive S12
+    # family: JetBrainsMono Nerd Font
+    family: Hack iCursive S12
     style: Regular
   bold:
-    family: JetBrainsMonoExtraBold Nerd Font
-    # family: Hack iCursive S12
+    # family: JetBrainsMonoExtraBold Nerd Font
+    family: Hack iCursive S12
     style: Bold
   italic:
-    family: JetBrainsMono Nerd Font
-    # family: Hack iCursive S12
-    style: Italic
+    # family: JetBrainsMono Nerd Font
+    family: Hack iCursive S12
+    # style: Italic
   bold_italic:
-    family: JetBrainsMono Nerd Font
-    # family: Hack iCursive S12
+    # family: JetBrainsMono Nerd Font
+    family: Hack iCursive S12
     style: Bold Italic
   size: 15
   offset:
