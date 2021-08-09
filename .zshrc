@@ -24,7 +24,7 @@ TERM=xterm-kitty
 ### Hides pfetch on vscode
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
 ### Pfetch
-PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
+PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
 fi
 
 ### Oh my zsh
@@ -71,6 +71,7 @@ alias bat='bat -p'
 ### Useful
 alias mv="mv -iv"
 alias cp="cp -riv"
+alias rm="rm -v"
 
 ### Youtube-dl
 alias videodl='youtube-dl -f best '
@@ -88,17 +89,19 @@ alias pictures='~/Pictures'
 alias desktop='~/Desktop'
 alias blog='~/Developer/Blog'
 alias developer='~/Developer'
-alias zshrc='cd ~ && nvim .zshrc'
-alias initvim='cd ~/.config/nvim/ && nvim init.vim'
-alias alacritty='cd ~/.config/alacritty/ && nvim alacritty.yml'
+alias temp='~/Developer/temp'
 alias icloud='~/Library/Mobile\ Documents/com~apple~CloudDocs/'
-alias karabiner='cd ~/.config/karabiner && nvim karabiner.json'
+alias dot='~/dot'
+
+alias zshrc='nvim ~/.zshrc'
+alias initvim='nvim ~/.config/nvim/init.vim'
+alias karabiner='nvim ~/.config/karabiner/karabiner.json'
 
 ### Pip
-alias pip='python3 -m pip'
+# alias pip='python3 -m pip'
 
-alias python="Python3"
-alias py="Python3"
+# alias python="Python3"
+alias py="Python"
 
 ### Removes executable files
 alias rmexec='find . -perm +100 -type f -delete'
@@ -132,7 +135,7 @@ function lazy() {
 function c() {
     clear;
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
-    PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_ASCII="macos" PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
+    PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
 fi
 }
 alias clear="c"
@@ -163,3 +166,6 @@ function set-title-preexec() {
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd set-title-precmd
 add-zsh-hook preexec set-title-preexec
+
+# ASDF
+. /usr/local/opt/asdf/asdf.sh
