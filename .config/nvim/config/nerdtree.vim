@@ -2,7 +2,9 @@
 autocmd VimEnter * NERDTree
 
 " Opens nerdtree on a new tab automatically
-autocmd BufWinEnter * NERDTreeMirror
+autocmd BufWinEnter * NERDTree | wincmd p
+
+" Moves the cursor to the file instead of NERDTree when opening a new file
 autocmd VimEnter * wincmd p
 
 " Quits nerd tree when quitting vim
@@ -13,9 +15,6 @@ let g:NERDTreeWinSize=22
 
 " Removes help message
 let NERDTreeMinimalUI=1
-
-" Opens file in a new tab
-let NERDTreeMapOpenInTab='<ENTER>'
 
 " Removes Path
 let NERDTreeStatusline="%{matchstr(getline('.'), 'szsw(.*)')}"

@@ -108,6 +108,10 @@ hi PreProc cterm=italic gui=italic
 hi Comment cterm=italic gui=italic
 hi Red cterm=italic gui=italic
 
+" Hides the tilde sign on blank lines
+" https://github.com/neovim/neovim/issues/2067
+let &fcs='eob: '
+
 " Disable trailing[1]
 let g:airline#extensions#whitespace#enabled = 0
 let g:jedi#completions_enabled = 0
