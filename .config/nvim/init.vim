@@ -22,6 +22,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
 Plug '907th/vim-auto-save'
+Plug 'kshenoy/vim-signature'
 call plug#end()
 
 colorscheme sonokai
@@ -137,9 +138,19 @@ nnoremap <c-p> :Files<cr>
 " Coc Config
 source ~/.config/nvim/config/coc.vim
 
+" Allows finding a file recursively
 set path+=**
 
 let g:airline#extensions#coc#enabled = 0
 
 " Hides (AutoSave) saved at ??:??:??
 let g:auto_save_silent = 1
+
+" New tab
+nnoremap <silent> <C-t> :tabnew<CR>
+
+" Substitute
+nnoremap <C-s> :%s//g<Left><Left>
+
+" Vim-Signature colors based on GitGutter
+let g:SignatureMarkTextHLDynamic = 1
