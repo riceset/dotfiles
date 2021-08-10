@@ -25,7 +25,7 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug '907th/vim-auto-save'
 call plug#end()
 
-let g:airline#extensions#coc#enabled = 0
+colorscheme sonokai
 
 " CONFIG
 " Basic Config
@@ -42,7 +42,6 @@ set termguicolors
 set t_Co=256
 set t_ut=
 hi! Directory guifg=none ctermfg=none
-hi Normal guibg=NONE ctermbg=NONE
 set inccommand=split
 set clipboard=unnamed
 set hlsearch
@@ -84,7 +83,6 @@ let g:auto_save = 1
 " THEME
 
 " Selection
-colorscheme sonokai
 
 " Theme Settings
 let g:nightflyUnderlineMatchParen = 1
@@ -261,3 +259,5 @@ let g:nvimgdb_config_override = {
   \ 'key_breakpoint': 'b',
   \ 'set_tkeymaps': "NvimGdbNoTKeymaps",
   \ }
+
+let g:airline#extensions#coc#enabled = 0

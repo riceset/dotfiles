@@ -61,10 +61,6 @@ export PATH="/usr/local/sbin:$PATH"
 
 ### ls
 alias ls='lsd --group-dirs first'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
 
 alias bat='bat -p'
 
@@ -169,3 +165,8 @@ add-zsh-hook preexec set-title-preexec
 
 # ASDF
 . /usr/local/opt/asdf/asdf.sh
+
+ export VISUAL=nvim;
+ export EDITOR=nvim;
+
+ alias icat="kitty +kitten icat"
