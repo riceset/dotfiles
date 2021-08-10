@@ -7,21 +7,20 @@
 
 " Import Plugins
 call plug#begin()
-Plug 'sheerun/vim-polyglot'
-Plug 'Raimondi/delimitMate'
+Plug 'sheerun/vim-polyglot' "Provides some syntax highlighting
+Plug 'Raimondi/delimitMate' "auto-completion for quotes, parens, brackets, etc
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
+Plug 'ryanoasis/vim-devicons' "Adds file type icons to Vim plugins NERDTree, Airline etc
+Plug 'airblade/vim-gitgutter' "Git information ~ + -
+Plug 'tpope/vim-fugitive' "plugin for Git
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sainnhe/sonokai'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
-Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
 Plug '907th/vim-auto-save'
 call plug#end()
 
@@ -82,18 +81,10 @@ let g:auto_save = 1
 
 " THEME
 
-" Selection
-
-" Theme Settings
-let g:nightflyUnderlineMatchParen = 1
-let g:nightflyCursorColor = 1
-let g:nightflyTransparent = 1
-highlight SpecialKey ctermbg=none
+set background=dark
 
 " Airline Themes
 let g:airline_theme = 'transparent'
-"let g:airline_theme='virtualenv'
-"let g:airline_theme = 'monokai_subtle'
 
 " Sonokai
 let g:sonokai_style = 'andromeda'
@@ -104,13 +95,7 @@ let g:sonokai_sign_column_background = 'none'
 let g:sonokai_current_word = 'bold'
 let g:sonokai_disable_italic_comment = 1
 
-" Nightfly
-let g:nightflyCursorColor = 1
-let g:nightflyUnderlineMatchParen = 1
-let g:nightflyTransparent = 1
-set background=dark
-
-" Italics Solarized
+" Italics (Syntax)
 
 hi Conditional cterm=italic gui=italic
 hi Include cterm=italic gui=italic
@@ -126,95 +111,11 @@ hi Red cterm=italic gui=italic
 let g:airline#extensions#whitespace#enabled = 0
 let g:jedi#completions_enabled = 0
 
-" TRANSPARENCY
+" Transparency
+source ~/.config/nvim/config/transparency.vim
 
-hi CocFloating       ctermbg=none guibg=none
-hi ColorColumn       ctermbg=none guibg=none
-hi NormalFloat       ctermbg=none guibg=none
-hi CursorColumn      ctermbg=none guibg=none
-hi CursorLine        ctermbg=none guibg=none
-hi TabLine           ctermbg=none guibg=none
-
-" airline
-hi airline_c       ctermbg=none guibg=none
-hi airline_tabfill ctermbg=none guibg=none
-
-" Transparent completion
-highlight Pmenu ctermbg=NONE guibg=none
-
-" left symbols transparent
-hi! CocErrorSign  ctermfg=none guifg=none guibg=none
-hi! CocWarningSign  ctermfg=none guifg=none guibg=none
-hi! CocInfoSign ctermfg=none guifg=none guibg=none
-hi! CocHintSign  ctermfg=none guifg=none guibg=none
-
-" transparent floating error/info/warning
-hi CocInfoFloat guifg=none guibg=none
-hi CocErrorFloat guifg=none guibg=none
-hi CocWarningFloat guifg=none guibg=none
-hi CocHintFloat guifg=none guibg=none
-
-" Split
-hi VertSplit ctermbg=none guibg=none
-
-" Theme
-hi Normal       ctermbg=none  guibg=none
-hi CursorLineNr               guibg=none
-hi EndOfBuffer                guibg=none
-hi Folded                     guibg=none
-hi LineNr       ctermbg=none  guibg=none
-
-hi TabLineFill ctermbg=none
-hi SignColumn   ctermbg=none  guibg=none
-highlight NonText ctermbg=none
-hi TabLineFill guibg=none ctermbg=none
-
-hi BufferInactive guibg=none
-hi BufferInactiveMod guibg=none
-hi StatusLine guibg=none
-hi StatusLineNC guibg=none
-hi StatusLineTerm guibg=none
-hi StatusLineTermNC guibg=none
-
-" OTHERS
-
-" NERDTree
-
-" Open by default
-autocmd VimEnter * NERDTree
-
-" Opens nerdtree on a new tab automatically
-autocmd BufWinEnter * NERDTreeMirror
-autocmd VimEnter * wincmd p
-
-" Quits nerd tree when quitting vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Size
-let g:NERDTreeWinSize=22
-
-" Removes help message
-let NERDTreeMinimalUI=1
-
-" Opens file in a new tab
-let NERDTreeMapOpenInTab='<ENTER>'
-
-" Removes Path
-let NERDTreeStatusline="%{matchstr(getline('.'), 'szsw(.*)')}"
-
-" Tagbar
-"autocmd VimEnter * Tagbar
-" let g:is_tagbar=0
-
-" Size
-" let g:tagbar_width=22
-
-" Removes help message
-" let g:tagbar_compact=1
-
-" Tabs
-" nnoremap <C-p> :tabprevious<CR>
-" nnoremap <C-n> :tabnext<CR>
+" NERDTree and Tagbar
+source ~/.config/nvim/config/nerdtree.vim
 
 " Splits
 
@@ -222,18 +123,11 @@ let NERDTreeStatusline="%{matchstr(getline('.'), 'szsw(.*)')
 set splitbelow
 set splitright
 
-" Navigation
+" Navigation between splits using Control + vim keys
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-" Runs inside floaterm
-" nmap <C-M> :w <CR> :!clang % -lcs50 -ggdb<CR>
-" nmap <C-N> :FloatermNew --height=0.9 --width=0.9 <CR> ./a.out <CR>
-
-" Compile C
-"map <F8> :w <CR> :!clang % -o %< -lcs50 && ./%< <CR> " Runs inside vim
 
 " Map
 nnoremap <leader>; A;<esc>
@@ -245,19 +139,7 @@ source ~/.config/nvim/config/coc.vim
 
 set path+=**
 
-" Gdb
-function! NvimGdbNoTKeymaps()
-  tnoremap <silent> <buffer> <esc> <c-\><c-n>
-endfunction
-
-let g:nvimgdb_config_override = {
-  \ 'key_next': 'n',
-  \ 'key_step': 's',
-  \ 'key_finish': 'f',
-  \ 'key_continue': 'c',
-  \ 'key_until': 'u',
-  \ 'key_breakpoint': 'b',
-  \ 'set_tkeymaps': "NvimGdbNoTKeymaps",
-  \ }
-
 let g:airline#extensions#coc#enabled = 0
+
+" Hides (AutoSave) saved at ??:??:??
+let g:auto_save_silent = 1

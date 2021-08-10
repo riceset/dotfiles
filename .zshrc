@@ -166,7 +166,9 @@ add-zsh-hook preexec set-title-preexec
 # ASDF
 . /usr/local/opt/asdf/asdf.sh
 
+# Sets the default text editor to nvim
  export VISUAL=nvim;
  export EDITOR=nvim;
 
+ # Kitty's default image viewer
  alias icat="kitty +kitten icat"
