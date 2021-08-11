@@ -12,10 +12,7 @@ syntax match _Operator "[-+&|<>=!\/~.,;:*%&^?\[\]]"
 " hi _memberFunc guifg=#0000FF guibg=NONE gui=none
 
 " Sonokai
-hi _Operator guifg=#fb617e guibg=NONE gui=none
-
-" Solarized
-" hi _Operator guifg=#b32d2b guibg=NONE gui=none
+hi _Operator guifg=#FF006A guibg=NONE gui=none
 
 " to resolve conflict with comment markers
 syntax region _Comment start="\/\*" end="\*\/"

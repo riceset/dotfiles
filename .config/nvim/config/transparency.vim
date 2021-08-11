@@ -47,3 +47,4 @@ hi StatusLine ctermbg=none guibg=none
 hi StatusLineNC ctermbg=none guibg=none
 hi StatusLineTerm ctermbg=none guibg=none
 hi StatusLineTermNC ctermbg=none guibg=none
+
