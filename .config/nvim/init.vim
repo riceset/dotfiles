@@ -103,6 +103,7 @@ let g:auto_save_silent = 1
 " Vim-Signature colors based on GitGutter
 let g:SignatureMarkTextHLDynamic = 1
 
+" Shows the initial letter for a mode in Airline (e.g. NORMAL - N, INSERT - I)
 let g:airline_mode_map = {
       \ '__'     : '-',
       \ 'c'      : 'C',
