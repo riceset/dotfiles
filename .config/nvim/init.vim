@@ -58,6 +58,7 @@ language en_US
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set mouse=a
 
 " Floaterm Shortcuts
 let g:floaterm_keymap_toggle = '<F2>'
