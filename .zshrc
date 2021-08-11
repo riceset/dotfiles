@@ -115,7 +115,6 @@ alias gdb='gdb -q'
  fi
  }
 
-
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
@@ -126,22 +125,6 @@ export FLASK_APP=application.py
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
 
-# Ubuntu
-alias ubuntu="docker exec -it 4f9066d297fbde5824c3c5463f16961d3579fe2e7f037cd47b60d1d34d090e2c /bin/sh"
-
-#sets title to the name of the currently executing command, and to the current directory when no process is running. https://github.com/kovidgoyal/kitty/issues/610
-# function set-title-precmd() {
-#   printf "\e]2;%s\a" "${PWD/#$HOME/~}"
-# }
-
-# function set-title-preexec() {
-#   printf "\e]2;%s\a" "$1"
-# }
-
-# autoload -Uz add-zsh-hook
-# add-zsh-hook precmd set-title-precmd
-# add-zsh-hook preexec set-title-preexec
-
 # ASDF
 . /usr/local/opt/asdf/asdf.sh
 
@@ -151,3 +134,5 @@ alias ubuntu="docker exec -it 4f9066d297fbde5824c3c5463f16961d3579fe2e7f037cd47b
 
  # Kitty's default image viewer
  alias icat="kitty +kitten icat"
+
+ export C_INCLUDE_PATH=/usr/local/include
