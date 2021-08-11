@@ -84,8 +84,6 @@ let g:auto_save = 1
 
 " THEME
 
-set background=dark
-
 " Airline Themes
 let g:airline_theme = 'transparent'
 
@@ -96,7 +94,8 @@ let g:sonokai_transparent_background = 1
 let g:sonokai_menu_selection_background = 'black'
 let g:sonokai_sign_column_background = 'none'
 let g:sonokai_current_word = 'bold'
-let g:sonokai_disable_italic_comment = 1
+
+set background=dark
 
 " Italics (Syntax)
 
