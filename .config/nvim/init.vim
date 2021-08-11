@@ -46,7 +46,6 @@ set inccommand=split
 set clipboard=unnamed
 set hlsearch
 set expandtab
-set shiftwidth=2
 let mapleader="\<space>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
@@ -55,6 +54,9 @@ set nosmd
 set noru
 set clipboard=unnamedplus
 language en_US
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 " Gutter + - ~
 highlight GitGutterAdd ctermfg=2
@@ -158,3 +160,19 @@ nnoremap <C-s> :%s//g<Left><Left>
 
 " Vim-Signature colors based on GitGutter
 let g:SignatureMarkTextHLDynamic = 1
+
+" Airline tabs
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#show_buffers = 1
+" let g:airline#extensions#tabline#show_splits = 0
+" let g:airline#extensions#tabline#show_tabs = 0
+" let g:airline#extensions#tabline#show_tab_count = 0
+" let g:airline#extensions#tabline#show_tab_nr = 0
+" let g:airline#extensions#tabline#show_tab_type = 0
+" let g:airline#extensions#tabline#close_symbol = '×'
+" let g:airline#extensions#tabline#show_close_button = 0
+" let g:airline#extensions#tabline#buffer_min_count = 2
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = ' '
+" let g:airline#extensions#tabline#right_sep = ' '
+" let g:airline#extensions#tabline#right_alt_sep = ' '

@@ -40,6 +40,7 @@ hi TabLineFill ctermbg=none guibg=none
 hi SignColumn ctermbg=none  guibg=none
 hi NonText ctermbg=none guibg=none
 hi TabLineFill guibg=none ctermbg=none
+
 hi BufferInactive ctermbg=none guibg=none
 hi BufferInactiveMod ctermbg=none guibg=none
 hi StatusLine ctermbg=none guibg=none
