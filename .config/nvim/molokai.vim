@@ -47,6 +47,7 @@ hi GitGutterAdd guifg=#7DCE03
 hi GitGutterDelete guifg=#FF006A
 hi GitGutterChange guifg=#30D6F0
 hi GitGutterChangeDelete guifg=#BB6DFF
+hi CocFadeOut gui=underline
 
 " hi CocErrorSign  ctermbg=none guibg=none
 " hi CocWarningSign  ctermbg=none guibg=none

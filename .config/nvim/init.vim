@@ -22,17 +22,14 @@ Plug 'kshenoy/vim-signature'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
+Plug '907th/vim-auto-save'
+ Plug 'tpope/vim-surround'
 "Plug 'sainnhe/sonokai'
 "Plug 'preservim/nerdtree'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Plug 'tpope/vim-surround'
-"Plug '907th/vim-auto-save'
 call plug#end()
 
 colorscheme molokai
-
-" CONFIG
-" Basic Config
 syntax on
 set noshowmode "Hides bottom text INSERT etc
 set encoding=UTF-8 " Vim devicons
@@ -62,25 +59,14 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-" FLoat term
-" hi FloatermBorder guibg=none guifg=none
-
-" Shortcuts
+" Floaterm Shortcuts
 let g:floaterm_keymap_toggle = '<F2>'
 let g:floaterm_keymap_new    = '<F12>'
 let g:floaterm_keymap_prev   = '<F9>'
 let g:floaterm_keymap_next   = '<F10>'
 
-" stop highlighting matching parenthesis
-"hi! MatchParen cterm=NONE gui=NONE guibg=NONE guifg=NONE
-
 " Next Line
 inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
-
-" Autosave
-let g:auto_save = 1
-
-" THEME
 
 " Airline Themes
 let g:airline_theme = 'transparent'
@@ -92,14 +78,6 @@ let &fcs='eob: '
 " Disable trailing[1]
 let g:airline#extensions#whitespace#enabled = 0
 let g:jedi#completions_enabled = 0
-
-" Transparency
-"source ~/.config/nvim/config/transparency.vim
-
-" NERDTree and Tagbar
-"source ~/.config/nvim/config/nerdtree.vim
-
-" Splits
 
 " Open new split panes to right and bottom
 set splitbelow
@@ -114,23 +92,41 @@ nnoremap <C-H> <C-W><C-H>
 " Allows finding a file recursively
 set path+=**
 
+" Disables CoC messages on Airline
 let g:airline#extensions#coc#enabled = 0
 
+" Enables AutoSave
+let g:auto_save = 1
 " Hides (AutoSave) saved at ??:??:??
 let g:auto_save_silent = 1
-
-" New tab
-nnoremap <silent> <C-t> :tabnew<CR>
-
-" Substitute
-nnoremap <C-s> :%s//g<Left><Left>
 
 " Vim-Signature colors based on GitGutter
 let g:SignatureMarkTextHLDynamic = 1
 
-" Fuzzy Finder
-nmap <leader>f :FZF<CR>
-nmap <leader>h :History<CR>
+let g:airline_mode_map = {
+      \ '__'     : '-',
+      \ 'c'      : 'C',
+      \ 'i'      : 'I',
+      \ 'ic'     : 'I',
+      \ 'ix'     : 'I',
+      \ 'n'      : 'N',
+      \ 'multi'  : 'M',
+      \ 'ni'     : 'N',
+      \ 'no'     : 'N',
+      \ 'R'      : 'R',
+      \ 'Rv'     : 'R',
+      \ 's'      : 'S',
+      \ 'S'      : 'S',
+      \ ''     : 'S',
+      \ 't'      : 'T',
+      \ 'v'      : 'V',
+      \ 'V'      : 'V',
+      \ ''     : 'V',
+      \ }
 
 " Coc Config
 source ~/.config/nvim/config/coc.vim
+
+" Fuzzy Finder
+nmap <leader>f :FZF<CR>
+nmap <leader>h :History<CR>
