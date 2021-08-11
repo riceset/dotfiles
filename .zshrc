@@ -5,13 +5,6 @@
 # (_) /___|___/_| |_|_|  \___|
 
 
-### navigation
-alias dl="cd ~/Downloads"
-alias -g ...='cd ../..'
-alias -g ....='cd ../../..'
-alias -g .....='cd ../../../..'
-alias -g ......='cd ../../../../..'
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -45,11 +38,12 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 ### Plugins
-zinit light zsh-users/zsh-autosuggestions
+#zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 zinit light jeffreytse/zsh-vi-mode
 
+# Sets cursor for zsh vi mode
 ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
 ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
@@ -66,8 +60,7 @@ export PATH="/usr/local/sbin:$PATH"
 
 ### ls
 alias ls='lsd --group-dirs first'
-
-alias bat='bat -p'
+alias cat='bat -p'
 
 ### Useful
 alias mv="mv -iv"
@@ -75,8 +68,8 @@ alias cp="cp -riv"
 alias rm="rm -v"
 
 ### Youtube-dl
-alias videodl='youtube-dl -f best '
-alias audiodl='youtube-dl -x --audio-format mp3 '
+# alias videodl='youtube-dl -f best '
+# alias audiodl='youtube-dl -x --audio-format mp3 '
 
 ### Alt server
 alias refreshapp='open -a AltServer.app; open -a mail'
@@ -95,29 +88,11 @@ alias icloud='~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias dot='~/dot'
 
 alias zshrc='nvim ~/.zshrc'
+alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
 alias initvim='nvim ~/.config/nvim/init.vim'
 alias karabiner='nvim ~/.config/karabiner/karabiner.json'
 
-### Pip
-# alias pip='python3 -m pip'
-
-# alias python="Python3"
 alias py="Python"
-
-### Removes executable files
-alias rmexec='find . -perm +100 -type f -delete'
-alias cldir='rmexec && rm -rf *.dSYM'
-
-### Git
-alias add='git add .'
-alias commit='git commit -m'
-alias branch='git branch'
-alias fetch='git fetch'
-alias status='git status'
-alias pull='git pull'
-alias push='git push'
-alias all='git add . && git commit -m'
-alias clone='git clone'
 
 # make
 # export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"
@@ -126,11 +101,11 @@ alias clone='git clone'
 alias gdb='gdb -q'
 
 # git lazy shortcut
-function lazy() {
-    git add .;
-    git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10";
-    git push;
-}
+# function lazy() {
+#     git add .;
+#     git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10";
+#     git push;
+# }
 
 # Clears the screen and runs pfetch
 function c() {
@@ -139,7 +114,6 @@ if [[ $TERM_PROGRAM != 'vscode' ]]; then
     PF_INFO="ascii title kernel os memory uptime pkgs shell" PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
 fi
 }
-alias clear="c"
 
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
@@ -155,18 +129,17 @@ PATH="$GOPATH/bin:$PATH"
 alias ubuntu="docker exec -it 4f9066d297fbde5824c3c5463f16961d3579fe2e7f037cd47b60d1d34d090e2c /bin/sh"
 
 #sets title to the name of the currently executing command, and to the current directory when no process is running. https://github.com/kovidgoyal/kitty/issues/610
+# function set-title-precmd() {
+#   printf "\e]2;%s\a" "${PWD/#$HOME/~}"
+# }
 
-function set-title-precmd() {
-  printf "\e]2;%s\a" "${PWD/#$HOME/~}"
-}
+# function set-title-preexec() {
+#   printf "\e]2;%s\a" "$1"
+# }
 
-function set-title-preexec() {
-  printf "\e]2;%s\a" "$1"
-}
-
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd set-title-precmd
-add-zsh-hook preexec set-title-preexec
+# autoload -Uz add-zsh-hook
+# add-zsh-hook precmd set-title-precmd
+# add-zsh-hook preexec set-title-preexec
 
 # ASDF
 . /usr/local/opt/asdf/asdf.sh

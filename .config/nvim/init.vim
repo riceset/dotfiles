@@ -11,17 +11,17 @@ Plug 'sheerun/vim-polyglot' "Provides some syntax highlighting
 Plug 'Raimondi/delimitMate' "auto-completion for quotes, parens, brackets, etc
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons' "Adds file type icons to Vim plugins NERDTree, Airline etc
 Plug 'airblade/vim-gitgutter' "Git information ~ + -
 Plug 'tpope/vim-fugitive' "plugin for Git
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sainnhe/sonokai'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
-Plug '907th/vim-auto-save'
+"Plug '907th/vim-auto-save'
 Plug 'kshenoy/vim-signature'
 call plug#end()
 
@@ -121,7 +121,7 @@ let g:jedi#completions_enabled = 0
 source ~/.config/nvim/config/transparency.vim
 
 " NERDTree and Tagbar
-source ~/.config/nvim/config/nerdtree.vim
+"source ~/.config/nvim/config/nerdtree.vim
 
 " Splits
 
