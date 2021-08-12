@@ -41,12 +41,8 @@ autoload -Uz _zinit
 #zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-zinit light jeffreytse/zsh-vi-mode
 
-# Sets cursor for zsh vi mode
-ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
-ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
-ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
+bindkey -v
 
 ### Starship:
 eval "$(starship init zsh)"
