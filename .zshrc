@@ -42,7 +42,6 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 zinit light jeffreytse/zsh-vi-mode
-zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-andromeda
 
 # Sets cursor for zsh vi mode
 ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
