@@ -41,8 +41,12 @@ autoload -Uz _zinit
 #zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
+zinit light jeffreytse/zsh-vi-mode
 
-bindkey -v
+# Sets cursor for zsh vi mode
+ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
+ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
 
 ### Starship:
 eval "$(starship init zsh)"
@@ -133,6 +137,7 @@ PATH="$GOPATH/bin:$PATH"
 
  export C_INCLUDE_PATH=/usr/local/include
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s main
-fi
+# Runs tmux automatically
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux new-session -A -s main
+# fi
