@@ -22,8 +22,6 @@ Plug 'tomasr/molokai'
 Plug '907th/vim-auto-save'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive' "plugin for Git
-"Plug 'dominikduda/vim_current_word'
-"Plug 'jaxbot/semantic-highlight.vim'
 " Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
 Plug 'sainnhe/sonokai'
 "Plug 'preservim/nerdtree'
@@ -57,7 +55,6 @@ language en_US
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set mouse=a
 
 " Floaterm Shortcuts
 let g:floaterm_keymap_toggle = '<F2>'
@@ -67,8 +64,6 @@ let g:floaterm_keymap_next   = '<F10>'
 
 " Next Line
 inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
-
-" let g:airline_theme = 'transparent'
 
 " Sonokai
 if has('termguicolors')
@@ -142,7 +137,7 @@ let g:airline_mode_map = {
       \ ''     : 'V',
       \ }
 
-" Coc Config
+" Additional Config
 source ~/.config/nvim/config/transparency.vim
 source ~/.config/nvim/config/coc.vim
 

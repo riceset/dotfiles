@@ -5,6 +5,10 @@
 # (_) /___|___/_| |_|_|  \___|
 
 
+# Enable colors and change prompt:
+autoload -U colors && colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -132,12 +136,20 @@ PATH="$GOPATH/bin:$PATH"
  export VISUAL=nvim;
  export EDITOR=nvim;
 
- # Kitty's default image viewer
- alias icat="kitty +kitten icat"
-
  export C_INCLUDE_PATH=/usr/local/include
 
 # Runs tmux automatically
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #   exec tmux new-session -A -s main
 # fi
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+
+# Edit line in vim with ctrl-t:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^t' edit-command-line
