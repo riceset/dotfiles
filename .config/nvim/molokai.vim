@@ -68,7 +68,7 @@ hi IncSearch       guifg=#C4BE89 guibg=none
 
 hi Keyword         guifg=#F92672               gui=italic
 hi Label           guifg=#E6DB74               gui=italic
-hi Macro           guifg=#C4BE89               gui=italic
+hi Macro           guifg=#AE81FF               gui=italic
 hi SpecialKey      guifg=#66D9EF               gui=italic
 
 hi MatchParen      guifg=#000000 guibg=#89807D gui=bold
@@ -90,7 +90,7 @@ hi Search          guifg=#000000 guibg=#FFE792
 hi Visual          guibg=#1C2F2F
 " marks
 hi SignColumn      guifg=#A6E22E guibg=none
-hi SpecialChar     guifg=#F92672               gui=bold
+hi SpecialChar     guifg=#AE81FF               gui=bold
 hi SpecialComment  guifg=#7E8E91               gui=bold
 hi Special         guifg=#66D9EF guibg=bg      gui=italic
 if has("spell")

@@ -4,7 +4,6 @@
 " | | | | | | |_   _   \ V /| | | | | | |
 " |_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
 
-
 " Import Plugins
 call plug#begin()
 Plug 'sheerun/vim-polyglot' "Provides some syntax highlighting
@@ -13,23 +12,24 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons' "Adds file type icons to Vim plugins NERDTree, Airline etc
 Plug 'airblade/vim-gitgutter' "Git information ~ + -
-Plug 'tpope/vim-fugitive' "plugin for Git
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
-Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
 Plug 'kshenoy/vim-signature'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
 Plug '907th/vim-auto-save'
- Plug 'tpope/vim-surround'
-"Plug 'sainnhe/sonokai'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive' "plugin for Git
+"Plug 'dominikduda/vim_current_word'
+"Plug 'jaxbot/semantic-highlight.vim'
+Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
+Plug 'sainnhe/sonokai'
 "Plug 'preservim/nerdtree'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
-colorscheme molokai
 syntax on
 set noshowmode "Hides bottom text INSERT etc
 set encoding=UTF-8 " Vim devicons
@@ -39,7 +39,6 @@ set cmdheight=1
 set hidden
 set number
 set relativenumber
-set termguicolors
 set t_Co=256
 set t_ut=
 hi Directory guifg=none ctermfg=none
@@ -69,8 +68,25 @@ let g:floaterm_keymap_next   = '<F10>'
 " Next Line
 inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 
-" Airline Themes
+" let g:airline_theme = 'transparent'
+
+" Sonokai
+if has('termguicolors')
+    set termguicolors
+endif
+
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_transparent_background = 1
+let g:sonokai_menu_selection_background = 'black'
+let g:sonokai_sign_column_background = 'none'
+
+colorscheme sonokai
+
 let g:airline_theme = 'transparent'
+
+" Python
+hi Red cterm=italic gui=italic
 
 " Hides the tilde sign on blank lines
 " https://github.com/neovim/neovim/issues/2067
@@ -127,6 +143,7 @@ let g:airline_mode_map = {
       \ }
 
 " Coc Config
+"source ~/.config/nvim/config/transparency.vim
 source ~/.config/nvim/config/coc.vim
 
 " Fuzzy Finder

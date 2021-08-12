@@ -136,3 +136,7 @@ PATH="$GOPATH/bin:$PATH"
  alias icat="kitty +kitten icat"
 
  export C_INCLUDE_PATH=/usr/local/include
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s main
+fi
