@@ -24,7 +24,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive' "plugin for Git
 "Plug 'dominikduda/vim_current_word'
 "Plug 'jaxbot/semantic-highlight.vim'
-Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
+" Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
 Plug 'sainnhe/sonokai'
 "Plug 'preservim/nerdtree'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -143,9 +143,12 @@ let g:airline_mode_map = {
       \ }
 
 " Coc Config
-"source ~/.config/nvim/config/transparency.vim
+source ~/.config/nvim/config/transparency.vim
 source ~/.config/nvim/config/coc.vim
 
 " Fuzzy Finder
 nmap <leader>f :FZF<CR>
 nmap <leader>h :History<CR>
+
+" Coc Error
+hi CocFadeOut gui=undercurl
