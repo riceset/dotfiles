@@ -13,15 +13,15 @@ disabled = true
 [git_status]
 disabled = true
 [username]
-style_user = "#45ba45"
-style_root = "bold yellow"
+style_user = "#81CE6B"
+style_root = "bold #DFDD51"
 format = "[$user]($style) in "
 disabled = true 
 show_always = true
 [directory]
-style = "#8be200"
+style = "#81CE6B"
 [git_branch]
-style = "#e7005c"
+style = "#F8586E"
 [character]
 success_symbol = "[❯](bold white)"
-error_symbol = "[❯](bold red)"
+error_symbol = "[❯](bold #e7005c)"
