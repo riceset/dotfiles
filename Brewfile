@@ -30,6 +30,7 @@ brew "http-server"
 brew "hugo"
 brew "jq"
 brew "lsd"
+brew "mas"
 brew "youtube-dl"
 brew "mpv"
 brew "neovim"
@@ -45,13 +46,23 @@ brew "tmux"
 brew "vim"
 brew "wget"
 brew "clementtsang/bottom/bottom"
+
+cask "airbuddy"
 cask "alfred"
+cask "amethyst"
 cask "brave-browser"
 cask "font-jetbrains-mono-nerd-font"
+cask "karabiner-elements"
 cask "kitty"
 cask "lulu"
 cask "openemu"
-cask "spectacle"
 cask "the-unarchiver"
 cask "tunnelblick"
 cask "virtualbox"
+
+mas "Bear", id: 1091189122
+mas "Cleaner One Lite", id: 1473079126
+mas "Keynote", id: 409183694
+mas "Scenecuts Helper", id: 1540491573
+mas "Spark", id: 1176895641
+mas "辞書 by 物書堂", id: 1380563956
