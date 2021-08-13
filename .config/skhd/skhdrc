@@ -1,0 +1,45 @@
+#      _    _         _
+#  ___| | _| |__   __| |_ __ ___
+# / __| |/ / '_ \ / _` | '__/ __|
+# \__ \   <| | | | (_| | | | (__
+# |___/_|\_\_| |_|\__,_|_|  \___|
+
+#brew services restart skhd
+
+# insert mode
+alt - i : yabai -m window --insert east
+alt + shift - i : yabai -m window --insert south
+
+# Open Programs
+alt - 1 : yabai -m window --insert south \
+    && open -n /Applications/Kitty.app
+alt + shift - 1 : yabai -m window --insert south \
+    && open -n /Applications/Kitty.app
+
+alt - 2 : yabai -m window --insert east \
+    && open -n /Applications/Brave.app
+alt + shift - 2 : yabai -m window --insert south \
+    && open -n /Applications/Brave.app
+
+alt - 3 : yabai -m window --insert east \
+    && open -n /Applications/Dictionaries.app
+
+alt - 4 : open -n /Applications/Bear.app
+alt - 9 : open -n /Applications/Anki.app
+
+# Flip
+alt - l : yabai -m space --mirror y-axis
+
+# Rotate the window tree clock-wise (options: 90, 180, 270 degree)
+alt - k : yabai -m space --rotate 90
+
+# Fullscreen
+alt - z : yabai -m window --toggle zoom-fullscreen
+
+# Focus
+alt - x : yabai -m window --focus recent
+alt - n : yabai -m window --focus prev
+alt - m : yabai -m window --focus next
+
+# Toggles float
+alt - f : yabai -m window --toggle float

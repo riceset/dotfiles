@@ -18,12 +18,12 @@ Plug 'tpope/vim-commentary'
 Plug 'kshenoy/vim-signature'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'tomasr/molokai'
 Plug '907th/vim-auto-save'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive' "plugin for Git
-" Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
 Plug 'sainnhe/sonokai'
+"Plug 'tomasr/molokai'
+" Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
 "Plug 'preservim/nerdtree'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
