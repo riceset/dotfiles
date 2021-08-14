@@ -1,0 +1,27 @@
+#              _
+#      _______| |__  _ __ ___
+#     |_  / __| '_ \| '__/ __|
+#  _   / /\__ \ | | | | | (__
+# (_) /___|___/_| |_|_|  \___|
+
+source "$ZDOTDIR/functions.zsh"
+
+# Sourcing files
+add_file "aliases.zsh"
+add_file "exports.zsh"
+
+# Prompt:
+eval "$(starship init zsh)"
+
+# Clears the screen and runs pfetch using 'c'
+function c() {
+     clear;
+ if [[ $TERM_PROGRAM != 'vscode' ]]; then
+     PF_INFO="ascii title kernel os memory uptime pkgs shell" \
+         PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
+ fi
+}; c
+
+# Edit line in vim with ctrl-t:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^t' edit-command-line
