@@ -1,17 +1,35 @@
-# Table of contents
+# dotfiles
 
-### Shell
-- [zsh](https://github.com/riceset/dotfiles/blob/main/.zshrc)
+Requirements
 
-### Vim
-- [NeoVim](https://github.com/riceset/dotfiles/blob/main/.config/nvim/init.vim)
+- [Stow](https://www.gnu.org/software/stow/)
+- [Brew](https://brew.sh/)
 
-### Terminal
+## Setting it up
 
-- [Alacritty](https://github.com/riceset/dotfiles/blob/main/.config/alacritty/alacritty.yml)
-- [kitty](https://github.com/riceset/dotfiles/tree/main/.config/kitty)
+Install Homebrew:
 
-### Others
-- [Starship](https://github.com/riceset/dotfiles/blob/main/.config/starship.toml)
-- [tmux](https://github.com/riceset/dotfiles/blob/main/.tmux.conf)
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Install packages from the [Brewfile](https://github.com/riceset/dotfiles/blob/main/Brewfile):
+
+```sh
+# Run from /.dotfiles
+brew bundle
+
+# Or
+
+brew bundle --file ~/.dotfiles/Brewfile
+```
+
+### Setting up dotfiles
+
+cd into packages and run:
+
+```sh
+stow -v -R -t ~ *
+```
+
 <a href="https://github.com/riceset/"><img align='right' src='https://user-images.githubusercontent.com/48802655/110702518-5fc7a700-81d1-11eb-9bff-35a31eb4f6d0.gif' width='60'></a>
