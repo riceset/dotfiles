@@ -50,6 +50,7 @@ brew "clementtsang/bottom/bottom"
 
 cask "airbuddy"
 cask "alfred"
+cask "altserver"
 cask "amethyst"
 cask "brave-browser"
 cask "font-jetbrains-mono-nerd-font"

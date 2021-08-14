@@ -6,8 +6,6 @@
 
 source "$ZDOTDIR/functions.zsh"
 
-# Sourcing files
-add_plugin "zsh-users/zsh-completions"
 add_plugin "zdharma/fast-syntax-highlighting"
 add_plugin "jeffreytse/zsh-vi-mode"
 
