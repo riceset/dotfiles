@@ -1,3 +1,5 @@
+# add_file(), add_plugin(), add_completion() from https://github.com/ChristianChiarulli 
+
 # Function to source files if they exist
 function add_file() {
     [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
@@ -29,3 +31,10 @@ function add_completion() {
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
+
+# git lazy shortcut
+# function lazy() {
+#     git add .;
+#     git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10";
+#     git push;
+# }

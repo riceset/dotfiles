@@ -26,3 +26,11 @@ export EDITOR=nvim;
 
 # ASDF
 . /usr/local/opt/asdf/asdf.sh
+
+# Sets cursor for zsh vi mode
+ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
+ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
+
+# make
+# export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"

@@ -1,18 +1,18 @@
 # Prevent brew from updating every time
 alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
 
-### ls
+# ls
 alias ls='lsd --group-dirs first'
 alias cat='bat -p'
 
-### Useful
+# Useful
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias rm="rm -v"
 alias vi='nvim'
 alias py="Python"
 
-### Alt server
+# Alt server
 alias refreshapp='open -a AltServer.app; open -a mail'
 
 # Useful Directories
@@ -36,3 +36,7 @@ alias karabiner='nvim ~/.config/karabiner/karabiner.json'
 
 # Gdb quiet
 alias gdb='gb -q'
+
+# Youtube-dl
+# alias videodl='youtube-dl -f best '
+# alias audiodl='youtube-dl -x --audio-format mp3 '
