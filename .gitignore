@@ -1,5 +1,1 @@
-.config/nvim/plugged/AutoComplPop
-.config/coc
-.config/configstore
-.config/gtk-2.0
-.config/nvim/plugged
+packages/nvim/.config/nvim/plugged

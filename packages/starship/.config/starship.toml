@@ -1,0 +1,27 @@
+#      _                 _     _             _                  _
+#  ___| |_ __ _ _ __ ___| |__ (_)_ __       | |_ ___  _ __ ___ | |
+# / __| __/ _` | '__/ __| '_ \| | '_ \      | __/ _ \| '_ ` _ \| |
+# \__ \ || (_| | |  \__ \ | | | | |_) |  _  | || (_) | | | | | | |
+# |___/\__\__,_|_|  |___/_| |_|_| .__/  (_)  \__\___/|_| |_| |_|_|
+#                               |_|
+
+add_newline = false
+[line_break]
+disabled = true
+[cmd_duration]
+disabled = true
+[git_status]
+disabled = true
+[username]
+style_user = "#81CE6B"
+style_root = "bold #DFDD51"
+format = "[$user]($style) in "
+disabled = true 
+show_always = true
+[directory]
+style = "#81CE6B"
+[git_branch]
+style = "#F8586E"
+[character]
+success_symbol = "[❯](bold white)"
+error_symbol = "[❯](bold #e7005c)"
