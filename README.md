@@ -1,11 +1,13 @@
 # dotfiles
 
-Requirements
+Requirements:
 
 - [Stow](https://www.gnu.org/software/stow/)
 - [Brew](https://brew.sh/)
 
 ## Setting it up
+
+### Homebrew
 
 Install Homebrew:
 
