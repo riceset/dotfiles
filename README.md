@@ -16,12 +16,12 @@ Install Homebrew:
 Install packages from the [Brewfile](https://github.com/riceset/dotfiles/blob/main/Brewfile):
 
 ```sh
-# Run from /.dotfiles
+# Run from the dotfiles directory
 brew bundle
 
 # Or
 
-brew bundle --file ~/.dotfiles/Brewfile
+brew bundle --file ~/dotfiles/Brewfile
 ```
 
 ### Setting up dotfiles
