@@ -44,7 +44,7 @@ set shiftwidth=4
 
 " Fuzzy Finder
 let mapleader="\<space>"
-nmap <leader>f :FZF<CR>
+nmap <leader>g :FZF<CR>
 nmap <leader>h :History<CR>
 
 " Navigation between splits using Control + vim keys

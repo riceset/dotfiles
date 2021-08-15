@@ -42,6 +42,7 @@ alias exports='nvim ~/.config/zsh/exports.zsh'
 alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
 alias tmuxconf='nvim ~/.config/tmux/.tmux.conf'
 alias initvim='nvim ~/.config/nvim/init.vim'
+alias plugins='nvim ~/.config/nvim/config/plugins.vim'
 alias karabiner='nvim ~/.config/karabiner/karabiner.json'
 
 # Gdb quiet

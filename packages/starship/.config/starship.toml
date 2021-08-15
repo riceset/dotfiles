@@ -6,22 +6,34 @@
 #                               |_|
 
 add_newline = false
+
 [line_break]
 disabled = true
+
 [cmd_duration]
-disabled = true
+disabled = false
+
 [git_status]
-disabled = true
+style = "#DFDD51"
+disabled = false
+
 [username]
 style_user = "#81CE6B"
 style_root = "bold #DFDD51"
+
 format = "[$user]($style) in "
-disabled = true 
+disabled = true
 show_always = true
+
+[package]
+disabled = false
+
 [directory]
 style = "#81CE6B"
+
 [git_branch]
 style = "#F8586E"
+
 [character]
-success_symbol = "[❯](bold white)"
-error_symbol = "[❯](bold #e7005c)"
+success_symbol = "[❯](bold #ffffff)"
+error_symbol = "[❯](bold #F8586E)"

@@ -30,7 +30,3 @@ function c() {
          PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
  fi
 }; c
-
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line

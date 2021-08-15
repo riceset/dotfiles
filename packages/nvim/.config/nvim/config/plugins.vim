@@ -12,9 +12,9 @@ Plug 'kshenoy/vim-signature'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug '907th/vim-auto-save'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive' "plugin for Git
 Plug 'sainnhe/sonokai'
+" Plug 'tpope/vim-fugitive' "plugin for Git
+" Plug 'tpope/vim-surround'
 "Plug 'tomasr/molokai'
 " Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
 "Plug 'preservim/nerdtree'
