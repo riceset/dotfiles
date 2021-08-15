@@ -1,4 +1,5 @@
 # dotfiles
+
 ![setup](https://user-images.githubusercontent.com/48802655/129465450-f52b9712-3d60-4d71-8950-50328c4ba816.png)
 
 ## Setting it up
@@ -23,7 +24,6 @@ Install packages from the [Brewfile](https://github.com/riceset/dotfiles/blob/ma
 brew bundle
 
 # Or
-
 brew bundle --file ~/dotfiles/Brewfile
 ```
 

@@ -12,18 +12,20 @@ alias ls='lsd --group-dirs first'
 alias cat='bat -p'
 
 # Useful
-alias mv="mv -iv"
-alias cp="cp -riv"
-alias rm="rm -v"
-alias df="df -h"
-alias du="du -h"
+alias mv='mv -iv'
+alias cp='cp -riv'
+alias rm='rm -v'
+
+alias df='df -h'
+alias du='du -h'
+
 alias vi='nvim'
-alias py="Python"
+alias py='Python'
 
 # Colorize grep output
-alias grep="grep --color=auto"
-alias egrep="egrep --color=auto"
-alias fgrep="fgrep --color=auto"
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
 # Alt server
 alias refreshapp='open -a AltServer.app; open -a mail'
@@ -37,18 +39,21 @@ alias developer='~/Developer'
 alias concepts='~/Developer/Concepts'
 alias projects='~/Developer/Projects'
 alias icloud='~/Library/Mobile¥ Documents/com~apple~CloudDocs/'
+alias vimconf='~/.config/nvim/config/'
 alias dotfiles='~/.dotfiles'
 alias tmp='~/tmp'
 
 # Config
+alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
+alias karabiner='nvim ~/.config/karabiner/karabiner.json'
+alias tmuxconf='nvim ~/.config/tmux/.tmux.conf'
+
 alias zshrc='nvim ~/.config/zsh/.zshrc'
 alias aliases='nvim ~/.config/zsh/aliases.zsh'
 alias exports='nvim ~/.config/zsh/exports.zsh'
-alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
-alias tmuxconf='nvim ~/.config/tmux/.tmux.conf'
+
 alias initvim='nvim ~/.config/nvim/init.vim'
 alias plugins='nvim ~/.config/nvim/config/plugins.vim'
-alias karabiner='nvim ~/.config/karabiner/karabiner.json'
 
 # Gdb quiet
 alias gdb='gb -q'
