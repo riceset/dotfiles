@@ -1,3 +1,4 @@
 packages/nvim/.config/nvim/plugged
 packages/zsh/.config/zsh/.zsh_history
 packages/zsh/.config/zsh/plugins
+packages/zsh/.config/zsh/.zcompdump
