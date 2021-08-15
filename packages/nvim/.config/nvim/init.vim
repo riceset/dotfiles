@@ -21,7 +21,6 @@ set inccommand=split
 set path+=** " Allows finding a file recursively
 let &fcs='eob: ' " Hides the tilde sign on blank lines
 hi Red cterm=italic gui=italic
-hi CocFadeOut gui=undercurl
 
 " Open new split panes to right and bottom
 set splitbelow
@@ -53,6 +52,9 @@ let g:SignatureMarkTextHLDynamic = 1 " Vim-Signature colors based on GitGutter
 
 let g:auto_save = 1 " Enables AutoSave
 let g:auto_save_silent = 1 " Hides (AutoSave) saved at ??:??:??
+
+" vim-lsp-cxx-highlight
+let g:lsp_cxx_hl_use_text_props = 1
 
 " Additional Config
 source ~/.config/nvim/config/airline.vim

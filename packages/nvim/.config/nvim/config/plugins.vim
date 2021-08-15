@@ -14,9 +14,9 @@ Plug 'junegunn/fzf.vim'
 Plug '907th/vim-auto-save' "Autosaves
 Plug 'sainnhe/sonokai' "My Current theme
 Plug 'tpope/vim-fugitive' "plugin for Git
-" Plug 'tpope/vim-surround'
-"Plug 'tomasr/molokai'
 " Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
+"Plug 'tpope/vim-surround'
+"Plug 'tomasr/molokai'
 "Plug 'preservim/nerdtree'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()

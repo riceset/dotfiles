@@ -27,6 +27,9 @@ export EDITOR=nvim;
 # ASDF
 . /usr/local/opt/asdf/asdf.sh
 
+# Z
+. /usr/local/etc/profile.d/z.sh
+
 # Sets cursor for zsh vi mode
 ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
 ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK

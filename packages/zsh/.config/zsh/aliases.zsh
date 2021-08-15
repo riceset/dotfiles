@@ -1,5 +1,8 @@
-alias vi='nvim'
-alias py="Python"
+# Navigation
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
 
 # Prevent brew from updating every time
 alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
@@ -14,6 +17,8 @@ alias cp="cp -riv"
 alias rm="rm -v"
 alias df="df -h"
 alias du="du -h"
+alias vi='nvim'
+alias py="Python"
 
 # Colorize grep output
 alias grep="grep --color=auto"
@@ -47,6 +52,9 @@ alias karabiner='nvim ~/.config/karabiner/karabiner.json'
 
 # Gdb quiet
 alias gdb='gb -q'
+
+# rickroll
+alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # Youtube-dl
 # alias videodl='youtube-dl -f best '
