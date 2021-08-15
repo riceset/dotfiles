@@ -1,11 +1,12 @@
 # dotfiles
+![setup](https://user-images.githubusercontent.com/48802655/129465450-f52b9712-3d60-4d71-8950-50328c4ba816.png)
 
-Requirements:
+## Setting it up
+
+### Requirements
 
 - [Stow](https://www.gnu.org/software/stow/)
 - [Brew](https://brew.sh/)
-
-## Setting it up
 
 ### Homebrew
 
