@@ -13,7 +13,8 @@ source ~/.config/nvim/config/coc.vim "CoC Configuration
 
 " Plugin Configuration
 source ~/.config/nvim/config/autosave.vim
-source ~/.config/nvim/config/fzf.vim
 source ~/.config/nvim/config/signatures.vim
 source ~/.config/nvim/config/floaterm.vim
 source ~/.config/nvim/config/airline.vim
+source ~/.config/nvim/config/ranger.vim
+source ~/.config/nvim/config/quickscope.vim

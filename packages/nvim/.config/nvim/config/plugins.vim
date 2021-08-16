@@ -9,14 +9,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "IDE features
 Plug 'voldikss/vim-floaterm' "terminal window inside vim with f2
 Plug 'tpope/vim-commentary' "Comment with 'gcc'
 Plug 'kshenoy/vim-signature' " Marks
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy finder
-Plug 'junegunn/fzf.vim'
-Plug '907th/vim-auto-save' "Autosaves
 Plug 'sainnhe/sonokai' "My Current theme
 Plug 'tpope/vim-fugitive' "plugin for Git
-" Plug 'jackguo380/vim-lsp-cxx-highlight' "Syntax highlighting for C
-"Plug 'tpope/vim-surround'
-"Plug 'tomasr/molokai'
-"Plug 'preservim/nerdtree'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} "ranger
+Plug 'unblevable/quick-scope' "Highlight when using 'f' or 't'
 call plug#end()

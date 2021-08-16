@@ -7,6 +7,8 @@ let g:jedi#completions_enabled = 0
 
 " Tabline
 let g:airline#extensions#tabline#enabled = 1
+" Only shows the file name
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1

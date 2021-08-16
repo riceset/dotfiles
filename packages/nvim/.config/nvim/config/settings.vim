@@ -22,3 +22,18 @@ set splitright
 " Tabs to 4 spaces
 set tabstop=4
 set softtabstop=4
+
+" Clear search highlights with Esc
+nnoremap <esc> :noh<return><esc>
+
+" Clear command line message
+function! s:empty_message(timer)
+  if mode() ==# 'n'
+    echon ''
+  endif
+endfunction
+
+augroup cmd_msg_cls
+    autocmd!
+    autocmd CmdlineLeave :  call timer_start(5000, funcref('s:empty_message'))
+augroup END
