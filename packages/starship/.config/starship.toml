@@ -15,7 +15,7 @@ disabled = false
 
 [git_status]
 style = "#DFDD51"
-disabled = false
+disabled = true
 
 [username]
 style_user = "#81CE6B"
