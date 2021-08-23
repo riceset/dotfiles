@@ -7,14 +7,13 @@ alias -g ......='../../../../..'
 # Prevent brew from updating every time
 alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
 
-# ls
-alias ls='lsd --group-dirs first'
-alias cat='bat -p'
-
 # Useful
 alias mv='mv -iv'
 alias cp='cp -riv'
 alias rm='rm -v'
+alias ls='lsd --group-dirs first'
+alias cat='bat -p'
+alias c='clear'
 
 alias df='df -h'
 alias du='du -h'
