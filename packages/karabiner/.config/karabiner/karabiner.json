@@ -250,6 +250,13 @@
                         "description": "Japanese",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "name": "kana",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "left_shift",
                                     "modifiers": {
@@ -270,19 +277,18 @@
                                             "name": "kana",
                                             "value": 0
                                         }
-
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_if",
-                                        "name": "kana",
-                                        "value": 1
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "name": "kana",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "left_shift",
                                     "modifiers": {
@@ -303,13 +309,6 @@
                                             "name": "kana",
                                             "value": 1
                                         }
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_if",
-                                        "name": "kana",
-                                        "value": 0
                                     }
                                 ],
                                 "type": "basic"

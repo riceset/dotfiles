@@ -4,6 +4,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "universal-ctags/universal-ctags"
 
 brew "coreutils"
 brew "asdf"
@@ -21,7 +22,6 @@ brew "libass"
 brew "srt"
 brew "ffmpeg"
 brew "figlet"
-brew "fzf"
 brew "gdb"
 brew "git", link: false
 brew "gnupg"
@@ -29,6 +29,8 @@ brew "htop"
 brew "hugo"
 brew "lsd"
 brew "mas"
+brew "youtube-dl"
+brew "mpv"
 brew "neovim"
 brew "pfetch"
 brew "pyenv"
@@ -41,7 +43,6 @@ brew "stow"
 brew "tldr"
 brew "tmux"
 brew "wget"
-brew "youtube-dl"
 brew "z"
 brew "clementtsang/bottom/bottom"
 
@@ -57,6 +58,7 @@ cask "lulu"
 cask "openemu"
 cask "the-unarchiver"
 cask "tunnelblick"
+cask "vanilla"
 cask "virtualbox"
 
 mas "Bear", id: 1091189122
@@ -64,4 +66,5 @@ mas "Cleaner One Lite", id: 1473079126
 mas "Keynote", id: 409183694
 mas "Scenecuts Helper", id: 1540491573
 mas "Spark", id: 1176895641
+mas "Thor", id: 1120999687
 mas "辞書 by 物書堂", id: 1380563956
