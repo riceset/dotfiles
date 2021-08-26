@@ -4,12 +4,6 @@
 #  _ / /\__ \ | | | | | (__
 # (_)___|___/_| |_|_|  \___|
 
-# Pfetch
-if [[ $TERM_PROGRAM != 'vscode' ]]; then
-    PF_INFO="ascii title kernel os memory uptime pkgs shell" \
-        PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
-fi
-
 source "$ZDOTDIR/functions.zsh"
 
 add_plugin "zsh-users/zsh-completions"

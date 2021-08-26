@@ -58,7 +58,6 @@ cask "lulu"
 cask "openemu"
 cask "the-unarchiver"
 cask "tunnelblick"
-cask "vanilla"
 cask "virtualbox"
 
 mas "Bear", id: 1091189122
@@ -67,4 +66,5 @@ mas "Keynote", id: 409183694
 mas "Scenecuts Helper", id: 1540491573
 mas "Spark", id: 1176895641
 mas "Thor", id: 1120999687
+mas "TickTick", id: 966085870
 mas "辞書 by 物書堂", id: 1380563956

@@ -8,26 +8,22 @@ alias -g ......='../../../../..'
 alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
 
 # Useful
-alias mv='mv -iv'
-alias cp='cp -riv'
-alias rm='rm -v'
+# alias mv='mv -iv'
+# alias cp='cp -riv'
+# alias rm='rm -v'
 alias ls='lsd --group-dirs first'
 alias cat='bat -p'
-alias c='clear'
 
-alias df='df -h'
-alias du='du -h'
+# alias df='df -h'
+# alias du='du -h'
 
 alias vi='nvim'
 alias py='Python'
 
 # Colorize grep output
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-# Alt server
-alias refreshapp='open -a AltServer.app; open -a mail'
+# alias grep='grep --color=auto'
+# alias egrep='egrep --color=auto'
+# alias fgrep='fgrep --color=auto'
 
 # Useful Directories
 alias downloads='~/Downloads'

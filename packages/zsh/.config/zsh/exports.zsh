@@ -37,3 +37,9 @@ ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
 
 # make
 # export CFLAGS="-ggdb -std=c99 -Wall -Werror -lcs50 -lm"
+
+# Pfetch
+# if [[ $TERM_PROGRAM != 'vscode' ]]; then
+#     PF_INFO="ascii title kernel os memory uptime pkgs shell" \
+#         PF_COL1=7 PF_COL3=7 /usr/local/bin/pfetch
+# fi
