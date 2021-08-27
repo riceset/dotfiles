@@ -4,3 +4,4 @@ packages/zsh/.config/zsh/plugins
 packages/zsh/.config/zsh/.zcompdump
 packages/ranger/.config/ranger/plugins
 packages/kitty/.config/kitty/kitty-themes
+packages/zsh/.config/zsh/.zsh_sessions/

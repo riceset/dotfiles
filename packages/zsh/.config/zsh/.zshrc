@@ -4,7 +4,6 @@
 #  _ / /\__ \ | | | | | (__
 # (_)___|___/_| |_|_|  \___|
 
-
 source "$ZDOTDIR/functions.zsh"
 
 add_plugin "zsh-users/zsh-completions"

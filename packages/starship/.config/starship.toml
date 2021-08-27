@@ -34,3 +34,27 @@ style = "#F8586E"
 [character]
 success_symbol = "[❯](bold #ffffff)"
 error_symbol = "[❯](bold #F8586E)"
+
+[python]
+disabled = true
+
+[package]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[java]
+disabled = true
+
+[golang]
+disabled = true
+
+[aws]
+disabled = true
