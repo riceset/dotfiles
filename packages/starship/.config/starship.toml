@@ -25,9 +25,6 @@ format = "[$user]($style) in "
 disabled = true
 show_always = true
 
-[package]
-disabled = false
-
 [directory]
 style = "#81CE6B"
 

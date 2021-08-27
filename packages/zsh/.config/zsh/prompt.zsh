@@ -22,8 +22,9 @@ case "$TERM" in
 esac
 
 function precmd () {
-    xtitle "$(print -P $USER@$HOST: 'in' '%~')"
+    xtitle "$(print -Pn "\e$USER@$HOST in %3~\a")"
+
 }
  function preexec () {
-    xtitle "$(print -P $USER@$HOST: running \'$1\')"
+     xtitle "$(print -P "$USER@$HOST running '$1'")"
 }
