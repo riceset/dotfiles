@@ -1,8 +1,4 @@
-# TERM
-if [[ $TERM_PROGRAM == 'kitty' ]]; then
-    TERM=xterm-kitty
-fi
-# TERM=xterm-256color
+TERM=xterm-kitty
 
 # Language
 export LC_ALL=en_US.UTF-8
