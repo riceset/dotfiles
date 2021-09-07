@@ -13,4 +13,5 @@ Plug 'sainnhe/sonokai' "My Current theme
 Plug 'tpope/vim-fugitive' "plugin for Git
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} "ranger
 Plug 'unblevable/quick-scope' "Highlight when using 'f' or 't'
+" Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
