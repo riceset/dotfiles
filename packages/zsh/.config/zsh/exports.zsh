@@ -1,4 +1,4 @@
-TERM=xterm-kitty
+# TERM=xterm-kitty
 
 # Language
 export LC_ALL=en_US.UTF-8
