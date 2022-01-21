@@ -5,7 +5,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "universal-ctags/universal-ctags"
-
 brew "coreutils"
 brew "asdf"
 brew "bat"
@@ -44,25 +43,24 @@ brew "wget"
 brew "youtube-dl"
 brew "z"
 brew "clementtsang/bottom/bottom"
-
 cask "airbuddy"
 cask "alfred"
-cask "altserver"
 cask "amethyst"
 cask "brave-browser"
+cask "discord"
 cask "font-jetbrains-mono-nerd-font"
 cask "karabiner-elements"
 cask "kitty"
 cask "lulu"
-cask "openemu"
 cask "the-unarchiver"
+cask "tomighty"
 cask "tunnelblick"
 cask "virtualbox"
-
-mas "Bear", id: 1091189122
+cask "zoom"
 mas "Cleaner One Lite", id: 1473079126
-mas "Keynote", id: 409183694
+mas "Dictionaries", id: 1380563956
+mas "Keynote 讲演", id: 409183694
 mas "Scenecuts Helper", id: 1540491573
 mas "Thor", id: 1120999687
 mas "Unsplash Wallpapers", id: 1284863847
-mas "辞書 by 物書堂", id: 1380563956
+mas "熊掌记", id: 1091189122
