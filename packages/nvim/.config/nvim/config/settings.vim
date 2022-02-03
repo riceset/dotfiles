@@ -6,7 +6,7 @@ set clipboard=unnamedplus
 set noru
 set t_Co=256
 set t_ut=
-set expandtab
+" set expandtab
 set laststatus=0 ruler
 set inccommand=split
 set path+=** " Allows finding a file recursively
@@ -15,6 +15,9 @@ let mapleader="\<space>"
 
 hi Red cterm=italic gui=italic
 
+" Show tab / spaces
+set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→
+
 " Open new split panes to right and bottom
 set splitbelow
 set splitright
@@ -22,9 +25,14 @@ set splitright
 " Tabs to 4 spaces
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 
 " Clear search highlights with Esc
 nnoremap <esc> :noh<return><esc>
+
+" 42 Header
+let g:user42 = 'tkomeno'
+let g:mail42 = 'tkomeno@student.42tokyo.jp'
 
 " Clear command line message
 function! s:empty_message(timer)
