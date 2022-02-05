@@ -1,4 +1,5 @@
 call plug#begin()
+Plug '42Paris/42header'
 Plug 'sheerun/vim-polyglot' "Provides some syntax highlighting
 Plug 'Raimondi/delimitMate' "auto-completion for quotes, parens, brackets, etc
 Plug 'vim-airline/vim-airline' "Line containing some information
@@ -13,7 +14,6 @@ Plug 'sainnhe/sonokai' "My Current theme
 Plug 'tpope/vim-fugitive' "plugin for Git
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} "ranger
 Plug 'unblevable/quick-scope' "Highlight when using 'f' or 't'
-Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug '907th/vim-auto-save'
-Plug '42Paris/42header'
+" Plug 'jackguo380/vim-lsp-cxx-highlight'
+" Plug '907th/vim-auto-save'
 call plug#end()

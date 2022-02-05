@@ -24,3 +24,4 @@ hi link _Comment Comment
 
 " https://stackoverflow.com/questions/54685249/in-vim-how-to-highlight-the-user-defined-data-type
 " syn match cType "\<[a-zA-Z_][a-zA-Z0-9_]*_[t]\>"
+syn match cType "\<[stueg]_[a-zA-Z_][a-zA-Z0-9_]*\>"

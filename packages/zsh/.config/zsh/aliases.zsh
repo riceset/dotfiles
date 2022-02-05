@@ -6,6 +6,7 @@ alias -g ......='../../../../..'
 
 # Prevent brew from updating every time
 alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
+alias norm="norminette"
 
 # Useful
 # alias mv='mv -iv'
