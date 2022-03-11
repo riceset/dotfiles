@@ -6,7 +6,19 @@ alias -g ......='../../../../..'
 
 # Prevent brew from updating every time
 alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
-alias norm="norminette"
+alias wcc="cc -Wall -Wextra -Werror"
+alias norm="norminette -R CheckForbiddenSourceHeader"
+alias normh="norminette -R CheckDefine"
+alias normall="norm ex*/ft*.c"
+alias xx="wcc ft*.c main.c; ./a.out"
+
+alias l='ls'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+alias c='clear'
 
 # Useful
 # alias mv='mv -iv'
@@ -52,7 +64,7 @@ alias initvim='nvim ~/.config/nvim/init.vim'
 alias plugins='nvim ~/.config/nvim/config/plugins.vim'
 
 # Gdb quiet
-alias gdb='gb -q'
+alias gdb='gdb -q'
 
 # rickroll
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'

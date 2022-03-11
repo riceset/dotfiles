@@ -16,4 +16,5 @@ Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} "ranger
 Plug 'unblevable/quick-scope' "Highlight when using 'f' or 't'
 " Plug 'jackguo380/vim-lsp-cxx-highlight'
 " Plug '907th/vim-auto-save'
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 call plug#end()

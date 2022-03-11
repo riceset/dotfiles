@@ -11,6 +11,7 @@ export MANPAGER="nvim -c 'set ft=man' -"
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # C includes
 export C_INCLUDE_PATH=/usr/local/include

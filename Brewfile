@@ -4,6 +4,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "louisbrunner/valgrind"
 tap "universal-ctags/universal-ctags"
 brew "coreutils"
 brew "asdf"
@@ -26,6 +27,7 @@ brew "git", link: false
 brew "gnupg"
 brew "htop"
 brew "hugo"
+brew "imagemagick"
 brew "lsd"
 brew "mas"
 brew "neovim"
@@ -39,6 +41,7 @@ brew "starship"
 brew "stow"
 brew "tldr"
 brew "tmux"
+brew "vim"
 brew "wget"
 brew "youtube-dl"
 brew "z"
@@ -52,16 +55,19 @@ cask "font-jetbrains-mono-nerd-font"
 cask "karabiner-elements"
 cask "kitty"
 cask "lulu"
+cask "notion"
+cask "obsidian"
 cask "the-unarchiver"
 cask "tomighty"
 cask "tunnelblick"
 cask "virtualbox"
+cask "visual-studio-code"
 cask "zoom"
-mas "Cleaner One Lite", id: 1473079126
-mas "Dictionaries", id: 1380563956
-mas "Keynote 讲演", id: 409183694
+mas "Bear", id: 1091189122
+mas "Drafts", id: 1435957248
+mas "Kindle", id: 405399194
+mas "LINE", id: 539883307
 mas "Scenecuts Helper", id: 1540491573
-mas "Thor", id: 1120999687
+mas "Thor Launcher", id: 1120999687
 mas "Unsplash Wallpapers", id: 1284863847
 mas "辞書 by 物書堂", id: 1380563956
-mas "熊掌记", id: 1091189122
