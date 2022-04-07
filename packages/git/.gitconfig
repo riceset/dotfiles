@@ -1,6 +1,6 @@
 [user]
-	name = riceset
-	email = 48802655+riceset@users.noreply.github.com
+	name = komeno
+	email = tkomeno@student.42tokyo.jp
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
