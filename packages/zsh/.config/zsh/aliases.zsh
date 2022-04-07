@@ -9,7 +9,7 @@ alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
 alias wcc="cc -Wall -Wextra -Werror"
 alias norm="norminette -R CheckForbiddenSourceHeader"
 alias normh="norminette -R CheckDefine"
-alias normall="norm ex*/ft*.c"
+alias normall="norm ft*.c"
 alias xx="wcc ft*.c main.c; ./a.out"
 
 alias l='ls'
@@ -23,7 +23,7 @@ alias c='clear'
 # Useful
 # alias mv='mv -iv'
 # alias cp='cp -riv'
-# alias rm='rm -v'
+alias rm='rm -v'
 alias ls='lsd --group-dirs first'
 alias cat='bat -p'
 
