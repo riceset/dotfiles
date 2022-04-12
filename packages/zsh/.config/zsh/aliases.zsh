@@ -11,7 +11,7 @@ alias norm="norminette -R CheckForbiddenSourceHeader"
 alias normh="norminette -R CheckDefine"
 alias normall="norm ft*.c"
 alias xx="wcc ft*.c main.c; ./a.out"
-
+alias db="lldb -s <(echo 'target stop-hook add --one-liner \"frame variable\"')"
 alias l='ls'
 alias ll='ls -l'
 alias la='ls -a'
@@ -64,7 +64,7 @@ alias initvim='nvim ~/.config/nvim/init.vim'
 alias plugins='nvim ~/.config/nvim/config/plugins.vim'
 
 # Gdb quiet
-alias gdb='gdb -q'
+# alias gdb='gdb -q'
 
 # rickroll
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'

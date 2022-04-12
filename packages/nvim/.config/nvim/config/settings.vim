@@ -1,7 +1,8 @@
 syntax on
 set noshowmode "Hides bottom text INSERT etc
 set noshowcmd
-set number relativenumber
+" set number relativenumber
+set number
 set clipboard=unnamedplus
 set noru
 set t_Co=256
