@@ -14,6 +14,7 @@ vim.cmd ("nnoremap <esc> :noh<return><esc>") -- Clear search highlights with Esc
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 vim.cmd ("autocmd CursorHold * :echo") --clear alert on the bottom (https://superuser.com/questions/1065125/how-to-control-vim-message-display-time)
+vim.opt.showtabline = 1
 lvim.builtin.treesitter.indent = {
 	enable = true,
 	disable = {
@@ -31,6 +32,8 @@ vim.cmd ("let g:sonokai_sign_column_background = 'none'")
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["m"] = {"<cmd>BufferLineCycleNext<CR>", "Go to the next buffer"}
+lvim.builtin.which_key.mappings["n"] = {"<cmd>BufferLineCyclePrev<CR>", "Go to the next buffer"}
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
 --   r = { "<cmd>Trouble lsp_references<cr>", "References" },
