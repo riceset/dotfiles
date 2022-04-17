@@ -30,7 +30,7 @@ alias cat='bat -p'
 # alias df='df -h'
 # alias du='du -h'
 
-alias vi='nvim'
+alias vi='lvim'
 alias py='Python'
 
 # Colorize grep output
