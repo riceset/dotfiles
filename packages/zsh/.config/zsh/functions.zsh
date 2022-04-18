@@ -40,10 +40,3 @@ function add_completion() {
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
-
-# git lazy shortcut
-# function lazy() {
-#     git add .;
-#     git commit -m "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10";
-#     git push;
-# }
