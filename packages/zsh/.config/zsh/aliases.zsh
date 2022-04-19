@@ -26,7 +26,7 @@ alias rm='rm -v'
 alias ls='lsd --group-dirs first'
 alias df='df -h'
 alias du='du -h'
-
+alias c='clear'
 alias vi='lvim'
 alias py='Python'
 
