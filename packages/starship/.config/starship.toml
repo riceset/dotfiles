@@ -6,6 +6,11 @@
 #                               |_|
 
 add_newline = false
+command_timeout = 999
+
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+style = "#DFDD51"
 
 [line_break]
 disabled = true
@@ -13,48 +18,107 @@ disabled = true
 [cmd_duration]
 disabled = false
 
-[git_status]
-style = "#DFDD51"
-disabled = false
-
 [username]
 style_user = "#81CE6B"
 style_root = "bold #DFDD51"
-
 format = "[$user]($style) in "
 disabled = true
 show_always = true
 
-[directory]
-style = "#81CE6B"
-
-[git_branch]
-style = "#F8586E"
+[package]
+symbol = " "
 
 [character]
 success_symbol = "[❯](bold #ffffff)"
 error_symbol = "[❯](bold #F8586E)"
 
-[python]
-disabled = true
+[aws]
+symbol = "  "
 
-[package]
-disabled = true
+[buf]
+symbol = " "
+format = "via [$symbol]($style)"
 
-[ruby]
-disabled = true
+[c]
+symbol = " "
+format = "via [$symbol]($style)"
 
-[rust]
-disabled = true
+[conda]
+symbol = " "
 
-[nodejs]
-disabled = true
+[dart]
+symbol = " "
+format = "via [$symbol]($style)"
 
-[java]
-disabled = true
+[directory]
+style = "#81CE6B"
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[elm]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[git_branch]
+symbol = " "
+style = "#F8586E"
 
 [golang]
-disabled = true
+symbol = " "
+format = "via [$symbol]($style)"
 
-[aws]
-disabled = true
+[haskell]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[julia]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[nix_shell]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[nodejs]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[python]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[spack]
+symbol = "🅢 "
+format = "via [$symbol]($style)"
+
+[rust]
+symbol = " "
+format = "via [$symbol]($style)"
+
+[lua]
+symbol = " "
+format = 'via [$symbol]($style)'
+
+[ruby]
+symbol = " "
+format = 'via [$symbol]($style)'

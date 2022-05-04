@@ -5,11 +5,8 @@ alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
 # Prevent brew from updating every time
-alias brew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
-alias wcc="cc -Wall -Wextra -Werror"
-alias norm="norminette -R CheckForbiddenSourceHeader"
-alias normh="norminette -R CheckDefine"
-alias normall="norm ft*.c; normh *.h"
+alias wcc='cc -Wall -Wextra -Werror'
+alias norm='norminette -R CheckForbiddenSourceHeader'
 alias db="lldb -s <(echo 'target stop-hook add --one-liner \"frame variable\"')"
 
 # ls
@@ -18,6 +15,9 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+
+# ssh on kitty
+alias s="kitty +kitten ssh"
 
 # Useful
 alias mv='mv -iv'
