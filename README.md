@@ -1,6 +1,12 @@
-# dotfiles
+<h1 align="center">
+	dotfiles
+</h1>
 
-![setup](https://user-images.githubusercontent.com/48802655/129465450-f52b9712-3d60-4d71-8950-50328c4ba816.png)
+<p align="center">
+	<b><i>My dotfiles.</i></b><br>
+</p>
+
+![image](https://user-images.githubusercontent.com/48802655/166656740-5f80a562-b58d-4d62-85f8-1b420ca706ee.png)
 
 ## Setting it up
 
