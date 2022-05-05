@@ -6,26 +6,29 @@
 #                               |_|
 
 add_newline = false
-command_timeout = 999
 
-[git_status]
-format = "([$all_status$ahead_behind]($style) )"
-style = "#DFDD51"
+format = """
+[╭── ](bold white)$all\
+[╰─](bold white)$character"""
+
+scan_timeout = 10
 
 [line_break]
-disabled = true
+disabled = false
 
 [cmd_duration]
+style = "italic yellow"
+format = "took [ $duration]($style)"
 disabled = false
 
 [username]
-style_user = "#81CE6B"
-style_root = "bold #DFDD51"
-format = "[$user]($style) in "
-disabled = true
+style_user = "italic cyan"
+format = "[ $user]($style) at "
+# style_root = "italic"
 show_always = true
 
 [package]
+style = "italic 208"
 symbol = " "
 
 [character]
@@ -51,10 +54,16 @@ symbol = " "
 format = "via [$symbol]($style)"
 
 [directory]
-style = "#81CE6B"
-read_only = " "
+style = "italic #81CE6B"
+read_only = "  "
+home_symbol = " "
+format = "[$path]($style)[$read_only]($read_only_style)"
+truncate_to_repo = true
+repo_root_format = "[$read_only]($read_only_style)[ ]($style)[$repo_root]($style)[$path]($style) "
+repo_root_style = ""
 
 [docker_context]
+style = "italic blue"
 symbol = " "
 
 [elixir]
@@ -67,7 +76,13 @@ format = "via [$symbol]($style)"
 
 [git_branch]
 symbol = " "
-style = "#F8586E"
+style = "italic #F8586E"
+
+[git_status]
+style = "bold yellow"
+ahead = "▲ ${count}"
+behind = "▼ ${count}"
+diverged = "▲ ${ahead_count} ▼ ${behind_count}"
 
 [golang]
 symbol = " "
@@ -87,9 +102,6 @@ format = "via [$symbol]($style)"
 [julia]
 symbol = " "
 format = "via [$symbol]($style)"
-
-[memory_usage]
-symbol = " "
 
 [nim]
 symbol = " "
