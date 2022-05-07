@@ -57,9 +57,9 @@ format = "via [$symbol]($style)"
 style = "italic #81CE6B"
 read_only = "  "
 home_symbol = " "
-format = "[$path]($style)[$read_only]($read_only_style)"
+format = "[$path]($style)[$read_only]($read_only_style) "
 truncate_to_repo = true
-repo_root_format = "[$read_only]($read_only_style)[ ]($style)[$repo_root]($style)[$path]($style) "
+repo_root_format = "[$read_only]($read_only_style)($style)[$repo_root]($style)[$path]($style) "
 repo_root_style = ""
 
 [docker_context]
