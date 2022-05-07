@@ -42,29 +42,27 @@ vim.cmd("let g:sonokai_disable_italic_comment=1")
 vim.cmd("let g:sonokai_transparent_background = 1")
 vim.cmd("let g:sonokai_sign_column_background = 'none'")
 
--- highlights (https://www.reddit.com/r/neovim/comments/px8j89/highlight_command_in_initlua/)
+-- switch between tabs on normal mode with tab / shift-tab
 vim.cmd([[
-augroup MyColors
-autocmd!
-autocmd ColorScheme * hi StatusLine ctermbg=NONE guibg=NONE
-augroup end
+	nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+	nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 ]])
 
--- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
-lvim.builtin.which_key.mappings["m"] = { "<cmd>BufferLineCycleNext<CR>", "Go to the next buffer" }
-lvim.builtin.which_key.mappings["n"] = { "<cmd>BufferLineCyclePrev<CR>", "Go to the next buffer" }
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
--- }
+-- Toggle relative numbers with f3
+vim.cmd([[
+	nnoremap <silent> <f3> :if &relativenumber <CR> :set norelativenumber<CR> :else <CR> :set relativenumber <CR> :endif <CR>
+]])
 
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
+-- highlights (https://www.reddit.com/r/neovim/comments/px8j89/highlight_command_in_initlua/)
+vim.cmd([[
+	augroup MyColors
+	autocmd!
+	autocmd ColorScheme * hi StatusLine ctermbg=NONE guibg=NONE
+	augroup end
+]])
+
+lvim.builtin.which_key.mappings["t"] = { "<cmd>ToggleTerm<CR>", "Terminal" }
+lvim.builtin.which_key.mappings["r"] = { "<cmd>:w | :make run | :make fclean<CR>", "make run" }
 
 lvim.builtin.bufferline.options.always_show_bufferline = true;
 lvim.builtin.alpha.active = true
