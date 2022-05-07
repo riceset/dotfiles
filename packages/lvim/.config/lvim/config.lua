@@ -8,6 +8,8 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
+vim.opt.relativenumber = true
+lvim.lsp.diagnostics.virtual_text = false
 vim.opt.cursorline = false
 vim.opt.smartindent = false
 vim.opt.expandtab = false -- convert tabs to spaces
@@ -18,19 +20,19 @@ lvim.format_on_save = false
 vim.cmd("set path+=**") --Allow finding a file recursively
 vim.cmd("let &fcs='eob: '") --Hide tilde on blank lines
 vim.cmd("nnoremap <esc> :noh<return><esc>") -- Clear search highlights with Esc
+vim.opt.mouse = "c"
 lvim.leader = "space"
+vim.cmd("set syntax=whitespace")
+vim.cmd("autocmd BufWritePost *.c CFormatter42")
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 vim.cmd("autocmd CursorHold * :echo") --clear alert on the bottom (https://superuser.com/questions/1065125/how-to-control-vim-message-display-time)
-vim.opt.showtabline = 1
+vim.opt.showtabline = 2
 lvim.builtin.treesitter.indent = {
   enable = true,
   disable = {
     "c"
   }
 }
-
-vim.opt.mouse = "c"
-vim.cmd("set syntax=whitespace")
 
 -- theme
 lvim.colorscheme = "sonokai"
@@ -85,7 +87,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- Additional Plugins
 lvim.plugins = {
   {
-    "42Paris/42header",
+    "riceset/42header",
     config = function()
       vim.cmd("let g:user42 = 'tkomeno'")
       vim.cmd("let g:mail42 = 'tkomeno@student.42tokyo.jp'")
