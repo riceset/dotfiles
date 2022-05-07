@@ -118,4 +118,18 @@ lvim.plugins = {
     })
   },
   { "riceset/c_formatter_42.vim" },
+  -- { "github/copilot.vim" },
+	 { "lukas-reineke/indent-blankline.nvim",
+		config = function()
+			vim.opt.list = true
+			-- vim.opt.listchars:append("space:⋅")
+			vim.opt.listchars:append("eol:↴")
+		end
+
+	 },
+	 { "norcalli/nvim-colorizer.lua",
+		config = function()
+			require'colorizer'.setup()
+		end
+	 }
 }
