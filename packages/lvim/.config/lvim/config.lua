@@ -34,6 +34,11 @@ lvim.builtin.treesitter.indent = {
   }
 }
 
+-- Copilot
+lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })--copilot-lunarvim debugger
+vim.g.copilot_assume_mapped = true
+
 -- theme
 lvim.colorscheme = "sonokai"
 vim.cmd("let g:sonokai_style = 'atlantis'")
@@ -119,6 +124,25 @@ lvim.plugins = {
   },
   { "riceset/c_formatter_42.vim" },
   -- { "github/copilot.vim" },
+  {
+	"zbirenbaum/copilot.lua",
+	event = { "VimEnter" },
+	config = function()
+	  vim.defer_fn(function()
+		print("copilot enter")
+		require("copilot").setup {
+		  plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+		}
+	  end, 100)
+	end,
+  },
+  {
+	"zbirenbaum/copilot-cmp",
+	after = { "copilot.lua", "nvim-cmp" },
+	config = function()
+	  require("copilot_cmp").setup()
+	end
+	},
 	 { "lukas-reineke/indent-blankline.nvim",
 		config = function()
 			vim.opt.list = true
