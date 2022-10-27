@@ -30,7 +30,7 @@ export VISUAL=lvim;
 export EDITOR=lvim;
 
 # ASDF
-. /usr/local/opt/asdf/asdf.sh
+# . /usr/local/opt/asdf/asdf.sh
 
 # Z
 . /usr/local/etc/profile.d/z.sh
@@ -41,3 +41,7 @@ ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
 
 export PATH="$HOME/.asdf/installs/rust/1.60.0/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

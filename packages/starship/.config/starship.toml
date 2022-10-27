@@ -21,6 +21,9 @@ style = "italic yellow"
 format = "took [ $duration]($style)"
 disabled = false
 
+[battery]
+	disabled = true
+
 [username]
 style_user = "italic cyan"
 format = "[ $user]($style) at "
