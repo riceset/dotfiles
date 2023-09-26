@@ -33,12 +33,12 @@ export EDITOR=lvim;
 # . /usr/local/opt/asdf/asdf.sh
 
 # Z
-. /usr/local/etc/profile.d/z.sh
+# . /usr/local/etc/profile.d/z.sh
 
 # Sets cursor for zsh vi mode
-ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
-ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
-ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
+# ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
+# ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+# ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
 
 export PATH="$HOME/.asdf/installs/rust/1.60.0/bin:$PATH"
 

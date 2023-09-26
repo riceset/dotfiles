@@ -7,11 +7,12 @@
 source "$ZDOTDIR/functions.zsh"
 
 add_plugin "zsh-users/zsh-completions"
-add_plugin "zdharma/fast-syntax-highlighting"
-add_plugin "jeffreytse/zsh-vi-mode"
+add_plugin "zsh-users/zsh-syntax-highlighting"
 add_plugin "zsh-users/zsh-autosuggestions"
 
 add_file "aliases.zsh"
 add_file "exports.zsh"
 add_file "prompt.zsh"
 add_file "tabcomp.zsh"
+
+# c

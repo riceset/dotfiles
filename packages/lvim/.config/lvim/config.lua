@@ -1,15 +1,8 @@
---                   __ _         _
---   ___ ___  _ __  / _(_) __ _  | |_   _  __ _
---  / __/ _ \| '_ \| |_| |/ _` | | | | | |/ _` |
--- | (_| (_) | | | |  _| | (_| |_| | |_| | (_| |
---  \___\___/|_| |_|_| |_|\__, (_)_|\__,_|\__,_|
---                        |___/
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
 vim.opt.relativenumber = true
-lvim.lsp.diagnostics.virtual_text = false
+vim.diagnostic.config({ virtual_text = false })
 vim.opt.cursorline = false
 vim.opt.smartindent = false
 vim.opt.expandtab = false -- convert tabs to spaces
@@ -23,7 +16,7 @@ vim.cmd("nnoremap <esc> :noh<return><esc>") -- Clear search highlights with Esc
 vim.opt.mouse = "c"
 lvim.leader = "space"
 vim.cmd("set syntax=whitespace")
--- vim.cmd("autocmd BufWritePost *.c CFormatter42")
+vim.cmd("autocmd BufWritePost *.c CFormatter42")
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 vim.cmd("autocmd CursorHold * :echo") --clear alert on the bottom (https://superuser.com/questions/1065125/how-to-control-vim-message-display-time)
 vim.opt.showtabline = 2
@@ -63,19 +56,108 @@ vim.cmd([[
 	augroup MyColors
 	autocmd!
 	autocmd ColorScheme * hi StatusLine ctermbg=NONE guibg=NONE
+	autocmd ColorScheme * hi StatusLineNC guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi TabLine guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi PmenuSbar guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi Pmenu guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi TabLineFill guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi CursorColumn guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi CursorLine guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi ColorColumn guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi NormalFloat guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi FloatBorder guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi StatusLineTerm guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi StatusLineTermNC guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi CocPumMenu guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi CocFloating guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi BufTabLineActive guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi BufTabLineHidden guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi BufTabLineFill guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi InclineNormalNC guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniStatuslineDevinfo guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniStatuslineFileinfo guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniStatuslineFilename guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniStatuslineModeInactive guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniTablineCurrent guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi SLCopilot guibg=NONE
+	autocmd ColorScheme * hi SLBranchName guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi SLSeparator guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi WhichKeyFloat guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi WhichKeyBorder guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b12_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b12_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b12_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b12_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b12_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b12_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b2_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b2_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b2_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b2_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b2_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b2_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_5_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_5_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_5_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_5_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_5_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_5_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_15_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_15_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_15_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_15_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_15_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b_15_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b9_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b9_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b9_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b9_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b9_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b9_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b19_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b19_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b19_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b19_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b19_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b19_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b3_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b3_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b3_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b3_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b3_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b3_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b13_command guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b13_normal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b13_terminal guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b13_visual guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b13_insert guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi lualine_b13_replace guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniTablineHidden guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniTablineModifiedCurrent guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniTablineModifiedHidden guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniTablineModifiedVisible guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi MiniTablineVisible guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi OctoGreenFloat guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi OctoRedFloat guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi OctoPurpleFloat guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi OctoYellowFloat guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi OctoBlueFloat guifg=NONE guibg=NONE
+	autocmd ColorScheme * hi OctoGreyFloat guifg=NONE guibg=NONE
 	augroup end
 ]])
 
 lvim.builtin.which_key.mappings["t"] = { "<cmd>ToggleTerm<CR>", "Terminal" }
 lvim.builtin.which_key.mappings["r"] = { "<cmd>:w | :make run | :make fclean<CR>", "make run" }
 
-lvim.builtin.bufferline.options.always_show_bufferline = true;
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
 
 -- Parsers
 lvim.builtin.treesitter.ensure_installed = {
@@ -87,42 +169,32 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
+-- Transparent bar
+local theme = require("lualine.themes.tokyonight")
+theme.normal.c.bg = nil
+lvim.builtin.lualine.options.theme = theme
+
+lvim.builtin.lualine.style = "default"
+local components = require("lvim.core.lualine.components")
+lvim.builtin.lualine.sections.lualine_c = { "diff" }
+lvim.builtin.lualine.sections.lualine_x = { "encoding", "filetype", "progress" }
+lvim.builtin.lualine.sections.lualine_y = { "scrollbar" }
+
+-- lvim.transparent_window = true
+
+vim.cmd("set notitle")
+
 -- Additional Plugins
 lvim.plugins = {
   {
-    "riceset/42header",
+    "42Paris/42header",
     config = function()
       vim.cmd("let g:user42 = 'tkomeno'")
       vim.cmd("let g:mail42 = 'tkomeno@student.42tokyo.jp'")
     end
   },
   { "riceset/sonokai" },
-  {
-    "andweeb/presence.nvim",
-    require("presence"):setup({
-      -- General options
-      auto_update        = true, -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
-      neovim_image_text  = "Neovim", -- Text displayed when hovered over the Neovim image
-      main_image         = "file", -- Main image display (either "neovim" or "file")
-      client_id          = "793271441293967371", -- Use your own Discord application client id (not recommended)
-      log_level          = nil, -- Log messages at or above this level (one of the following: "debug", "info", "warn", "error")
-      debounce_timeout   = 10, -- Number of seconds to debounce events (or calls to `:lua package.loaded.presence:update(<filename>, true)`)
-      enable_line_number = false, -- Displays the current line number instead of the current project
-      blacklist          = {}, -- A list of strings or Lua patterns that disable Rich Presence if the current file name, path, or workspace matches
-      buttons            = true, -- Configure Rich Presence button(s), either a boolean to enable/disable, a static table (`{{ label = "<label>", url = "<url>" }, ...}`, or a function(buffer: string, repo_url: string|nil): table)
-      file_assets        = {}, -- Custom file asset definitions keyed by file names and extensions (see default config at `lua/presence/file_assets.lua` for reference)
-
-      -- Rich Presence text options
-      editing_text        = "Editing %s", -- Format string rendered when an editable file is loaded in the buffer (either string or function(filename: string): string)
-      file_explorer_text  = "Browsing %s", -- Format string rendered when browsing a file explorer (either string or function(file_explorer_name: string): string)
-      git_commit_text     = "Committing changes", -- Format string rendered when committing changes in git (either string or function(filename: string): string)
-      plugin_manager_text = "Managing plugins", -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)
-      reading_text        = "Reading %s", -- Format string rendered when a read-only or unmodifiable file is loaded in the buffer (either string or function(filename: string): string)
-      workspace_text      = "Working on %s", -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
-      line_number_text    = "Line %s out of %s", -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
-    })
-  },
-  { "riceset/c_formatter_42.vim" },
+  -- { "cacharle/c_formatter_42.vim" },
   -- { "github/copilot.vim" },
   {
 	"zbirenbaum/copilot.lua",
@@ -155,5 +227,6 @@ lvim.plugins = {
 		config = function()
 			require'colorizer'.setup()
 		end
-	 }
+	 },
+	{ "xiyaowong/transparent.nvim" }
 }
