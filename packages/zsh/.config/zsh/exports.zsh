@@ -41,6 +41,7 @@ export EDITOR=lvim;
 # ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BEAM
 
 export PATH="$HOME/.asdf/installs/rust/1.60.0/bin:$PATH"
+export ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

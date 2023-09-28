@@ -20,6 +20,7 @@ alias lt='ls --tree'
 alias s="kitty +kitten ssh"
 
 # Useful
+alias make="compiledb make"
 alias mv='mv -iv'
 alias cp='cp -riv'
 alias rm='rm -v'

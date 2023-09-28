@@ -3,7 +3,9 @@
 # Clears the screen and runs pfetch
 function c() {
      clear;
-	 pfetch;
+	 PF_INFO="ascii title memory os host kernel editor shell" \
+	 PF_COL1=6 USER="riceset" HOSTNAME="MacBook" \
+	 /opt/homebrew/bin/pfetch
 };
 
 # Function to source files if they exist
