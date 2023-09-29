@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+
+# insert mode
+alt - i : yabai -m window --insert east
+alt + shift - i : yabai -m window --insert south
+
+# Applications
+# alt - return : alacritty --working-directory $HOME/projects/github.com/JunichiSugiura
+alt - return : open /Applications/Alacritty.app
+alt - 0 : open -n /Applications/Brave\ Browser.app
+alt + shift - n : open /Applications/Notion.app
+
+# close
+alt - c : yabai -m window --close
+
+# navigate
+alt - k : yabai -m window --focus stack.prev \
+    || yabai -m window --focus prev
+alt - j : yabai -m window --focus stack.next \
+    || yabai -m window --focus next
+alt - tab : yabai -m window --focus stack.recent \
+    || yabai -m window --focus recent
+
+# mirror
+alt - m : yabai -m space --mirror y-axis \
+    && yabai -m window --focus first
+
+# rotate
+alt - r : yabai -m space --rotate 270
+
+# warp
+alt + shift - k : yabai -m window --warp prev
+alt + shift - j : yabai -m window --warp next
+
+# full screen
+alt - space : yabai -m window --toggle zoom-fullscreen
+
+# resize
+alt + shift - 0x21 : yabai -m window --resize left:-40:0 \
+    || yabai -m window --resize right:-40:0
+alt + shift - 0x1E : yabai -m window --resize right:40:0 \
+    || yabai -m window --resize left:40:0
