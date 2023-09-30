@@ -35,8 +35,8 @@ style = "italic 208"
 symbol = " "
 
 [character]
-success_symbol = "[❯](bold #ffffff)"
-error_symbol = "[❯](bold #F8586E)"
+success_symbol = "[❯](bold white)"
+error_symbol = "[❯](bold #red)"
 
 [aws]
 symbol = "  "
@@ -57,7 +57,7 @@ symbol = " "
 format = "via [$symbol]($style)"
 
 [directory]
-style = "italic #81CE6B"
+style = "italic green"
 read_only = "  "
 home_symbol = " "
 format = "[$path]($style)[$read_only]($read_only_style) "
@@ -79,7 +79,7 @@ format = "via [$symbol]($style)"
 
 [git_branch]
 symbol = " "
-style = "italic #F8586E"
+style = "italic red"
 
 [git_status]
 style = "bold yellow"

@@ -28,7 +28,7 @@ alias ls='lsd --group-dirs first'
 alias df='df -h'
 alias du='du -h'
 # alias c='clear'
-alias vi='lvim'
+alias vi='nvim'
 alias py='Python'
 alias exam='bash -c "$(curl https://grademe.fr)"'
 
