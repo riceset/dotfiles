@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 tap "clementtsang/bottom"
 tap "homebrew/bundle"
 tap "homebrew/cask"
