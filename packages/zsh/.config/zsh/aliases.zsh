@@ -4,7 +4,6 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
-# Prevent brew from updating every time
 alias wcc='cc -Wall -Wextra -Werror'
 alias norm='norminette -R CheckForbiddenSourceHeader'
 alias db="lldb -s <(echo 'target stop-hook add --one-liner \"frame variable\"')"
@@ -27,7 +26,6 @@ alias rm='rm -v'
 alias ls='lsd --group-dirs first'
 alias df='df -h'
 alias du='du -h'
-# alias c='clear'
 alias vi='nvim'
 alias py='Python'
 alias exam='bash -c "$(curl https://grademe.fr)"'

@@ -8,6 +8,10 @@ function c() {
 	 /opt/homebrew/bin/pfetch
 };
 
+function update_brew() {
+  brew bundle dump --file=/Users/riceset/.dotfiles --force
+}
+
 # Function to source files if they exist
 function add_file() {
     [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"

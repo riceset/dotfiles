@@ -26,11 +26,15 @@ export C_INCLUDE_PATH=/usr/local/include
 export FLASK_APP=application.py
 
 # Sets the default text editor to nvim
-export VISUAL=lvim;
-export EDITOR=lvim;
+export VISUAL=nvim;
+export EDITOR=nvim;
 
 # ASDF
 # . /usr/local/opt/asdf/asdf.sh
+
+# 42
+export USER=tkomeno
+export MAIL=tkomeno@student.42tokyo.jp
 
 # Z
 # . /usr/local/etc/profile.d/z.sh
