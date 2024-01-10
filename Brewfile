@@ -83,12 +83,13 @@ mas "AdBlock Pro", id: 1018301773
 mas "Bitwarden", id: 1352778147
 mas "Craft", id: 1487937127
 mas "Developer", id: 640199958
+mas "Dictionaries", id: 1380563956
+mas "FANTASIAN", id: 1517339045
 mas "Goodnotes", id: 1444383602
-mas "Hanami", id: 1456235760
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
-mas "MindNode", id: 1289197285
+mas "Live Wallpaper", id: 1456235760
 mas "Noir", id: 1592917505
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -96,6 +97,7 @@ mas "Playgrounds", id: 1496833156
 mas "Portal", id: 1436994560
 mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
+mas "Unsplash Wallpapers", id: 1284863847
+mas "UnTrap", id: 1637438059
 mas "Weather App", id: 6444355530
 mas "Xcode", id: 497799835
-mas "辞書 by 物書堂", id: 1380563956
