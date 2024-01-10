@@ -8,12 +8,15 @@ tap "universal-ctags/universal-ctags"
 brew "coreutils"
 brew "asdf"
 brew "bat"
+brew "binutils"
 brew "bottom"
 brew "glib"
 brew "unbound"
 brew "cask"
+brew "python@3.11"
 brew "ccls"
 brew "cmake"
+brew "compiledb"
 brew "harfbuzz"
 brew "libass"
 brew "srt"
@@ -65,10 +68,13 @@ cask "kindle"
 cask "kitty"
 cask "lulu"
 cask "minecraft"
+cask "obsidian"
 cask "openemu"
 cask "qbittorrent"
 cask "reminders-menubar"
+cask "spotify"
 cask "the-unarchiver"
+cask "tomighty"
 cask "tunnelblick"
 cask "utm"
 cask "zoom"
@@ -76,17 +82,20 @@ mas "Adblock Plus", id: 1432731683
 mas "AdBlock Pro", id: 1018301773
 mas "Bitwarden", id: 1352778147
 mas "Craft", id: 1487937127
+mas "Developer", id: 640199958
 mas "Goodnotes", id: 1444383602
 mas "Hanami", id: 1456235760
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
+mas "MindNode", id: 1289197285
 mas "Noir", id: 1592917505
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Playgrounds", id: 1496833156
+mas "Portal", id: 1436994560
 mas "Spark", id: 1176895641
-mas "Twitter", id: 1482454543
+mas "The Unarchiver", id: 425424353
 mas "Weather App", id: 6444355530
 mas "Xcode", id: 497799835
 mas "辞書 by 物書堂", id: 1380563956

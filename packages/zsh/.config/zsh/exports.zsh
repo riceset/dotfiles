@@ -18,6 +18,10 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="~/.emacs.d/bin:$PATH"
+export PATH="/Users/riceset/Library/Python/3.9/bin:$PATH"
+
+# Go
+export GOPATH="/Users/riceset/Library/go"
 
 # C includes
 export C_INCLUDE_PATH=/usr/local/include
