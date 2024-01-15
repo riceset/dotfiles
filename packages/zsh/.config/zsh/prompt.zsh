@@ -5,23 +5,24 @@ autoload -U colors && colors
 eval "$(starship init zsh)"
 
 # Window Title
-echo -ne "\033]0;riceset\007"
-
-case "$TERM" in
-    xterm*|rxvt*)
-        function xtitle () {
-            builtin print -n -- "\e]0;$@\a"
-        }
-        ;;
-    screen)
-        function xtitle () {
-            builtin print -n -- "\ek$@\e\\"
-        }
-        ;;
-    *)
-        function xtitle () {
-        }
-esac
+# echo -ne "\033]0;riceset\007"
+echo -ne "\033]0;riceset@MacBook\007"
+#
+# case "$TERM" in
+#     xterm*|rxvt*)
+#         function xtitle () {
+#             builtin print -n -- "\e]0;$@\a"
+#         }
+#         ;;
+#     screen)
+#         function xtitle () {
+#             builtin print -n -- "\ek$@\e\\"
+#         }
+#         ;;
+#     *)
+#         function xtitle () {
+#         }
+# esac
 
 # function precmd () {
 #     xtitle "$(print -Pn "\e$USER@$HOST in %3~\a")"

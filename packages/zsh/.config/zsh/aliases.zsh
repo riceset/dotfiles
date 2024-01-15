@@ -26,7 +26,7 @@ alias rm='rm -v'
 alias ls='lsd --group-dirs first'
 alias df='df -h'
 alias du='du -h'
-alias vi='nvim'
+alias vi='/Users/riceset/.local/bin/lvim'
 alias py='Python'
 alias exam='bash -c "$(curl https://grademe.fr)"'
 
@@ -37,6 +37,7 @@ alias dkt='cd ~/Desktop'
 alias icloud='cd ~/Library/Mobile¥ Documents/com~apple~CloudDocs/'
 alias dtf='cd ~/.dotfiles'
 alias tmp='cd ~/tmp'
+alias articles='cd ~/Blog/content/articles'
 
 # Config
 alias kittyconfig='vi ~/.config/kitty/kitty.conf'
