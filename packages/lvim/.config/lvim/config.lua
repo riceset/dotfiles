@@ -16,7 +16,6 @@ vim.cmd("nnoremap <esc> :noh<return><esc>") -- Clear search highlights with Esc
 vim.opt.mouse = "c"
 lvim.leader = "space"
 vim.cmd("set syntax=whitespace")
-vim.cmd("autocmd BufWritePost *.c CFormatter42")
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 vim.cmd("autocmd CursorHold * :echo") --clear alert on the bottom (https://superuser.com/questions/1065125/how-to-control-vim-message-display-time)
 vim.opt.showtabline = 2

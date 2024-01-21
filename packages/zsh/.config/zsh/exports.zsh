@@ -37,7 +37,7 @@ export EDITOR=nvim;
 # . /usr/local/opt/asdf/asdf.sh
 
 # 42
-export USER=tkomeno
+export USER=riceset
 export MAIL=tkomeno@student.42tokyo.jp
 
 # Z

@@ -26,7 +26,7 @@ alias rm='rm -v'
 alias ls='lsd --group-dirs first'
 alias df='df -h'
 alias du='du -h'
-alias vi='/Users/riceset/.local/bin/lvim'
+alias vi='nvim'
 alias py='Python'
 alias exam='bash -c "$(curl https://grademe.fr)"'
 
