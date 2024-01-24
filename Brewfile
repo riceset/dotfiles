@@ -91,7 +91,6 @@ cask "zoom"
 mas "AdBlock Pro", id: 1018301773
 mas "Bitwarden", id: 1352778147
 mas "Codeshot", id: 1541665460
-mas "Craft", id: 1487937127
 mas "Developer", id: 640199958
 mas "Dictionaries", id: 1380563956
 mas "FANTASIAN", id: 1517339045
