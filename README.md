@@ -6,9 +6,7 @@
 	<b><i>My dotfiles.</i></b><br>
 </p>
 
-![image](https://user-images.githubusercontent.com/48802655/166656740-5f80a562-b58d-4d62-85f8-1b420ca706ee.png)
-
-## Setting it up
+## Setting it up![Uploading Screenshot 2024-01-24 at 16.31.13.png…]()
 
 ### Requirements
 
