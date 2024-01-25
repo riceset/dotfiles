@@ -6,7 +6,9 @@
 	<b><i>My dotfiles.</i></b><br>
 </p>
 
-## Setting it up![Uploading Screenshot 2024-01-24 at 16.31.13.png…]()
+<img width="1470" alt="Screenshot 2024-01-24 at 16 31 13" src="https://github.com/riceset/dotfiles/assets/48802655/cdb35d4f-50a2-4168-9cf5-bf251f23cf26">
+
+## Setting it up!
 
 ### Requirements
 
