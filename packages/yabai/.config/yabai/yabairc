@@ -40,7 +40,6 @@ yabai -m config active_window_opacity 0.85
 yabai -m config normal_window_opacity 0.85
 
 yabai -m rule --add app!="^(Safari|Arc|Obsidian|kitty)$" opacity=1
-yabai -m rule --add app="^(Things|Fantastical|Amie)$" opacity=0.95
 yabai -m rule --add app="^(Xcode)$" opacity=0.9
 yabai -m rule --add app!="^(Safari|Arc|Obsidian|Xcode|kitty|Things|Fantastical)$" manage=off
 
