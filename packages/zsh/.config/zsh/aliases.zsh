@@ -29,6 +29,7 @@ alias du='du -h'
 alias vi='nvim'
 alias py='Python'
 alias exam='bash -c "$(curl https://grademe.fr)"'
+alias c=clear
 
 # Useful Directories
 alias dl='cd ~/Downloads'

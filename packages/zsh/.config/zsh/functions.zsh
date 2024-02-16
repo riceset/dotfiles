@@ -1,12 +1,12 @@
 # add_file(), add_plugin(), add_completion() from https://github.com/ChristianChiarulli 
 
 # Clears the screen and runs pfetch
-function c() {
-     clear;
-	 PF_INFO="ascii title memory os host kernel editor shell" \
-	 PF_COL1=6 USER="riceset" HOSTNAME="MacBook" \
-	 /opt/homebrew/bin/pfetch
-};
+# function c() {
+#      clear;
+# 	 PF_INFO="ascii title memory os host kernel editor shell" \
+# 	 PF_COL1=6 USER="riceset" HOSTNAME="MacBook" \
+# 	 /opt/homebrew/bin/pfetch
+# };
 
 function update_brew() {
   brew bundle dump --file=/Users/riceset/.dotfiles --force
