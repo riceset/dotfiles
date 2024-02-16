@@ -1,10 +1,3 @@
-#      _                 _     _             _                  _
-#  ___| |_ __ _ _ __ ___| |__ (_)_ __       | |_ ___  _ __ ___ | |
-# / __| __/ _` | '__/ __| '_ \| | '_ \      | __/ _ \| '_ ` _ \| |
-# \__ \ || (_| | |  \__ \ | | | | |_) |  _  | || (_) | | | | | | |
-# |___/\__\__,_|_|  |___/_| |_|_| .__/  (_)  \__\___/|_| |_| |_|_|
-#                               |_|
-
 add_newline = false
 
 format = """
@@ -19,20 +12,21 @@ disabled = false
 [cmd_duration]
 style = "italic yellow"
 format = "took [ $duration]($style)"
-disabled = false
+disabled = true
 
 [battery]
 	disabled = true
 
 [username]
-style_user = "italic cyan"
-format = "[ riceset]($style) at "
+style_user = "italic yellow"
+format = "[riceset]($style) at "
 # style_root = "italic"
 show_always = true
 
 [package]
 style = "italic 208"
 symbol = " "
+disabled = true
 
 [character]
 success_symbol = "[❯](bold white)"
@@ -40,21 +34,26 @@ error_symbol = "[❯](bold #red)"
 
 [aws]
 symbol = "  "
+disabled = true
 
 [buf]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [c]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [conda]
 symbol = " "
+disabled = true
 
 [dart]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [directory]
 style = "italic green"
@@ -64,6 +63,8 @@ format = "[$path]($style)[$read_only]($read_only_style) "
 truncate_to_repo = true
 repo_root_format = "[$read_only]($read_only_style)($style)[$repo_root]($style)[$path]($style) "
 repo_root_style = ""
+truncation_length = 3
+use_logical_path = false
 
 [docker_context]
 style = "italic blue"
@@ -72,17 +73,19 @@ symbol = " "
 [elixir]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [elm]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [git_branch]
 symbol = " "
 style = "italic red"
 
 [git_status]
-style = "bold yellow"
+style = "bold red"
 ahead = "▲ ${count}"
 behind = "▼ ${count}"
 diverged = "▲ ${ahead_count} ▼ ${behind_count}"
@@ -90,10 +93,12 @@ diverged = "▲ ${ahead_count} ▼ ${behind_count}"
 [golang]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [haskell]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [hg_branch]
 symbol = " "
@@ -101,39 +106,49 @@ symbol = " "
 [java]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [julia]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [nim]
 symbol = " "
+disabled = true
 format = "via [$symbol]($style)"
 
 [nix_shell]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [nodejs]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [python]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [spack]
 symbol = "🅢 "
 format = "via [$symbol]($style)"
+disabled = true
 
 [rust]
 symbol = " "
 format = "via [$symbol]($style)"
+disabled = true
 
 [lua]
 symbol = " "
 format = 'via [$symbol]($style)'
+disabled = true
 
 [ruby]
 symbol = " "
 format = 'via [$symbol]($style)'
+disabled = true
