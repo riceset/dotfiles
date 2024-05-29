@@ -27,18 +27,19 @@ alias ls='lsd --group-dirs first'
 alias df='df -h'
 alias du='du -h'
 alias vi='nvim'
+alias ccc='clang++'
 alias py='Python'
-alias exam='bash -c "$(curl https://grademe.fr)"'
+alias py3='Python3'
+alias examshell='bash -c "$(curl https://grademe.fr)"'
 alias c=clear
 
 # Useful Directories
 alias dl='cd ~/Downloads'
 alias pct='cd ~/Pictures'
 alias dkt='cd ~/Desktop'
-alias icloud='cd ~/Library/Mobile¥ Documents/com~apple~CloudDocs/'
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias dtf='cd ~/.dotfiles'
 alias tmp='cd ~/tmp'
-alias articles='cd ~/Blog/content/articles'
 
 # Config
 alias kittyconfig='vi ~/.config/kitty/kitty.conf'
@@ -49,12 +50,5 @@ alias zshrc='vi ~/.config/zsh/.zshrc'
 alias aliases='vi ~/.config/zsh/aliases.zsh'
 alias exports='vi ~/.config/zsh/exports.zsh'
 
-# Gdb quiet
-# alias gdb='gdb -q'
-
 # rickroll
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
-# Youtube-dl
-# alias videodl='youtube-dl -f best '
-# alias audiodl='youtube-dl -x --audio-format mp3 '

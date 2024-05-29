@@ -1,8 +1,8 @@
 add_newline = false
 
 format = """
-[╭── ](bold white)$all\
-[╰─](bold white)$character"""
+[╭── ](bold)$all\
+[╰─](bold)$character"""
 
 scan_timeout = 10
 
@@ -29,7 +29,7 @@ symbol = " "
 disabled = true
 
 [character]
-success_symbol = "[❯](bold white)"
+success_symbol = "[❯](bold)"
 error_symbol = "[❯](bold #red)"
 
 [aws]
@@ -58,7 +58,7 @@ disabled = true
 [directory]
 style = "italic green"
 read_only = "  "
-home_symbol = " "
+# home_symbol = " "
 format = "[$path]($style)[$read_only]($read_only_style) "
 truncate_to_repo = true
 repo_root_format = "[$read_only]($read_only_style)($style)[$repo_root]($style)[$path]($style) "
@@ -151,4 +151,7 @@ disabled = true
 [ruby]
 symbol = " "
 format = 'via [$symbol]($style)'
+disabled = true
+
+[swift]
 disabled = true

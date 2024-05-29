@@ -34,7 +34,7 @@
                                 "to": [
                                     {
                                         "select_input_source": {
-                                            "language": "zh*"
+                                            "language": "zh-Hant"
                                         }
                                     }
                                 ],

@@ -22,6 +22,12 @@ alt - space : yabai -m window --toggle zoom-fullscreen
 # Rebalance window sizes
 alt - e : yabai -m space --balance
 
+ctrl + alt - m : yabai -m window --space next;
+ctrl + alt - n : yabai -m window --space prev;
+
+alt - m : yabai -m space --focus next
+alt - n : yabai -m space --focus prev
+
 # swap windows
 shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north

@@ -13,5 +13,3 @@ add_file "aliases.zsh"
 add_file "exports.zsh"
 add_file "prompt.zsh"
 add_file "tabcomp.zsh"
-
-c
