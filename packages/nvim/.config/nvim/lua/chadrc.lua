@@ -7,6 +7,9 @@ M.ui = {
   statusline = {
     theme = "default",
     separator_style = "round"
+  },
+  tabufline = {
+    order = {"buffers"}
   }
 }
 
