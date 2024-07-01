@@ -1,8 +1,10 @@
 {
+  "42header": { "branch": "master", "commit": "71e6a4df6d72ae87a080282bf45bb993da6146b2" },
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "LuaSnip": { "branch": "master", "commit": "878ace11983444d865a72e1759dbcc331d1ace4c" },
   "NvChad": { "branch": "v2.5", "commit": "0496016e188e294ba09dde41914b83800a9fa9ca" },
   "base46": { "branch": "v2.5", "commit": "b48abead2b70aa1671ce604dc781f8fb2036a133" },
+  "c_formatter_42.vim": { "branch": "master", "commit": "7a2d50f6683d6f58a2c95375524b4406d6bdc2c3" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
   "cmp-nvim-lua": { "branch": "main", "commit": "f12408bdb54c39c23e67cab726264c10db33ada8" },

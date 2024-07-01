@@ -34,4 +34,12 @@ return {
   		},
   	},
   },
+  {
+    "cacharle/c_formatter_42.vim",
+	lazy = false
+  },
+  {
+	"42Paris/42header",
+	lazy = false
+  }
 }
