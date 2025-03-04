@@ -43,3 +43,14 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 0
 vim.opt.expandtab = false
+
+-- disable inline lsp errors
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false,
+        underline = false,
+		signs = function(namespace, bufnr)
+			return vim.b[bufnr].show_signs == false
+		end,
+    }
+)

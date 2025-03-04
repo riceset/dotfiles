@@ -30,10 +30,16 @@ yabai -m config left_padding                 5
 yabai -m config right_padding                5
 yabai -m config window_gap                   06
 
-yabai -m config window_opacity on
-yabai -m config window_opacity_duration 0.0
-yabai -m config active_window_opacity 0.85
-yabai -m config normal_window_opacity 0.85
+# Set the window opacity settings
+#yabai -m config window_opacity on
+#yabai -m config window_opacity_duration 0.0
+#yabai -m config active_window_opacity 0.75
+#yabai -m config normal_window_opacity 0.75
 
-yabai -m rule --add app!="^(Arc|Obsidian|kitty)$" opacity=1
-yabai -m rule --add app!="^(Arc|Obsidian|kitty)$" manage=off
+# Apply rules for specific apps
+#yabai -m rule --add app="^(Arc|Obsidian|kitty)$" opacity=0.7
+#yabai -m rule --add app="^(Arc|Obsidian|kitty)$" manage=on
+
+# Ensure no opacity for other apps
+#yabai -m rule --add app!="^(Arc||iTerm2)$" opacity=1
+yabai -m rule --add app!="^(Arc|iTerm2)$" manage=off

@@ -2,7 +2,6 @@
 local M = {}
 
 M.ui = {
-	theme = "tokyodark",
   transparency = true,
   statusline = {
     theme = "default",

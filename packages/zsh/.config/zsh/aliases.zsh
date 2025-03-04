@@ -4,6 +4,7 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
+alias vi=nvim
 alias wcc='cc -Wall -Wextra -Werror'
 alias norm='norminette -R CheckForbiddenSourceHeader'
 alias db="lldb -s <(echo 'target stop-hook add --one-liner \"frame variable\"')"
@@ -20,18 +21,18 @@ alias s="kitty +kitten ssh"
 
 # Useful
 alias make="compiledb make"
+alias omake="orb make"
+alias orun="orb ./webserv"
 alias mv='mv -iv'
 alias cp='cp -riv'
 alias rm='rm -v'
 alias ls='lsd --group-dirs first'
 alias df='df -h'
 alias du='du -h'
-alias vi='nvim'
 alias ccc='clang++'
 alias py='Python'
 alias py3='Python3'
 alias examshell='bash -c "$(curl https://grademe.fr)"'
-alias c=clear
 
 # Useful Directories
 alias dl='cd ~/Downloads'
