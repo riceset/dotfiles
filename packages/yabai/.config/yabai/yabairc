@@ -11,7 +11,7 @@ yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
 yabai -m config window_shadow                on
 yabai -m config window_border                off
-yabai -m config window_border_width          6
+yabai -m config window_border_width          20
 yabai -m config active_window_border_color   0xff775759
 yabai -m config normal_window_border_color   0xff555555
 yabai -m config insert_feedback_color        0xffd75f5f
@@ -24,10 +24,10 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  5
-yabai -m config bottom_padding               5
-yabai -m config left_padding                 5
-yabai -m config right_padding                5
+yabai -m config top_padding                  7
+yabai -m config bottom_padding               7
+yabai -m config left_padding                 7
+yabai -m config right_padding                7
 yabai -m config window_gap                   06
 
 # Set the window opacity settings
@@ -42,4 +42,4 @@ yabai -m config window_gap                   06
 
 # Ensure no opacity for other apps
 #yabai -m rule --add app!="^(Arc||iTerm2)$" opacity=1
-yabai -m rule --add app!="^(Arc|iTerm2)$" manage=off
+yabai -m rule --add app!="^(Arc|iTerm2|Craft|ChatGPT)$" manage=off

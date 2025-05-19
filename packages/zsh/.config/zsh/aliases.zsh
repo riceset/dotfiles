@@ -20,8 +20,8 @@ alias lt='ls --tree'
 alias s="kitty +kitten ssh"
 
 # Useful
-alias make="compiledb make"
-alias omake="orb make"
+#alias make="compiledb make"
+#alias omake="orb make"
 alias orun="orb ./webserv"
 alias mv='mv -iv'
 alias cp='cp -riv'
@@ -50,6 +50,7 @@ alias tmuxconf='vi ~/.config/tmux/.tmux.conf'
 alias zshrc='vi ~/.config/zsh/.zshrc'
 alias aliases='vi ~/.config/zsh/aliases.zsh'
 alias exports='vi ~/.config/zsh/exports.zsh'
+#alias clear='clear && pfetch'
 
 # rickroll
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'

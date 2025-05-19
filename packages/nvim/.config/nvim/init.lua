@@ -1,56 +1,41 @@
-vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
-vim.g.mapleader = " "
+require "options"
+require "mappings"
+require "commands"
 
--- bootstrap lazy and all plugins
-local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+-- bootstrap plugins & lazy.nvim
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim" -- path where its going to be installed
 
 if not vim.loop.fs_stat(lazypath) then
-  local repo = "https://github.com/folke/lazy.nvim.git"
-  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
+  vim.fn.system {
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  }
 end
 
 vim.opt.rtp:prepend(lazypath)
 
-local lazy_config = require "configs.lazy"
+local plugins = require "plugins"
 
--- load plugins
-require("lazy").setup({
-  {
-    "NvChad/NvChad",
-    lazy = false,
-    branch = "v2.5",
-    import = "nvchad.plugins",
-    config = function()
-      require "options"
-    end,
-  },
+require("lazy").setup(plugins, require "lazy_config")
 
-  { import = "plugins" },
-}, lazy_config)
+-- Hide status bar
+vim.opt.laststatus = 0
+vim.opt.cmdheight = 0
 
--- load theme
-dofile(vim.g.base46_cache .. "defaults")
-dofile(vim.g.base46_cache .. "statusline")
+-- Use terminal colors
+vim.opt.termguicolors = false
+vim.cmd.colorscheme("dim")
 
-require "nvchad.autocmds"
+-- Show padding before line numbers only when needed
+vim.opt.signcolumn = "auto"
 
-vim.schedule(function()
-  require "mappings"
-end)
+vim.o.mouse = ""
 
--- Tab config
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 0
-vim.opt.expandtab = false
-
--- disable inline lsp errors
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false,
-        underline = false,
-		signs = function(namespace, bufnr)
-			return vim.b[bufnr].show_signs == false
-		end,
-    }
-)
+-- Tab
+--vim.opt.tabstop = 4
+--vim.opt.shiftwidth = 4
+--vim.opt.expandtab = true

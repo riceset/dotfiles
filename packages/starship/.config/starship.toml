@@ -10,4 +10,20 @@ scan_timeout = 10
 disabled = false
 
 [git_branch]
+style = "italic red"
 symbol = " "
+
+[username]
+style_user = "italic yellow"
+format = "[riceset]($style) at "
+show_always = true
+
+[directory]
+style = "italic green"
+read_only = "  "
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncate_to_repo = true
+repo_root_format = "[$read_only]($read_only_style)($style)[$repo_root]($style)[$path]($style) "
+repo_root_style = ""
+truncation_length = 3
+use_logical_path = false

@@ -7,6 +7,7 @@
 source "$ZDOTDIR/functions.zsh"
 
 add_plugin "jeffreytse/zsh-vi-mode"
+add_plugin "zsh-users/zsh-syntax-highlighting"
 
 add_file "aliases.zsh"
 add_file "exports.zsh"
