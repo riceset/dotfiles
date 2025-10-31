@@ -30,4 +30,21 @@ return {
     "stevearc/conform.nvim",
     opts = require "plugins.configs.conform",
   },
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*",
+    lazy = true,
+    ft = "markdown",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+        workspaces = {
+            {
+              name = "Garden",
+              path = "~/Documents/2 Areas/Garden/",
+            },
+        }
+    },
+  }
 }

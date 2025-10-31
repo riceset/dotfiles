@@ -2,7 +2,7 @@ autoload -U colors && colors
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 PS1="$ "
 # Starship
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 
 # Window Title
 # echo -ne "\033]0;riceset\007"
