@@ -41,5 +41,5 @@ yabai -m config window_gap                   06
 #yabai -m rule --add app="^(Arc|Obsidian|kitty)$" manage=on
 
 # Ensure no opacity for other apps
-#yabai -m rule --add app!="^(Arc||iTerm2)$" opacity=1
-yabai -m rule --add app!="^(Arc|iTerm2|Craft|ChatGPT Atlas|Obsidian)$" manage=off
+#yabai -m rule --add app!="^(Arc|iTerm2|Craft|Claude|Safari|Obsidian)$" manage=off
+yabai -m rule --add app!="^(Safari|Craft|Dia|Obsidian|Claude|Comet)$" manage=off

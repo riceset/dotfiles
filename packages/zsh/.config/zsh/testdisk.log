@@ -1,0 +1,45 @@
+
+
+Sat Nov  1 00:43:30 2025
+Command line: TestDisk
+
+TestDisk 7.2, Data Recovery Utility, February 2024
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Darwin, kernel 25.0.0 (Darwin Kernel Version 25.0.0: Wed Sep 17 21:38:03 PDT 2025; root:xnu-12377.1.9~141/RELEASE_ARM64_T8112) arm64
+Compiler: GCC 4.2
+ext2fs lib: none, ntfs lib: none, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+Hard disk list
+Disk /dev/disk0 - 1000 GB / 931 GiB - 244276265 sectors (RO), sector size=4096
+Disk /dev/disk2 - 5368 MB / 5119 MiB - 1310709 sectors, sector size=4096
+Disk /dev/disk4 - 15 GB / 14 GiB - 30425155 sectors (RO), sector size=512
+Disk /dev/disk6 - 9315 MB / 8884 MiB - 18194499 sectors (RO), sector size=512
+Disk /dev/disk8 - 8843 MB / 8434 MiB - 17272899 sectors (RO), sector size=512
+Disk /dev/disk10 - 19 GB / 18 GiB - 38019139 sectors (RO), sector size=512
+Disk /dev/disk12 - 10376 MB / 9896 MiB - 20267075 sectors (RO), sector size=512
+Disk /dev/disk14 - 9116 MB / 8694 MiB - 17805379 sectors (RO), sector size=512
+Disk /dev/disk16 - 20 GB / 19 GiB - 40427587 sectors (RO), sector size=512
+Disk /dev/disk18 - 8994 MB / 8578 MiB - 17567811 sectors (RO), sector size=512
+Disk /dev/rdisk0 - 1000 GB / 931 GiB - 244276265 sectors (RO), sector size=4096
+Disk /dev/rdisk1 - 524 MB / 500 MiB - 128000 sectors (RO), sector size=4096
+Disk /dev/rdisk2 - 5368 MB / 5119 MiB - 1310709 sectors, sector size=4096
+Disk /dev/rdisk3 - 994 GB / 926 GiB - 242837545 sectors (RO), sector size=4096
+Disk /dev/rdisk4 - 15 GB / 14 GiB - 30425155 sectors (RO), sector size=512
+Disk /dev/rdisk5 - 15 GB / 14 GiB - 3803136 sectors (RO), sector size=4096
+Disk /dev/rdisk6 - 9315 MB / 8884 MiB - 18194499 sectors (RO), sector size=512
+Disk /dev/rdisk7 - 9315 MB / 8884 MiB - 2274304 sectors (RO), sector size=4096
+Disk /dev/rdisk8 - 8843 MB / 8434 MiB - 17272899 sectors (RO), sector size=512
+Disk /dev/rdisk9 - 8843 MB / 8434 MiB - 2159104 sectors (RO), sector size=4096
+Disk /dev/rdisk10 - 19 GB / 18 GiB - 38019139 sectors (RO), sector size=512
+Disk /dev/rdisk11 - 19 GB / 18 GiB - 4752384 sectors (RO), sector size=4096
+Disk /dev/rdisk12 - 10376 MB / 9896 MiB - 20267075 sectors (RO), sector size=512
+Disk /dev/rdisk13 - 10376 MB / 9896 MiB - 2533376 sectors (RO), sector size=4096
+Disk /dev/rdisk14 - 9116 MB / 8694 MiB - 17805379 sectors (RO), sector size=512
+Disk /dev/rdisk15 - 9116 MB / 8694 MiB - 2225664 sectors (RO), sector size=4096
+Disk /dev/rdisk16 - 20 GB / 19 GiB - 40427587 sectors (RO), sector size=512
+Disk /dev/rdisk17 - 20 GB / 19 GiB - 5053440 sectors (RO), sector size=4096
+Disk /dev/rdisk18 - 8994 MB / 8578 MiB - 17567811 sectors (RO), sector size=512
+Disk /dev/rdisk19 - 8994 MB / 8578 MiB - 2195968 sectors (RO), sector size=4096
+
+
+TestDisk exited normally.
