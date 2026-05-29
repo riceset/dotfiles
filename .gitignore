@@ -5,3 +5,10 @@ packages/zsh/.config/zsh/.zcompdump
 packages/ranger/.config/ranger/plugins
 packages/kitty/.config/kitty/kitty-themes
 packages/zsh/.config/zsh/.zsh_sessions/
+
+**/.DS_Store
+
+# GitHub Copilot — contains live OAuth tokens
+packages/github-copilot/.config/github-copilot/apps.json
+packages/github-copilot/.config/github-copilot/copilot-xcode.db
+packages/github-copilot/.config/github-copilot/xcode/
